@@ -1,0 +1,28 @@
+You can run RoleManagement-ui, TargetManagement-ui, UserManagement-ui_2_0 by:
+running script auto-run-RM.sh or auto-run-TG.sh or auto-run-UM.sh
+
+if you execute script first time as first (mandatory) argument you should give build or <application_name>
+(which is f.e. usermanagement, usermgmtprofile).
+
+It will perform necessary cdt2 package link and cdt2 package install commands and run application with
+proxyServer.js (real backend, need to have VPN connection to vApp) on port 8585.
+
+This build command should be used only once after cloning clean repository.
+This command used to build and run sub-application.
+    - second parameter is port number
+    - third parameter could be local or proxy or v5.
+Proxy is default, if you enter local, serve will be run on localServer.js (fake backend)
+
+Example:
+                 ./auto-run-UM2.sh build 8181
+                 ./auto-run-UM2.sh usermanagement 8181
+
+If you want to perform cdt2 commands manually see auto-run-RM.sh or auto-run-TG.sh or auto-run-UM.sh script to see which application r
+equire which links and do those commands manually
+
+to run serve go to application folder (f.e. UserManagement-ui_2_0/usermanagement) and execute command (-p -> port number, -m -> server to run) :
+for local server: cdt2 serve -p 9000 -m ../localServer.js
+for proxy server (using VPN): cdt2 serve -p 9000 -m ../proxyServer.js
+for proxyserver (using FFE): cdt2 serve -p 9000 -m ../proxyServerSocksV5.js
+
+For further information see: https://eteamspace.internal.ericsson.com/display/DU/How+to+run+application

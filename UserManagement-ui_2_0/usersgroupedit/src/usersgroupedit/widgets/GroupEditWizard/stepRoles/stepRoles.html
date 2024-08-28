@@ -1,0 +1,16 @@
+<e-link src="../RoleAssignTableWidget/RoleAssignTableWidget" name="role-assign-table-widget" />
+<div class="eaUsersgroupedit-StepRoles">
+    <div class="eaUsersgroupedit-StepRoles-container">
+        <div class="eaUsersgroupedit-StepRoles-container-innerWrapper  eaUsersgroupedit-StepRoles-container-innerWrapper-roles">
+            <label class="eaUsersgroupedit-StepRoles-label">
+                <input class="eaUsersgroupedit-StepRoles-roles ebCheckbox" type="checkbox" />
+                <span class="ebCheckbox-inputStatus"></span>
+                <span class="ebCheckbox-label">{{roles.label}}:</span>
+            </label>
+            <e-element src="widgets/SelectBox" e-id="selectBoxRoles" e-options="selectBoxRoles" class="eaUsersgroupedit-StepRoles-SelectBoxRoles" />
+            <e-element src="../RoleAssignTableWidget/RoleAssignTableWidget" e-id="privilegesTable" e-options="tablePrivilegesOptions" />
+       </div>
+
+    </div>
+</div>
+<e-link src="./stepRoles.less" />

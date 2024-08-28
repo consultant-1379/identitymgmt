@@ -1,0 +1,51 @@
+{
+    "targetgroupForm": {
+        "targetgroup_name": "Name",
+        "targetgroup_description": "Description",
+        "description_placeholder": "Enter a target group description",
+        "name_placeholder": "Enter a target group name",
+        "create_targetgroup_header": "Details",
+        "fetch_target_group_failed": "Fetch Target Group failed",
+        "ScopingPanel_Title": "Select Targets",
+        "policy": {
+            "header" : "Policy",
+            "subheader": "Target Group Name Policy",
+            "textLine1": "Target group name can't be more than 255 character",
+            "textLine2": "Only alphanumeric (upper and lower case), underscore, dash, and dot characters are accepted",
+            "textLine3": "Target group name must start with a letter",
+            "textLine4": "Target group name must end with alphanumeric character (letter or digit)."
+        }
+    },
+    "targetgroupModel": {
+        "name_toolong": "Target group name exceeds 255 character",
+        "name_empty": "Target group name required",
+        "name_not_match_pattern": "Use only:a-z, A-Z, 0-9, _, -, .",
+        "name_not_start_with_letter": "Target Group name must start with a letter",
+        "name_end_with_alphanumeric": "Target Group name must end with an alphanumeric character",
+        "description_empty": "Target group description required"
+    },
+    "notifications": {
+        "targetgroup_save_success": "Target Group successfully saved",
+        "targetgroup_save_error": "Something went wrong",
+        "form_has_errors": "There are some errors in the form",
+        "server_error": "Server Error occurred"
+    },
+    "basicFilterHeaderCell": {
+        "placeholder": "Type to filter"
+    },
+    "targetListWidget": {
+        "title": "Targets",
+        "column": {
+            "target_name": "Name",
+            "target_type": "Type"
+        },
+        "noData": {
+            "header": "No Match Found",
+            "message": "Nothing was found matching your filters."
+        },
+        "typeToFilter": "Type to Filter",
+        "fetch_targets_error_header": "Fetch targets failed",
+        "fetch_targets_error_content": "Something went wrong during targets fetching. See troubleshooting guide to find possible solutions."
+    },
+    "selectedCaption": "Selected"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="WhatsNew">
+    <title>What's New</title>
+    <conbody>
+        <dl>
+            <dlentry id="appName">
+                <dt>App</dt>
+                <dd>Usermgmtprofile</dd>
+            </dlentry>
+            <dlentry id="version">
+                <dt>Version</dt>
+                <dd>{{version}}</dd>
+            </dlentry>
+        </dl>
+        <section>
+            <title>User Profile</title>
+            <p>
+                The functions supported by the application include: editing data, getting credentials and changing password.
+            </p>
+            <p>
+                The credentials of a User in the form of certificate can be obtained with User Profile application.
+            </p>
+        </section>
+    </conbody>
+</concept>

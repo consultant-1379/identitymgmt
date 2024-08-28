@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Overview</title>
+    <conbody>
+        <p>
+            User Profile is an application that provides a User a possibility to easily manage your profile.
+        </p>
+        <p>
+            The functions supported by the application include: editing data, getting credentials and changing password.
+        </p>
+    </conbody>
+</concept>

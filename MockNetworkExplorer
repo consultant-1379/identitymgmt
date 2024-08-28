@@ -1,0 +1,41 @@
+Come mockare NetworkExplorer
+
+Modifica il file:
+./TargetManagement-ui/newserver.js
+mettendo in:
+numberTargetOriginal: il numero di Target contenuti nel TG quando viene Editato.
+numberTargetToAdd: il numero di Target contenuti nella collection selezionata su NetworkExplorer
+
+Lancia TargetManagement con:
+./auto-run-TGM.sh build 8586 newserver
+
+Selezionare un TG e premere Edit.
+
+Il TG avra' tanti nodi quanti sono selezionati in numberTargetOriginal.
+
+Cliccando su "Add topolgy data"-> NetworkExplorer viene rediretto sul una pagina non trovata.
+
+Modificando direttamente l'url con:
+http://localhost:8586/#targetmanagement/targetgroup/edit/<nome del TG>?collections=281474978113727&generatedCollection=true
+http://localhost:8586/#targetmanagement/targetgroup/edit/Europe_Croatia0?collections=101893941781952881&generatedCollection=true
+http://localhost:8586/#targetmanagement/targetgroup/edit/Europe_Croatia0?collections=2041288,2041290&generatedCollection=true
+http://localhost:8586/#targetmanagement/targetgroup/edit/Europe_Croatia0?collections=101893941781952881,101893941781952882&generatedCollection=true
+
+Si ritorna nella pagina di editing del TG e i nodi aggiunti sono uguali a numberTargetToAdd.
+
+
+http://localhost:8586/#targetmanagement/targetgroup/edit/Europe_Bulgaria7?savedsearches=281474978988097
+
+
+http://localhost:8586/topologyCollections/savedSearches/281474978988097
+Risposta
+{"poId":"281474978988097","name":"emptySearch","searchQuery":"NetworkElement*","attributes":{"category":"Public","userId":"administrator","name":"emptySearch","searchQuery":"NetworkElement*","lastUpdated":null,"timeCreated":1527673483495},"deletable":true,"update":true,"delete":true,"type":"SavedSearch"}
+
+http://localhost:8586/managedObjects/query/?searchQuery=NetworkElement*&fullMo=false
+Parametri
+fullMo	false
+searchQuery	NetworkElement*
+Risposta
+{"poList":[],"attributes":[],"attributeMappings":[],"metadata":{"SORTABLE":true,"RESULT_SET_TOTAL_SIZE":0,"MAX_UI_CACHE_SIZE":100000,"INFO_MESSAGE":2001}}
+
+http://localhost:8586/managedObjects/getObjectsByPoIds/

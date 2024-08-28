@@ -1,0 +1,82 @@
+<div class="eaUsermgmtprofile-wUserDetailsCreateWidget">
+
+            <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-userBox eaUsermgmtprofile-wUserDetailsCreateWidget-detailsContainerBox">
+                <h3 class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-subheader">{{Dictionary.details}}</h3>
+                {{#each inputFields}}
+                <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-innerWrapper">
+                    <label class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+                    <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-input-content">
+                        {{#if this.checkbox}}
+                        <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/CheckboxWidget/CheckboxWidget" identifier="{{this.id}}" type="{{this.type}}" on-label="{{this.onLabel}}" off-label="{{this.offLabel}}" on-value="{{this.onValue}}" off-value="{{this.offValue}}"></e-element>
+                        {{else}}
+                            {{#if this.textarea}}
+                                <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/TextareaWidget/TextareaWidget" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+                            {{else}}
+                                <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/InputWidget/InputWidget" debounce="{{this.debounce}}" identifier="{{this.id}}" type="{{this.type}}" hidden="{{this.hidden}}" maxlength="{{this.maxlength}}"></e-element>
+                            {{/if}}
+                        {{/if}} {{#if this.validator}}
+                        <e-element e-id="{{this.validator}}" src="usermgmtlib/widgets/ValidationResultWidget/ValidationResultWidget"></e-element>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+
+            <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-passwordBox eaUsermgmtprofile-wUserDetailsCreateWidget-detailsContainerBox">
+                <h3 class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-subheader">{{Dictionary.passwordHeader}}</h3>
+                {{#each inputPasswordFields}}
+                <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-innerWrapper">
+                    <label class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+                    <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-details-input-content">
+                        {{#if this.checkbox}}
+                        <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/CheckboxWidget/CheckboxWidget" identifier="{{this.id}}" type="{{this.type}}" on-label="{{this.onLabel}}" off-label="{{this.offLabel}}" on-value="{{this.onValue}}" off-value="{{this.offValue}}" status="{{status}}"></e-element>            
+                        {{else}}
+                        {{#if this.selectBox}}
+                        <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/SelectBoxWidget/SelectBoxWidget" e-options="inputPasswordFields[{{@index}}].sbOptions" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+                        {{else}}
+                        <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/InputWidget/InputWidget" debounce="{{this.debounce}}" identifier="{{this.id}}" type="{{this.type}}" ></e-element>
+                        {{/if}}
+                        {{/if}}  {{#if this.validator}}
+                        <e-element e-id="{{this.validator}}" src="usermgmtlib/widgets/ValidationResultWidget/ValidationResultWidget"></e-element>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+                <!-- pwdAge section  -->
+                <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-innerWrapper">
+                    <e-element e-id="passwordAgeing"  e-options="passwordAgeingWidget" src="usermgmtlib/widgets/CustomPasswordAgeingWidget/CustomPasswordAgeingWidget" ></e-element>
+                </div>
+            </div>
+
+            <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-policies eaUsermgmtprofile-wUserDetailsCreateWidget-detailsContainerBox">
+                <h3 class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-policies-subheader">{{Dictionary.usernamePolicy.header}}</h3>
+                <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container">
+                    <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-header">{{Dictionary.usernamePolicy.subheader}}</div>
+                    <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField">
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField-text">{{Dictionary.usernamePolicy.textLine1}}</div>
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField-text">{{Dictionary.usernamePolicy.textLine2}}</div>
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-invalidUsername">
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField-text">
+                        <span>{{Dictionary.usernamePolicy.textLine3}}</span>
+                        </div>
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-infoPopupContainer">
+                            <span class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-infoPopup">
+                                <e-element src="widgets/InfoPopup" e-options="infoPopup" />
+                            </span>
+                         </div>
+                         </div>
+                    </div>
+                </div>
+                <e-element e-id="passwordPolicy" e-options="passwordPoliciesWidget" src="usermgmtlib/widgets/PasswordPolicyWidget/PasswordPolicyWidget"></e-element>
+                <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container">
+                    <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-header">{{Dictionary.passwordAgeingPolicy.subheader}}</div>
+                    <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField">
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField-text">{{Dictionary.passwordAgeingPolicy.textLine1}}</div>
+                        <div class="eaUsermgmtprofile-wUserDetailsCreateWidget-eausermanagementlibrary-userForm-usernamePolicy-container-textField-text">{{Dictionary.passwordAgeingPolicy.textLine2}}</div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+<e-link src="./UserDetailsCreateWidget.less" />

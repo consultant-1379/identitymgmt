@@ -1,0 +1,43 @@
+<div class="eaUsermanagement-ProfileSummary">
+    {{#if username}}
+    <a href="#usermanagement/usermgmtprofile/edit/{{username}}" class="eaUsermanagement-ProfileSummary-editlink ebBtn">{{Dictionary.editProfile}}</a>
+    <div class="ebText">{{Dictionary.name}}</div>
+    <div class="eaUsermanagement-ProfileSummary-username ebText ebColor_grey_60">
+        {{username}}
+    </div>
+    <button class="ebBtn eaUsermanagement-ProfileSummary-terminatSessions-button">{{Dictionary.terminate_sessions}}</button>
+    <div>
+        <div>
+            <span class="eaUsermanagement-ProfileSummary-sessions-instances ebText"></span>
+            <div class="eaUsermanagement-ProfileSummary-sessions-value ebColor_grey_60"></div>
+            <span class="eaUsermanagement-ProfileSummary-sessions">
+                <div class="eaUsermanagement-ProfileSummary-rolesContainer-container">
+                    <span class="eaUsermanagement-ProfileSummary-sessions-loader">
+                       <span class="ebLoader-Dots"></span>
+                       <div class="eaUsermanagement-ProfileSummary-rolesContainer-loaderText">{{Dictionary.loading}}</div>
+                    </span>
+                </div>
+            </span>
+        </div>
+    </div>
+    <div class="eaUsermanagement-ProfileSummary-odpProfilesContainer">
+    </div>
+    <div class="eaUsermanagement-ProfileSummary-odpProfilesContainer-container">
+        <span class="eaUsermanagement-ProfileSummary-odpProfilesContainer-loader">
+            <span class="ebLoader-Dots"></span>
+            <div class="eaUsermanagement-ProfileSummary-odpProfilesContainer-loaderText">{{Dictionary.loading}}</div>
+        </span>
+    </div>
+    <div class="eaUsermanagement-ProfileSummary-rolesContainer">
+    </div>
+    <div class="eaUsermanagement-ProfileSummary-rolesContainer-container">
+        <span class="eaUsermanagement-ProfileSummary-rolesContainer-loader">
+            <span class="ebLoader-Dots"></span>
+            <div class="eaUsermanagement-ProfileSummary-rolesContainer-loaderText">{{Dictionary.loading}}</div>
+        </span>
+    </div>
+    {{else}}
+    <p class="eaUsermanagement-ProfileSummary-NoUsername">{{Dictionary.select_any_user}}</p>
+    {{/if}}
+</div>
+<e-link src="./ProfileSummary.less" ></e-link>

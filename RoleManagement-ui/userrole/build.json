@@ -1,0 +1,64 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "userrole",
+        "name": "UserRole",
+        "version": "1.0.0",
+        "skeleton": "2.1.0",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "copy-bit-lib": {
+            "copy": {
+                "from": "../../Utils/bit/lib",
+                "to": "test/bit/"
+            }
+        },
+        "clean-bit-lib": {
+            "delete": {
+                "target": "test/bit/lib/"
+            }
+        },
+        "copy-rolemgmtlib-bit-steps": {
+            "copy": {
+                "from": "../rolemgmtlib/test/bit/common/*",
+                "to": "test/bit/common/rolemgmtlib/"
+            }
+        },
+        "copy-identitymgmtlib-bit-steps": {
+            "copy": {
+                "from": "../../IdentityManagementLibrary-ui/identitymgmtlib/test/bit/common/*",
+                "to": "test/bit/common/identitymgmtlib/"
+            }
+        },
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "clean-bit-lib",
+                "copy-bit-lib",
+                "copy-identitymgmtlib-bit-steps",
+                "copy-rolemgmtlib-bit-steps",
+                "test",
+                "compile",
+                "compress"
+            ]
+        },
+        "package-notest": {
+            "depends": [
+                "clean",
+                "analyze",
+                "clean-bit-lib",
+                "copy-bit-lib",
+                "copy-identitymgmtlib-bit-steps",
+                "copy-rolemgmtlib-bit-steps",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "clientsdk": "1.90.1"
+    }
+}

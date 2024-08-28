@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="UserInterface">
+    <title>User Interface</title>
+        <abstract>
+      <shortdesc>This section describe the User Profile User Interfaces.</shortdesc>
+   </abstract>
+    <conbody>
+        <section>
+          <p><xref type="concept" href="#UP">User Profile</xref></p>
+          <p><xref type="concept" href="#EP">Edit Profile</xref></p>
+          <p><xref type="concept" href="#CP">Change Your Local Password</xref></p>
+          <p><xref type="concept" href="#PAW">Password Aging Warning</xref></p>
+          <p><xref type="concept" href="#GUC">Get User Credentials</xref></p>
+       </section>
+
+       <section>
+           <title id="UP">User Profile</title>
+             <p>
+                User Profile Menu button at the top right provides access to three actions: <b>View User Profile</b>, <b>Change Password</b>, and <b>Log Out</b> at any stage.
+            </p>
+
+            <p>
+                <image href="/resources/DropDownMenu.png" alt="DropDownMenu"/>
+            </p>
+            <p>
+                <b>View User Profile</b> redirects to user profile page where the user can check own data.</p>
+            <p>
+                <b>Change Password</b> redirects to page where the user can change own password.</p>
+            <p>   
+                <b>Log Out</b> redirects to login page and terminates this user session. This option is available from other application in ENM, for example, User Management.
+            </p>
+
+            <p>
+                By clicking <b>View User Profile</b>, the user can view a summary of their profile. This is not editable.
+            </p>
+           For local users
+            <p>
+                <image href="/resources/UserProfileUI.png" alt="UserProfileUI"/>
+            </p>
+           For federated users
+           <p>
+               <image href="/resources/UserProfileUIFederated.png" alt="UserProfileUIFederated"/>
+           </p>
+           
+           <p>
+                    For local users the Username, Name, Surname, Description, Email Address, Status, and Previous Login are displayed.
+                    The roles associated to the user are also displayed.
+           </p>
+           <p>
+               For federated users Username, Status, and Previous Login are displayed.
+               The roles associated to the user are also displayed.
+           </p>
+        </section>
+
+       <section>
+           <title id="EP">Edit Profile</title>
+           <p><image href="/resources/EditDataUI.png" alt="Edit Profile"/></p>
+            <p>Click <b>Edit Data</b> to update the user profile.</p>
+            <p>The following fields can be changed in the user profile: <b>Name</b>, <b>Surname</b>, and <b>Email Address</b>.</p>
+                <p>It is not possible to edit Username, Status, and Roles.</p>
+                <p>Click <b>Save</b> to save the updates to the user profile.</p>
+
+                <p>Click <b>Cancel</b> to return to main window.</p>
+                <p>
+                The <b>Edit Data</b> is not available for federated users.</p>
+        </section>
+
+       <section>
+           <title id="CP">Change Your Local Password</title>
+           <p><image href="/resources/EditPasswordUI.png" alt="Change Your Password"/></p>
+            <p>
+                Click <b>Change Password</b> to update the user password.</p>
+            <p>The fields to update the password are: <b>Current Local Password</b>, <b>New Local Password</b>, and <b>Repeat New Local Password</b>.
+                The new password must comply the password policies that are described in <b>Local Password Policies</b>.
+            </p>
+            <p>Click <b>Save</b> to save the new password.</p>
+
+            <p>Click <b>Cancel</b> to return to main window.
+            </p>
+            <p>
+            <b>Note:</b>
+            If the user has at least a Task Profile Role assigned or a Custom Role containing Task Profile Roles, the LAAD file has to be redistribute to the CPP nodes that user has access to.
+            </p>
+            <p>Following errors can occur:</p>
+            <ul>
+              <li><b>New Local Password</b> and <b>Repeat New Local Password</b> don't match.
+              <p>
+              <image href="/resources/ChangePasswordError.png" alt="ChangePasswordError"/>
+              </p>
+            </li>
+            <li><b>New Local Password</b> doesn't fulfill the <b>Local Password Policies</b>.
+            <p>
+            <image href="/resources/ChangePWError1.PNG" alt="ChangePasswordError"/>
+            </p>
+            </li>
+            </ul>
+        </section>
+
+       <section>
+           <title id="PAW">Password Aging Warning</title>
+            <p><image href="/resources/PasswordAgeingWarning.png" alt="Password Ageing Warning"/>
+            </p>
+            <p>
+              <b>Change Your Local Password</b> page is displayed at login, showing a warning message about the remaining time before your local password expires. You can choose to change the password or to postpone the password change.
+            </p>
+            <p>
+                 See <i>
+                            <xref href="/ui.xml#CP">Change Password</xref></i> to change your password.
+            </p>
+
+            <p>Click <b>Skip</b> to postpone password change and proceed to launcher page.
+            </p>
+                    <p>
+                        For security reason the Skip function is available for a short time: after that time clicking Skip the user results unauthorized and is redirected to Login page.
+                    </p>
+                    <p>
+                        The same <b>Change Your Local Password</b> page containing the warning message is displayed at next user login until the password expires.
+                    </p>
+            <p>
+                <b>Notes</b>:
+                <ul>
+                    <li>
+                    Number of days the password is valid and number of days to password expiration warning are meant 24 hours/day, for example, if the password is set at 3 p.m., it expires after the number of days set at 3 p.m. and password expiration warning fires as set in the number of days to expiration at 3 p.m.
+                    </li>
+                    <li>
+                    Password aging warning is displayed only for the local password if System Wide Remote Authentication with External Identity feature is enabled and the user is configured as remote Authentication Mode. 
+                    </li>
+                </ul>
+            </p>
+        </section>
+
+       <section>
+           <title id="GUC">Get User Credentials</title>
+            <p>
+                Credentials allow the user to be authenticated by network node. The credentials are required to start the SSL session on the node.
+                Credentials are managed by clicking <b>Get Credentials</b> from the action bar in the User profile.</p>
+                <p>The <b>Get credentials</b> panel is displayed.</p>
+            <p><image href="/resources/GetCredentials.png" alt="GetCredentials"/></p>
+            <p>Click <b>Submit</b> to get the credentials.</p>
+            <p>Click <b>Cancel</b> to return to main window.
+            </p>
+            <sectiondiv>
+                <p><b>Fields supported</b></p>
+                <p>
+                    The following fields are supported: <b>PKI Entity One Time Password</b>, <b>Credentials Format</b>, <b>Certificate File Password</b>, and <b>Repeat Certificate File Password</b>.
+                </p>
+                <p>The <b>Credentials Format</b> can have the following values:
+                <ul><li>PKCS #12</li>
+                <li>XML</li>
+                </ul></p>
+            </sectiondiv>
+            <sectiondiv>
+                <p><b>Validation</b></p>
+                <p>
+                    The following fields are mandatory for PKCS #12 credentials format, as denoted with a red asterisk on screen:
+                    PKI Entity One Time Password, Certificate File Password, Repeat New Certificate File Password.
+                    For XML credentials format only PKI Entity One Time Password is mandatory.
+                </p>
+                <ul>
+                    <li>The <b>PKI Entity One Time Password</b> is obtained from PKI Administrator.</li>
+                    <li>The <b>Certificate File Password</b> and <b>Repeat Certificate File Password</b> fields must match.</li>
+                    <li>The <b>Certificate File Password</b> must follow the guidelines for passwords. For Password description, see section Password Policy Complexity.</li>
+                    <li>The <b>Certificate File Password</b> is a password connected to a given credential.</li>
+                    <!-- <li>The <b>Credentials Format</b> allows user to choose between XML and PKCS #12 format.</li> -->
+                    <li>For XML credentials format, the fields <b>Certificate File Password</b> and <b>Repeat Certificate File Password</b> are redundant and disabled.</li>
+                </ul>
+            </sectiondiv>
+        </section>
+
+    </conbody>
+</concept>

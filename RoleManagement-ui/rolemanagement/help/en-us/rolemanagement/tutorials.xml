@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorials">
+    <title>Tutorials</title>
+    <abstract>
+    <shortdesc>These tutorials explain how to configure and manage user roles.</shortdesc>
+    </abstract>
+    <conbody>
+        <section>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/CreateRole.xml">Create Role</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/CreateCustomRole.xml">Create Custom Role</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/EditRole.xml">Edit Role</xref>
+         </p>
+        </section>
+    </conbody>
+</concept>

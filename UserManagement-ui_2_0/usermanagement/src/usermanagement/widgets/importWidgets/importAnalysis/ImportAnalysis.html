@@ -1,0 +1,33 @@
+<div class="eaUsermanagement-wImportAnalysis">
+    <div class="eaUsermanagement-wImportAnalysis-listContainer">
+        <span class="eaUsermanagement-wImportAnalysis-analysisListHeader">{{analysisHeader}}</span>
+        <ul class="eaUsermanagement-wImportAnalysis-list">
+            {{#each analysisRecords}}
+            <li class="eaUsermanagement-wImportAnalysis-listItem">{{content}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{#if warnings}}
+    <div class="eaUsermanagement-wImportAnalysis-listContainer">
+        <span class="ebIcon  ebIcon_warningOrange"></span>
+        <span class="eaUsermanagement-wImportAnalysis-warningListHeader ebColor_orange">{{warningsHeader}}</span>
+        <ul class="eaUsermanagement-wImportAnalysis-list">
+            {{#each warnings}}
+            <li class="eaUsermanagement-wImportAnalysis-listItem">
+                <div class="eaUsermanagement-wImportAnalysis-warningListItem">
+                    <span>{{content}}</span>
+                    <span class="eaUsermanagement-wImportAnalysis-link ebColor_paleBlue">{{../view}}</span>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+    <div class="eaUsermanagement-wImportAnalysis-noteContainer">
+        <span>{{note}}</span>
+    </div>
+    <div class="eaUsermanagement-wImportAnalysis-questionContainer">
+        <span>{{question}}</span>
+    </div>
+</div>
+<e-link src="./ImportAnalysis.less"></e-link>

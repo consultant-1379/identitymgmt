@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="usermanagement-Export">
+    <title>Export User Profiles</title>
+    <taskbody>
+        <prereq>
+          <ul>
+            <li>You must have the SECURITY_ADMIN role.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner,
+             and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+            </li>
+          </ul>
+        </prereq>
+        <context>
+           <p>
+                <b>Objective</b>
+            </p>
+           <p>This tutorial explains how to export selected user profiles to an XML file. Up to 1,000 users can be exported to a single file.
+                Exported file can be used to modify users profiles by using <b>Import</b> option.
+                Due to security reasons the password is not exported.
+            </p>
+
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+               <li>
+                  <xref href="#1">Click Export</xref>
+               </li>
+              <li>
+                  <xref href="#2">Select File Localization</xref>
+               </li>
+               <li>
+                  <xref href="#3">Export the User Profiles</xref>
+               </li>
+          </ol>
+        </context>
+       <steps>
+            <step id="1">
+              <cmd>Click Export</cmd>
+                <info>
+                  <ol>
+                    <li>Launch <xref scope="external" href="/#usermanagement">
+                            User Management.</xref></li>
+                    <li>Select one or more users.</li>
+
+                    <li>Click <b>Export</b>. The <b>Opening UserProfiles.xml</b> window is displayed.
+
+                   There is an availability to filter users with chosen attribute and then export filtered users profiles.
+                   </li>
+                 </ol>
+                </info>
+           </step>
+           <step id="2">
+                <cmd>Select File Localization</cmd>
+                <info>
+                    In the pop-up window, choose a localization to save UsersProfiles.xml.
+                </info>
+           </step>
+           <step id="3">
+                <cmd>Export the User Profiles</cmd>
+                <info>
+                    Click OK to export the file.
+                    <p>
+                        For more information on <b>Export</b>, see <i>
+                            <xref href="../ui.xml#importexport">Import and Export</xref></i>.
+                    </p>
+                </info>
+           </step>
+
+       </steps>
+       <result>
+           <p>
+                The user profiles are exported.
+            </p>
+      </result>
+    </taskbody>
+</task>

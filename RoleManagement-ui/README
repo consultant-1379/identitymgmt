@@ -1,0 +1,31 @@
+To link all role management packages:
+cd RoleManagement-ui\rolemgmt
+cdt2 package link ..\..\IdentityManagementLibrary-ui\identitymgmtlib
+cdt2 package link ..\rolemgmtlib
+cdt2 package link ..\rolecreate
+cdt2 package link ..\roleedit
+cdt2 package link ..\rolecompare
+cd ..\..\RoleManagement-ui\rolecreate
+cdt2 package link ..\rolemgmtlib
+cd ..\..\RoleManagement-ui\roleedit
+cdt2 package link ..\rolemgmtlib
+
+
+#To build all role mamangement required packages:
+cdt2 build --packages IdentityManagementLibrary-ui\identitymgmtlib,RoleManagement-ui\rolemgmtlib,RoleManagement-ui\rolemgmt,RoleManagement-ui\rolecreate,RoleManagement-ui\roleedit,RoleManagement-ui\rolecompare
+
+Before server running perform this:
+cd RoleManagement-ui\rolemgmt
+cdt2 pacakge install
+
+To run server:
+cd RoleManagement-ui\rolemgmt
+cdt2 serve -m ..\server.js
+or with newer server version:
+cdt2 serve -m ..\serverRest.js
+
+When not using mocked server use --proxy-config:
+cdt2 serve --proxy-config ..\proxy.json
+proxy.json contains proxy configuration for local JBoss deployment.
+
+

@@ -1,0 +1,16 @@
+<div class="eaUsermanagement-wProgressNotification">
+    <div class="eaUsermanagement-wProgressNotification-outerProgressBarContainer">
+        <div class="eaUsermanagement-wProgressNotification-progressBarContainer">
+            <e-element src="../importProgressBar/ImportProgressBar" e-options="progressOptions" e-id="progressBar" />
+        </div>
+        <div class="eaUsermanagement-wProgressNotification-timestampContainer">
+            <span class="eaUsermanagement-wProgressNotification-timestamp ebText_alternative">{{timestamp}}</span>
+        </div>
+    </div>
+    {{#if button}}
+    <div class="eaUsermanagement-wProgressNotification-buttonContainer">
+        <e-element src="widgets/Button" e-id="stopButton" e-options="stopButtonOptions" />
+    </div>
+    {{/if}}
+</div>
+<e-link src="./ProgressNotification.less"></e-link>

@@ -1,0 +1,15 @@
+<div class="elIdentitymgmtlib-checklist">
+    <ul>
+        {{#each elements}}
+            <li class="elIdentitymgmtlib-checklist-listItem elIdentitymgmtlib-checklist-listItem-{{value}} ebList-item" data-id="{{value}}">
+                <label>
+                    <input class="ebCheckbox elIdentitymgmtlib-checklist-listItem-{{value}}-input" type="checkbox"/>
+                    <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">
+                        <span class="ebCheckbox-label-text-{{value}}" title="{{description}}">{{title}}</span>
+                    </span>
+                </label>
+            </li>
+        {{/each}}
+    </ul>
+</div>

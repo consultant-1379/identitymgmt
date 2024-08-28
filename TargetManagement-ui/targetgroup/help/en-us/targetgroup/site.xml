@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <title>Targetgroup</title>
+    <homeTitle>Home</homeTitle>
+    <home>
+        <blocks>
+            <block color="purple" icon="page" href="whatsnew.xml">
+                <title>What's New?</title>
+                <desc>Learn about the new features in Targetgroup.</desc>
+            </block>
+            <block color="green" icon="screen" href="ui.xml">
+                <title>User Interface</title>
+                <desc>Learn the key elements of the user interface.</desc>
+            </block>
+            <block color="blue" icon="book" href="tutorials/map.xml">
+                <title>Tutorials</title>
+                <desc>Tutorials explain how to use key features in Targetgroup.</desc>
+            </block>
+            <block color="darkblue" icon="video" href="videos.xml">
+                <title>Videos</title>
+                <desc>Watch the available videos for Targetgroup.</desc>
+            </block>
+        </blocks>
+    </home>
+</site>

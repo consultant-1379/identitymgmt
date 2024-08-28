@@ -1,0 +1,23 @@
+<e-link src="../../widgets/UserProfileEditWidget/UserProfileEditWidget" name="user-profile-edit-widget" />
+<e-link src="../../widgets/UserProfilePrivilegesWidget/UserProfilePrivilegesWidget" name="user-profile-privileges-widget" />
+<e-link src="../../widgets/UserProfileViewWidget/UserProfileViewWidget" name="user-profile-view-widget" />
+
+
+<div class="eaUserprofile-rMainRegion">
+    <h2>{{Dictionary.userprofile.general_information}}</h2>
+    <h3>{{Dictionary.userprofile.details}}</h3>
+    {{#if view}}
+        <e-user-profile-view-widget e-options="userProfileOptions" />
+        <h3>
+            <div class="eaUserprofile-rMainRegion-rolesHeader">{{Dictionary.userprofile.view_user_roles_header}}</div>
+        </h3>
+    {{/if}}
+    {{#if edit}}
+        <e-user-profile-edit-widget e-options="userProfileOptions" />
+        <h3>
+            <div class="eaUserprofile-rMainRegion-rolesHeader ebLabel-text_required">{{Dictionary.userprofile.edit_user_profile_roles_header}}</div>
+        </h3>
+    {{/if}}
+    <e-user-profile-privileges-widget e-options="userPrivilegesOptions" />
+
+</div>

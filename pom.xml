@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ericsson.nms</groupId>
+		<artifactId>integration</artifactId>
+		<version>15.2.0.40</version>
+	</parent>
+
+	<groupId>com.ericsson.nms.security</groupId>
+	<artifactId>identitymgmt</artifactId>
+	<version>1.120.4-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>[${project.artifactId}] JEE6 Project</name>
+	<properties>
+	<!-- <nodeDir>/proj/ciexadm200/tools/node/0.10.26_x64</nodeDir>-->
+        <nodeDir>/proj/ciexadm200/tools/node/node-v12.6.0-linux-x64</nodeDir>
+
+		<npm>${nodeDir}/bin/npm</npm>
+        <node>${nodeDir}/bin/node</node>
+        <phase>package</phase>
+        <!-- local maven dev params
+        <npm>C:\Program Files\nodejs\npm.cmd</npm>
+        <node>C:\nodejs\node.exe</node> -->
+        <!-- linux maven dev params-->
+	<!--<npm>npm</npm>
+	<node>node</node>-->
+    </properties>
+
+  	<modules>
+        <module>UserManagement-ui_2_0</module>
+        <module>RoleManagement-ui</module>
+        <module>TargetManagement-ui</module>
+    	<module>ERICidentitymgmt_CXP9030739</module>
+  	</modules>
+
+  <scm>
+    <tag>identitymgmt-1.92.14</tag>
+  </scm>
+</project>

@@ -1,0 +1,15 @@
+[
+    {
+        "source": "/openidm"
+    },
+    {
+        "source": "/editprofile"
+    },
+    {
+        "source": "/rest"
+    },
+{
+    "source":"/oss"
+}
+
+]

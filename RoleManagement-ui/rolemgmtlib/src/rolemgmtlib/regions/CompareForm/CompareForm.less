@@ -1,0 +1,66 @@
+@appName: eaRolemgmtlib-roleCompare;
+
+.eaRolemgmtlib {
+    //-------------------------------------
+
+    @screen-sd_768: 768px;
+
+    //-------------------------------------
+
+    padding: 10px;
+    &-roleCompare{
+        &-role {
+            display: block;
+            padding: 0;
+            font-size: 1.2rem;
+
+            /* 1281px and up */
+            @media (min-width: @screen-sd_768) {
+                display: inline-block;
+                width: 50%;
+                padding-right: 8px;
+                box-sizing: border-box;
+            }
+
+            &Comparator {
+                // get the 2 aligned,
+                // the space between the indented HTML tags is causing more or less 4px to be added
+                font-size: 0;
+            }
+
+            &Row{
+                font-size: 0;
+                border-radius: 2px;
+
+                &:nth-child(odd){
+                    background-color: #efefef;
+                }
+            }
+
+            &Attribute {
+                font-size: 0;
+
+                &-name,
+                &-value {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 1.2rem;
+                    box-sizing: border-box;
+                    padding: 12px;
+                }
+
+                &-name {
+                    width: 120px;
+                    font-weight: bold;
+                }
+                &-value {
+                    width: calc(~'100% - 120px');
+
+                    .@{appName}-actionName {
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}

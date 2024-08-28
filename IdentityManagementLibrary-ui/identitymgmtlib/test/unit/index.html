@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                i18n:  {
+                    localesDir: "../../locales",
+                    locales: ["en-us"]
+                }
+            },
+            tests: [
+                "utils/UsersExport",
+                "utils/DataHandler",
+                "utils/AccessControlService",
+                "utils/ParamsLocationController",
+                "widgets/list-builder/ListBuilder",
+                "widgets/list-builder/menu/item/Item",
+                "widgets/list-builder/list-tree/ListTree",
+                "widgets/list-builder/menu/Menu",
+                "widgets/ErrorWidget",
+                "widgets/FilterByStringHeaderCell",
+                "widgets/FilterByStringOptions",
+                "widgets/List/List",
+                "widgets/List/ListView",
+                "widgets/PaginatedTable",
+                "widgets/ResponsesSummaryDialog",
+                "widgets/ResponsesSummaryList",
+                "widgets/PasswordPolicyListWidget/PasswordPolicyListWidget",
+                "widgets/ResponseStatusCell",
+                "widgets/CheckList/CheckList",
+                "widgets/CheckList/CheckListView",
+                "widgets/TableSelectionInfoWidget",
+                "widgets/RoleMgmtTable",
+                "widgets/ShowRows",
+                "widgets/ResponseStatusCell",
+                "widgets/ConfirmationSummaryList",
+                "widgets/ConfirmationSummaryDialog",
+                "widgets/ConfirmationStatusCell",
+                "widgets/CheckboxWidget",
+                "widgets/InputWidget",
+		        "widgets/TextareaWidget",
+                "widgets/RoleTypeCell/RoleTypeCell",
+                "widgets/SimpleCheckboxWidget",
+                "widgets/RadioButtonWidget",
+                "filters/CheckListFilterPlugin",
+                "filters/FilterPlugin",
+                "filters/LoginFilterPlugin",
+                "filters/RadioListFilterPlugin",
+                "filters/RolesAccordionFilterWidget",
+                "filters/RolesListFilterPlugin",
+                "filters/RolesSelector",
+                "filters/SearchCell",
+                "filters/SelectBoxQueryRoleWidget",
+                "filters/TextInputFilterPlugin"
+            ]
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

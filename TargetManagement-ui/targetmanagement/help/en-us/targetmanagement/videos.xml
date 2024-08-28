@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Videos">
+    <title>Videos</title>
+    <conbody>
+        <p>
+            Currently there are no video tutorials for Target Group Management.
+        </p>
+        <!-- <object type="video" data="resources/video.mp4">
+            <desc>Target Group Management video</desc>
+        </object> -->
+    </conbody>
+</concept>

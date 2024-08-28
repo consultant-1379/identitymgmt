@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="usermanagement-EditUser">
+    <title>Edit User Profile</title>
+    <taskbody>
+        <prereq>
+           <ul>
+            <li>You must have the SECURITY_ADMIN role.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           </ul>
+        </prereq>
+        <context>
+           <p>
+                <b>Objective</b>
+            </p>
+           <p>This tutorial describes the steps to edit an ENM user.
+           The <b>Edit User</b> allows to update the user details, and, with the buttons in the action bar, to <b>Change User Local Password</b>, <b>Duplicate</b>, <b>Delete</b>, <b>Terminate Sessions</b>, <b>Revoke Force Password Change</b>. For the description of these actions, see the associated User Interface pages.
+            </p>
+
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+               <li>
+                  <xref href="#1">Click Edit Profile</xref>
+               </li>
+               <li>
+                  <xref href="#2">Enter User Details</xref>
+               </li>
+               <li><xref href="#3">Create New Role (optional)</xref>
+               </li>
+               <li>
+                    <xref href="#4">Assign Required Role(s)</xref>
+               </li>
+               <li>
+                    <xref href="#5">Create a New Target Group (optional)</xref>
+               </li>
+               <li>
+                    <xref href="#6">Assign required Target Group(s) (optional)</xref>
+               </li>
+               <li>
+                  <xref href="#7">Click Save</xref>
+               </li>
+            </ol>
+        </context>
+       <steps>
+            <step id="1">
+                <cmd>Click Edit Profile</cmd>
+                <info>
+                   <ol>
+                     <li>Launch <xref scope="external" href="/#usermanagement">
+                            User Management.</xref></li>
+                     <li>Select a user from the <b>Users Profiles</b> table.</li>
+                     <li>Click <b>Edit Profile</b>. The <b>Edit User Profile</b> page is displayed.</li>
+                  </ol>
+                </info>
+           </step>
+           <step id="2">
+                <cmd>Enter User Details</cmd>
+                <info>
+                        <p>Enter required <b>General Information</b>.</p>
+                            <ul>
+                                <li>
+                                    <b>Name</b>
+                                </li>
+                                <li>
+                                    <b>Surname</b>
+                                </li>
+                                <li>
+                                    <b>Email Address</b>
+                                    (optional)
+                                </li>
+                                <li>
+                                    <b>Status</b>
+                                    (optional and disabled by default)
+                                </li>
+                                <li>
+                                    <b>Description</b>
+                                    (optional)
+                                </li>
+                                <li>
+                                    <b>Authentication Mode</b>
+                                    (Local by default)
+                                </li>
+                                <li>
+                                    <b>Password Ageing</b>
+                                    (select required password aging) <xref href="#help/app/userprofile/ui~PAW" type="concept" scope="external">(More information)</xref>
+                                </li>
+                            </ul>
+                    <p>For more information on editing a User Profile, see the  <i>
+                        <xref href="../ui.xml#edituser">Edit User</xref></i>.
+                    </p>
+                </info>
+            </step>
+            <step id="3">
+                <cmd>Create New Role (optional)</cmd>
+                <info>
+                    <p>If the required role to be added to the user is not displayed in the <b>Roles</b> table:
+                    </p>
+
+                    <ol>
+                        <li>Click <b>Create a New Role</b>. The <b>Create User Role</b> page is displayed.
+                        </li>
+                        <li>To create a new role, perform the steps in <xref scope="external"
+                                      href="/#help/app/rolemanagement/topic/tutorials/CreateRole~3">
+                                    Create Role</xref>.
+                        </li>
+                    </ol>
+                    Close the <b>Role Management</b> application if no other user roles are required.
+                </info>
+            </step>
+            <step id="4">
+                <cmd>Assign Required Role(s)</cmd>
+                <info>
+                   <p>Click check box(es) to select the required role(s) from the <b>Roles</b> table to assign to the user.</p>
+                </info>
+            </step>
+
+            <step id="5">
+
+                <cmd>Create a New Target Group (optional)</cmd>
+                <info>
+                    <ol>
+                        <li>Click <b>Create a New Target Group</b>. The <b>Create Target Group</b> page is displayed.
+                        </li>
+                        <li>To Create a new target group, perform the steps in <xref scope="external"
+                                      href="/#help/app/targetmanagement/topic/tutorials/CreateTargetGroup~3"> Create Target Group</xref>.
+                        </li>
+                    </ol>
+                        Close the <b>Target Group Management</b> application if no other target groups are required.
+                </info>
+            </step>
+
+            <step id="6">
+
+                <cmd>Assign required Target Group(s) (optional)</cmd>
+                <info>
+                    <p>If you have to assign a target group to an ENM System Role or Custom Role</p>
+                    <ol>
+                        <li>Click <b>Service Target Groups (ALL)</b>. The <b>Assign Service Target Groups</b> flyout panel is
+                            displayed.
+                        </li>
+                        <li>Click <b>Assign Manually</b>.
+                        </li>
+                        <li>Select the target group from the list.</li>
+                        <li>Click <b>></b> .
+                        </li>
+                        <li>Click <b>Apply</b>.
+                        </li>
+                    </ol>
+
+                    <p>If you have to assign a target group to a COM Role or COM Role Alias:</p>
+                    <ol>
+                        <li>Click <b>COM Target Groups (NONE)</b> from the <b>Target Groups Assigned</b> column in the
+                            <b>Roles</b> table. The <b>Assign COM Target Groups</b> flyout panel is displayed.
+                        </li>
+                        <li>Click <b>Assign Manually</b>.
+                        </li>
+                        <li>Select the target group from the list.</li>
+                        <li>Click <b>></b> .
+                        </li>
+                        <li>Click <b>Apply</b>.
+                        </li>
+                    </ol>
+                    <p>If you have to assign a target group to a Task Profile Role:</p>
+                    <ol>
+                        <li>Click <b>Task Profile Target Groups (NONE)</b> from the <b>Target Groups Assigned</b> column in the
+                            <b>Roles</b> table. The <b>Assign Task Profile Target Groups</b> flyout panel is displayed.
+                        </li>
+                        <li>Click <b>Assign Manually</b>.
+                        </li>
+                        <li>Select the target group from the list.</li>
+                        <li>Click <b>></b> .
+                        </li>
+                        <li>Click <b>Apply</b>.
+                        </li>
+                    </ol>
+                </info>
+            </step>
+            <step id="7">
+                <cmd>Save the User Profile</cmd>
+                <info>
+                    Click <b>Save</b> to edit the user.
+                </info>
+            </step>
+
+        </steps>
+        <result>
+            <p>
+                The user profile is successfully updated.
+            </p>
+        </result>
+   </taskbody>
+</task>

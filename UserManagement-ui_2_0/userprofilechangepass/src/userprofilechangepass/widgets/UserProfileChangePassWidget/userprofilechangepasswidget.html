@@ -1,0 +1,27 @@
+<div class="eaUserprofilechangepass-wUserProfileChangePassWidget-mainContent">
+    <p class="eaUserprofilechangepass-wUserProfileChangePassWidget-mainContent-topInfoText">
+        <span class="eaUserprofilechangepass-wUserProfileChangePassWidget-mainContent-topInfoText1"></span>
+        <span class="eaUserprofilechangepass-wUserProfileChangePassWidget-mainContent-topInfoTextUserName ebColor_purple"></span>.
+        <span class="eaUserprofilechangepass-wUserProfileChangePassWidget-mainContent-topInfoText2"></span>
+    </p>
+    <form class="eaUserprofilechangepass-wUserProfileChangePassWidget-form" autoComplete="off">
+        <input type="text" class="eaUserprofilechangepass-wUserProfileChangePassWidget-form-input_fakeText ebInput" style="display:none"></input>
+        <input type="password" class="eaUserprofilechangepass-wUserProfileChangePassWidget-form-input_fakePassword ebInput" style="display:none"></input>
+
+        {{#each inputFields}}
+        <label class="eaUserprofilechangepass-wUserProfileChangePassWidget-form-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+        <div class="eaUserprofilechangepass-wUserProfileChangePassWidget-form-innerWrapper">
+            <div class="eaUserprofilechangepass-wUserProfileChangePassWidget-form-input-content">
+                <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/InputWidget/InputWidget" debounce="{{this.debounce}}" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+                {{#if this.validator}}
+                <e-element e-id="{{this.validator}}" src="usermgmtlib/widgets/ValidationResultWidget/ValidationResultWidget" debounce="{{this.debounce}}" identifier="{{this.id}}"></e-element>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </form>
+    <div class="eaUserprofilechangepass-wUserProfileChangePassWidget-form-policies">
+        <e-element e-id="passwordPolicy" e-options="passwordPoliciesWidget" src="usermgmtlib/widgets/PasswordPolicyWidget/PasswordPolicyWidget"></e-element>
+    </div>
+</div>
+<e-link src="./userprofilechangepasswidget.less" />

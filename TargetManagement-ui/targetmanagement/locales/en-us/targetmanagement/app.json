@@ -1,0 +1,50 @@
+{
+    "title": "Target Group Management",
+    "tableHeaderInformation": "{0}-{1} of {2}",
+
+    "actions": {
+        "createTargetGroup": "Create Target Group",
+        "deleteTargetGroup": "Delete",
+        "viewTargetGroup": "View Target Group",
+        "editTargetGroup": "Edit",
+        "refresh": "Refresh"
+    },
+
+    "filter": {
+        "title": "Filters",
+        "apply": "Apply",
+        "clear": "Clear",
+        "cancel": "Cancel",
+        "label": "Filters",
+        "target_group_name": "Target Group Name",
+        "type_to_filter_by_target_name": "Type to filter by Target Group Name",
+        "node_name": "Node Name",
+        "type_to_filter_nodes": "Type to filter Nodes"
+    },
+
+    "targetGroups": "Target Groups",
+
+    "targetMgmt": {
+        "targetNameHeader": "Target Group Name",
+        "targetDescriptionHeader": "Description"
+    },
+
+    "deleteTargetGroups": {
+        "confirmDialog" : {
+            "deleteTgHeader": "Confirm Delete",
+            "deleteTgContent": "Are you sure you want to delete selected target group(s)?",
+            "deleteTgConfirm": "Delete",
+            "deleteTgCancel": "Cancel"
+        },
+        "response": {
+            "deleteTgResultOK": "OK",
+            "deleteTgCode204": "Success",
+            "DeleteResults": "Delete Results",
+            "CannotDeletedTargetGroup": "Cannot delete Target Group(s)"
+        },
+        "notifications": {
+            "deletedTargetGroups":"Target Groups deleted ",
+            "deletedTargetGroup":"Target Group successfully deleted"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"exports": {
+        "rolemgmtlib/regions/RoleForm/RoleForm": "rolemgmtlib/regions/RoleForm/RoleForm",
+        "rolemgmtlib/regions/DisplayRole/DisplayRole": "rolemgmtlib/regions/DisplayRole/DisplayRole",
+        "rolemgmtlib/regions/CompareForm/CompareForm": "rolemgmtlib/regions/CompareForm/CompareForm",
+        "rolemgmtlib/regions/ComAliasRoleList/ComAliasRoleList": "rolemgmtlib/regions/ComAliasRoleList/ComAliasRoleList",
+        "rolemgmtlib/model/RoleModel": "rolemgmtlib/model/RoleModel",
+        "rolemgmtlib/model/CompareModel": "rolemgmtlib/model/CompareModel",
+        "rolemgmtlib/widgets/CustomRoleDetails/CustomRoleDetails": "rolemgmtlib/widgets/CustomRoleDetails/CustomRoleDetails",
+        "rolemgmtlib/widgets/ContainerWidget/ContainerWidget": "rolemgmtlib/widgets/ContainerWidget/ContainerWidget",
+        "rolemgmtlib/widgets/Notifications/Notifications": "rolemgmtlib/widgets/Notifications/Notifications",
+        "rolemgmtlib/widgets/BasicFilterHeaderCell/BasicFilterHeaderCell": "rolemgmtlib/widgets/BasicFilterHeaderCell/BasicFilterHeaderCell"
+    },
+    "i18n": {
+        "locales": ["en-us"]
+    }
+}

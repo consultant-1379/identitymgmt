@@ -1,0 +1,182 @@
+.eaUsermgmtprofile-wUserDetailsCreateWidget {
+
+    &-details {
+
+        &-innerWrapper {
+            padding-left: 7px;
+            margin-left: 2px;
+            background-color: white;
+            margin-bottom: 4px;
+        }
+
+        &-label {
+            float: left;
+            width: 30%;
+            min-width: 140px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        &-input-content {
+            display: inline-block;
+        }
+
+        &-subheader {
+            margin-bottom: 16px;
+            width: 100%;
+        }
+
+    }
+
+    &-detailsContainerBox {
+        width: calc(~"32% - 3px");
+        display: inline-block;
+        margin-left: 2%;
+        position: relative;
+        vertical-align: top;
+    }
+
+    &-detailsContainerBox:nth-child(3n+1) {
+        margin-left: 0;
+    }
+
+    &-eausermanagementlibrary-userForm {
+
+        &-usernamePolicy {
+
+            &-container {
+                margin-top: 2px;
+                background: #fafafa;
+                max-width: 546px;
+                padding: 2px 16px 0 15px;
+
+                &-header {
+                    font-weight: bold;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                }
+
+                &-textField {
+                    margin-bottom: 5px;
+                    padding: 3px;                    
+
+                    &-text {
+                        line-height: 22px;
+                    }
+                }
+
+                &-invalidUsername {
+                    display: flex;
+                }
+            }
+
+            &-infoPopupContainer {
+                float: left;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1134px) and (min-width: 784px) {
+
+        .eaUsermgmtprofile-wUserDetailsCreateWidget {
+
+            &-detailsContainerBox {
+                width: calc(~"48% - 3px");
+                display: inline-block;
+                margin-left: 2%;
+                position: relative;
+                vertical-align: top;
+            }
+
+            &-eausermanagementlibrary-userForm {
+
+                &-policies {
+                    width: 100%;
+                }
+
+                &-usernamePolicy {
+
+                    &-container {
+                        margin-top: 2px;
+                        background: #fafafa;
+                        max-width: 100%;
+                        padding: 2px 16px 0 15px;
+
+                        &-header {
+                            font-weight: bold;
+                            margin-top: 10px;
+                            margin-bottom: 5px;
+                        }
+
+                        &-textField {
+                            margin-bottom: 5px;
+                            padding: 3px;
+
+                            &-text {
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+                &-policies-subheader {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+
+    @media screen and (max-width: 784px)  {
+
+        .eaUsermgmtprofile-wUserDetailsCreateWidget {
+
+            &-detailsContainerBox {
+                width: 100%;
+                display: inline-block;
+                margin-left: 2%;
+                position: relative;
+                vertical-align: top;
+            }
+
+
+            &-eausermanagementlibrary-userForm {
+
+                &-policies {
+                    width: 100%;
+                }
+
+                &-usernamePolicy {
+
+                    &-container {
+                        margin-top: 2px;
+                        background: #fafafa;
+                        max-width: 100%;
+                        padding: 2px 16px 0 15px;
+
+                        &-header {
+                            font-weight: bold;
+                            margin-top: 10px;
+                            margin-bottom: 5px;
+                        }
+
+                        &-textField {
+                            margin-bottom: 5px;
+                            padding: 3px;
+
+                            &-text {
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+                &-policies-subheader {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+}

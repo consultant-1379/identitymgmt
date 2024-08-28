@@ -1,0 +1,69 @@
+<div class="eaTargetmgmtlib-targetgroupForm">
+    <div class="eaTargetmgmtlib-targetgroupForm-content eaTargetmgmtlib-targetgroupForm-detailsContainerBox">
+    {{#if mode.create }}
+        <h3 class="eaTargetmgmtlib-targetgroupForm-header">{{dictionary.targetgroupForm.create_targetgroup_header}}</h3>
+    {{else}}
+        <h3 class="eaTargetmgmtlib-targetgroupForm-header">{{targetGroup}}</h3>
+    {{/if}}
+
+        <div class="eaTargetmgmtlib-targetgroupForm-content-error"></div>
+
+        {{#if mode.create }}
+            <div class="eaTargetmgmtlib-targetgroupForm-entry">
+                <label class="ebLabel eaTargetmgmtlib-targetgroupForm-entryFlex">
+                    <span class="ebLabel-text ebLabel-text_required eaTargetmgmtlib-targetgroupForm-entryLabel">{{dictionary.targetgroupForm.targetgroup_name}}</span>
+                    <div class="eaTargetmgmtlib-targetgroupForm-inputWrapper eaTargetmgmtlib-targetgroupForm-nameWrapper">
+                        <input type="text" class="ebInput ebInput_width_full eaTargetmgmtlib-targetgroupForm-name" placeholder="{{dictionary.targetgroupForm.name_placeholder}}"/>
+                        <span class="ebInput-status eaTargetmgmtlib-targetgroupForm-nameStatus">
+                            <span class="ebInput-statusError"></span>
+                            <span class="ebInput-statusOk">{{commonDictionary.ok}}</span>
+                        </span>
+                    </div>
+                </label>
+            </div>
+        {{/if}}
+
+        <div class="eaTargetmgmtlib-targetgroupForm-entry">
+            <label class="ebLabel eaTargetmgmtlib-targetgroupForm-entryFlex">
+
+                {{#if ( or mode.create mode.edit) }}
+                    <span class="ebLabel-text ebLabel-text_required eaTargetmgmtlib-targetgroupForm-entryLabel">{{dictionary.targetgroupForm.targetgroup_description}}</span>
+                {{else}}
+                    <span class="ebLabel-text eaTargetmgmtlib-targetgroupForm-entryLabel">{{dictionary.targetgroupForm.targetgroup_description}}:</span>
+                {{/if}}
+
+                <div class="eaTargetmgmtlib-targetgroupForm-inputWrapper eaTargetmgmtlib-targetgroupForm-descriptionWrapper">
+
+                    {{#if ( or mode.create mode.edit) }}
+                        <textarea class="ebTextArea ebTextArea_width_full eaTargetmgmtlib-targetgroupForm-description" rows="4" placeholder="{{dictionary.targetgroupForm.description_placeholder}}"></textarea>
+                    {{else}}
+                        <span class="ebLabel-text eaTargetmgmtlib-targetgroupForm-description"></span>
+                    {{/if}}
+
+                    <span class="ebInput-status eaTargetmgmtlib-targetgroupForm-descriptionStatus">
+                        <span class="ebInput-statusError"></span>
+                        <span class="ebInput-statusOk">{{commonDictionary.ok}}</span>
+                    </span>
+                </div>
+            </label>
+        </div>
+        <div class="eaTargetmgmtlib-targetgroupForm-topologyDataWidgetWrapper"/></div>
+    </div>
+    {{#if mode.create }}
+    <div class="eaTargetmgmtlib-targetgroupForm-policies eaTargetmgmtlib-targetgroupForm-policiyContainerBox">
+        <h3 class="eaTargetmgmtlib-targetgroupForm-policies-subheader">{{dictionary.targetgroupForm.policy.header}}</h3>
+        <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container">
+            <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container-header">{{dictionary.targetgroupForm.policy.subheader}}</div>
+            <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container-textField">
+                <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container-textField-text">{{dictionary.targetgroupForm.policy.textLine1}}</div>
+                <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container-textField-text">{{dictionary.targetgroupForm.policy.textLine2}}</div>
+                <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container-textField-text">{{dictionary.targetgroupForm.policy.textLine3}}</div>
+                <div class="eaTargetmgmtlib-targetgroupForm-targetgroupnamePolicy-container-textField-text">{{dictionary.targetgroupForm.policy.textLine4}}</div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+
+    <div class="eaTargetmgmtlib-targetgroupForm-targetsListWrapper"/></div>
+
+</div>

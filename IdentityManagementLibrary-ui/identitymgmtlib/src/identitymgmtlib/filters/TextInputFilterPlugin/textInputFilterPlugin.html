@@ -1,0 +1,17 @@
+<div class="eaIdentitymgmtlib-TextInputFilterPlugin">
+    <span>
+        {{#if this.showTitle}}
+            <div class="eaIdentitymgmtlib-TextInputFilterPlugin-title">{{title}}</div>
+        {{/if}}
+        <input type="text" class="ebInput ebInput_width_xLong eaIdentitymgmtlib-TextInputFilterPlugin-TextInput eaIdentitymgmtlib-TextInputFilterPlugin-TextInput-{{name}}" e-id="{{name}}" placeholder="{{placeholder}}"/>
+        <span>
+            <span e-id="{{name}}-searchIcon" class="eaIdentitymgmtlib-TextInputFilterPlugin-TextInput-searchIcon">
+                <i class="ebIcon ebIcon_search eaIdentitymgmtlib-TextInputFilterPlugin-TextInput-filterSearchIcon"></i>
+            </span>
+            <span e-id="{{name}}-closeIcon" class="eaIdentitymgmtlib-TextInputFilterPlugin-TextInput-closeIcon">
+                <i class="ebIcon ebIcon_close eaIdentitymgmtlib-TextInputFilterPlugin-TextInput-filterCloseIcon"></i>
+            </span>
+        </span>
+    </span>
+</div>
+<e-link src="./textInputFilterPlugin.less"/>

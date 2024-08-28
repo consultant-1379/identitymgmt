@@ -1,0 +1,72 @@
+{
+    "targetgroupForm": {
+        "targetgroup_name": "Name",
+        "targetgroup_description": "Description",
+        "description_placeholder": "Enter Target Group description here...",
+        "name_placeholder": "Enter Target Group name here...",
+        "create_targetgroup_header": "Details",
+        "fetch_target_group_failed": "Fetch Target Group failed"
+    },
+    "targetgroupModel": {
+        "name_empty": "Target Group name must not be empty",
+        "name_not_match_pattern": "Target Group name contains forbidden characters",
+        "name_not_start_with_letter": "Target Group name must start with a letter",
+        "name_end_with_alphanumeric": "Target Group name must end with an alphanumeric character",
+        "description_empty": "Description must not be empty"
+    },
+    "notifications": {
+        "targetgroup_save_success": "Target Group successfully saved",
+        "targetgroup_save_error": "Something went wrong",
+        "form_has_errors": "There are some errors in the form",
+        "server_error": "Server Error occurred"
+    },
+    "basicFilterHeaderCell": {
+        "placeholder": "Type to filter"
+    },
+    "targetListWidget": {
+        "title": "Targets",
+        "column": {
+            "target_name": "Name",
+            "target_type": "Type"
+        },
+        "fetch_targets_error_header": "Fetch targets failed",
+        "fetch_targets_error_content": "Something went wrong during targets fetching. See troubleshooting guide to find possible solutions."
+    },
+    "selectedCaption": "Selected",
+
+    "targetGroup": {
+        "errorCodes": {
+            "200": {
+                "default": "Success"
+            },
+            "201": {
+                "default": "Created"
+            },
+            "204": {
+                "default": "No Content"
+            },
+            "403": {
+                "default": "Forbidden",
+                "internalCodes": {
+                    "1.14": "Insufficient privileges"
+                }
+            },
+            "404": {
+                "default": "Not found",
+                "internalCodes": {
+                    "1.13": "Target not found"
+                }
+            },
+            "422": {
+                "default": "Unprocessable Entity"
+            },
+            "500": {
+                "default": "Internal Server Error"
+            },
+            "503": {
+                "default": "Service Unavailable"
+            },
+            "unexpected": "Code {0} - Unexpected reason"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script src="../resources/polyfills/object.assign.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                i18n:  {
+                    localesDir: "../../locales",
+                    locales: ["en-us"]
+                }
+            },
+            tests: [
+                "cells/CheckboxIconCell/CheckboxIconCell",
+                "cells/CheckboxCell/CheckboxCell",
+                "cells/RoleNameCell/RoleNameCell",
+                "cells/ProfileNamesComboCell/ProfileNamesComboCell",
+                "cells/TGAssignedCell/TGAssignedCell",
+                "cells/ResultsTableCell/ResultsTableCell",
+                "cells/RoleStatusCell/RoleStatusCell",
+                "cells/RoleStatusCell/RoleStatusCellView",
+                "cells/AuthModeCell/AuthModeCell",
+                "cells/AuthModeCell/AuthModeCellView",
+                "model/UserProfileModel",
+                "model/RolePrivilegesCollection",
+                "model/RolePrivilegesModel",
+                "model/PasswordPoliciesModel",
+                "model/PasswordPoliciesCollection",
+                "services/UserManagementService",
+                "validators/name.validator",
+                "validators/surname.validator",
+                "validators/username.validator",
+                "validators/email.validator",
+                "validators/password.validator",
+                "validators/passwordageing.validator",
+                "widgets/ConfirmationDeleteUsersDialog/ConfirmationDeleteUsersDialog",
+                "widgets/CustomPasswordAgeingWidget/CustomPasswordAgeingWidget",
+                "widgets/CustomPasswordAgeingWidget/CustomPasswordAgeingWidgetView",
+                "widgets/PasswordPolicyElement/PasswordPolicyElement",
+                "widgets/PasswordPolicyWidget/PasswordPolicyWidget",
+                "widgets/HidableDialog/HidableDialog",
+                "widgets/ExpandableNotification/ExpandableNotification",
+                "widgets/ResponseHandler/ResponseHandler",
+                "widgets/StatusUserCell/StatusUserCell",
+                "widgets/StatusUserCell/StatusUserCellView",
+                "widgets/ValidationResultWidget/ValidationResultWidget",
+                "widgets/UnassignTGFlyout/UnassignTGFlyout",
+                "widgets/UnassignTGFlyout/UnassignTGFlyoutView",
+                "widgets/AssignTGFlyout/AssignTGFlyout",
+                "widgets/AssignTGFlyout/AssignTGFlyoutView",
+                "Dictionary"
+            ]
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

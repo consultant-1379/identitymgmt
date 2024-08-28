@@ -1,0 +1,14 @@
+{
+  "title": "Change Your Local Password",
+  "topInfoText1": "Enter a new local password for user ",
+  "topInfoText2": "We highly recommend you create a unique password",
+  "validator": {
+    "empty_old_password": "You must enter an old password",
+    "not_different_old_new_passwords": "New password must be different than old",
+    "incorrect_old_password": "Invalid password",
+    "password_in_password_history": "Your password must not repeat your previous {0} password(s)"
+  },
+  "currentPassword": "Current Local Password",
+  "newPassword" : "New Local Password",
+  "repeatNewPassword" : "Repeat New Local Password"
+}

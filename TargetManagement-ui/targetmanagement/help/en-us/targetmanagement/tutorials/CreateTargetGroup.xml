@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="targetmanagement-CreateTargetGroup">
+    <title>Create Target Group</title>
+    <taskbody>
+        <prereq>
+           <ul>
+           <li>You must have the SECURITY_ADMIN role.</li>
+           <li>To check currently assigned role(s), select the User ID on the top right hand corner, 
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial explains how to create new target group to be associated to a user.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+
+                <li>
+                    <xref href="#1">Launch Create Target Group</xref>
+                </li>
+                <li>
+                    <xref href="#2">Enter Target Group Details</xref>
+                </li>
+                <li>
+                    <xref href="#3">Save the Target Group</xref>
+                </li>
+            </ol>
+        </context>
+
+        <steps>
+
+            <step id="1">
+                <cmd>Launch Create Target Group</cmd>
+                <info>
+                    <ol>
+                        <li>Launch <xref scope="external" href="#targetmanagement"> Target Group Management</xref>.</li>
+                        <li>Click <b>Create Target Group</b>. The <b>Create Target Group</b> page is displayed.</li>
+                    </ol>
+                </info>
+
+            </step>
+
+            <step id="2">
+                <cmd>Enter Target Group Details</cmd>
+                <info>
+                    <ol>
+                        <li>Enter required <b>Name</b>.</li>
+                        <li>Enter required <b>Description</b>.</li>
+                    </ol>
+                    <p>
+                        For more information on creating a target group, see <i>
+                            <xref href="../ui.xml#CTG">Create Target Group</xref></i>.
+                    </p>
+                </info>
+
+            </step>
+
+            <step id="3">
+                <cmd>Save the Target Group</cmd>
+                <info>
+                    <p>
+                        Click <b>Save</b> to create the new target group.
+                    </p>
+                </info>
+
+            </step>
+
+        </steps>
+        <result>
+            <p>The target group is successfully created.</p>
+        </result>
+
+
+    </taskbody>
+</task>
+
+
+

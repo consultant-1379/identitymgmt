@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document was created with Syntext Serna Free. -->
+<concept xmlns:xsa3="http://dita.oasis-open.org/architecture/2005/" id="Tutorials">
+   <title>Tutorials</title>
+   <abstract>
+      <shortdesc>These tutorials explain how to configure the User Profile.</shortdesc>
+   </abstract>
+   <conbody>
+      <section>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/editingaexistinguser.xml">Edit an Existing User</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/editingownprofile.xml">Edit Own Profile</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/changeuserpassword.xml">Change Your Local Password</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/getusercredentials.xml">Get User Credentials</xref>
+         </p>
+      </section>
+   </conbody>
+</concept>

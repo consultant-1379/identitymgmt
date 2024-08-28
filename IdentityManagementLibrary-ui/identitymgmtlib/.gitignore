@@ -1,0 +1,7 @@
+.cdt/
+tmp/
+target/
+node_modules/
+src/identitymgmtlib/bitTestSteps/Browser.js
+*.tar.gz
+*.tgz

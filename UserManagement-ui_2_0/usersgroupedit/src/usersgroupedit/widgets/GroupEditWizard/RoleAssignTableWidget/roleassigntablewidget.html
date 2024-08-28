@@ -1,0 +1,53 @@
+<div class="eaUsersgroupedit-wRoleAssignTableWidget">
+    <h3>
+        <div>    
+            <div class="eaUsersgroupedit-wRoleAssignTableWidget-tittleContainer">
+                <span class="eaUsersgroupedit-wRoleAssignTableWidget-title">
+                    {{this.tableHeaders.title}}
+                </span>
+            </div>
+            <div class="eaUsersgroupedit-wRoleAssignTableWidget-infoPopupContainer">
+                <span class="eaUsersgroupedit-wRoleAssignTableWidget-infoPopup">
+                    <e-element e-id="rolePrivilegsInfoPopup" src="widgets/InfoPopup" e-options="infoPopup" />
+                </span>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </h3>
+    <h4 class="eaUsersgroupedit-wRoleAssignTableWidget-createRole">
+       <span class="eaUsersgroupedit-wRoleAssignTableWidget-createRole-text">
+            {{this.tableHeaders.role_not_here}}
+       </span>
+       <a href="/#rolemanagement/userrole/create" class="eaUsersgroupedit-wRoleAssignTableWidget-createRole-link" target="_blank">
+           {{this.tableHeaders.create_role}}
+       </a>
+    </h4>
+    <div class="eaUsersgroupedit-wRoleAssignTableWidget-loader">
+        <h3>
+                <span class="eaUsersgroupedit-wRoleAssignTableWidget-resultsRole">
+                <span class="eaUsersgroupedit-wRoleAssignTableWidget-resultsRole-all"></span>|
+                <span class="eaUsersgroupedit-wRoleAssignTableWidget-resultsRole-assigned"></span>-
+                <a class="eaUsersgroupedit-wRoleAssignTableWidget-filter-assign-roles-link-all">
+                    {{this.tableHeaders.all}}
+                </a>-
+                <a class="eaUsersgroupedit-wRoleAssignTableWidget-filter-assign-roles-link-none">
+                    {{this.tableHeaders.none}}
+                </a>
+            </span>
+            <span class="eaUsersgroupedit-wRoleAssignTableWidget-actions">
+                <input type="text" class="ebInput eaUsersgroupedit-wRoleAssignTableWidget-filter-search" placeholder="{{searchPlaceholder}}" />
+                <button class="eaUsersgroupedit-wRoleAssignTableWidget-actions-serviceTGs ebBtn">{{this.tableHeaders.service_target_groups}}</button>
+                <div class="eaUsersgroupedit-wRoleAssignTableWidget-actions-info"> </div>
+            </span>
+        </h3>
+
+        <div class="eaUsersgroupedit-wRoleAssignTableWidget-loader-overlay">
+            <div class="eaUsersgroupedit-wRoleAssignTableWidget-loader-content">
+                <span class="ebLoader-Dots"></span>
+            </div>
+        </div>
+        <div class="eaUsersgroupedit-wRoleAssignTableWidget-tableContainer">
+        </div>
+    </div>
+</div>
+<e-link src="./roleassigntablewidget.less" />

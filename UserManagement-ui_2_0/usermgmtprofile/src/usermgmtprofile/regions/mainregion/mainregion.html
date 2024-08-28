@@ -1,0 +1,14 @@
+
+<e-link src="../../widgets/UserDetailsCreateWidget/UserDetailsCreateWidget" name="user-details-create-widget" />
+<e-link src="../../widgets/UserDetailsEditWidget/UserDetailsEditWidget" name="user-details-edit-widget" />
+
+<div class="eaUsermgmtprofile-rMainRegion">
+    <h2>{{Dictionary.generalInformation}}</h2>
+    {{#if edit}}
+    <e-user-details-edit-widget e-options="userDetailsOptions" />
+    {{/if}}
+    {{#if create}}
+    <e-user-details-create-widget e-options="userDetailsOptions" />
+    {{/if}}
+    <div class="eaUsermgmtprofile-rMainRegion-tabsHolder"></div>
+</div>

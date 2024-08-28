@@ -1,0 +1,63 @@
+{
+  "title": "Edit User Profiles",
+  "detailsStep": {
+    "title": "Details",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "modifyStatus": "Modify Status",
+    "next": "Next",
+    "previous": "Previous",
+    "cancel": "Cancel",
+    "finish": "Finish",
+    "apply": "Apply",
+    "modifyDescription": "Modify Description",
+    "modifyPwdAgeing": "Modify Password Ageing"
+  },
+  "rolesStep": {
+    "title": "Roles and Target Groups",
+    "modifyRoles": "Modify Roles and Target Groups",
+    "assign": "Assign",
+    "unassign": "Unassign"
+  },
+  "securityStep": {
+    "title": "Authentication",
+    "modifyPwdAgeing": "Modify Password Ageing",
+    "modifyAuthMode": "Modify Authentication Mode",
+    "authModeInfoPopup": "Select this checkbox if you want authentication mode to be modified for the selected user(s).</br>"
+  },
+  "summaryStep": {
+    "title": "Summary",
+    "usersUpdatedMsg": "{0} user(s) will be updated",
+    "statusUpdatedMsg": "Status will be set to ",
+    "statusUpdatedMsgEnabled": "Status will be set to Enabled",
+    "statusUpdatedMsgDisabled": "Status will be set to Disabled",
+    "descriptionUpdatedMsg": "Description will be updated ({0})",
+    "pwdAgeingUpdatedMsg": "Password Ageing will be updated: {0}",
+    "pwdAgeingGlobals": "system settings",
+    "pwdAgeingCustomizedDisabled": "customized settings with password ageing disabled",
+    "pwdAgeingCustomizedEnabled": "customized settings with password ageing set to {0} days and expire warning set to {1} days",
+    "pwdMaxAge":"Number of days password is valid",
+    "pwdExpireWarning":"Number of days to password expiration warning",
+    "invalidPwdAgeing": "Error in Password Ageing settings. {0}",
+    "adminUpdatedMsg": "{0} user(s) with SECURITY_ADMIN role will be updated",
+    "assignedUpdatedMsgAssigned": "Roles of {0} user(s) will be assigned",
+    "assignedUpdatedMsgUnassigned": "Roles of {0} user(s) will be unassigned",
+    "unassignAdminRole": "You are going to unassign SECURITY_ADMIN role from {0} user(s)",
+    "authModeUpdatedMsgLocal": "Authentication mode of {0} user(s) will be set to Local",
+    "authModeUpdatedMsgRemote": "Authentication mode of {0} user(s) will be set to Remote",
+    "noUserUpdated": "No user(s) will be updated",
+    "cannotUnassignAllRoles": "{0} user roles cannot be updated because user has to contain at least one role",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "noRolesSelected": "No user role has been selected",
+    "unassignAllRoles": "You are going to unassign all user roles. This operation is not allowed because user has to contain at least one role"
+  },
+  "applyStep": {
+    "title": "Apply",
+    "header": "Results",
+    "total": "Total ({0})",
+    "successful": "Successful ({0})",
+    "failed": "Failed ({0})"
+  },
+  "cancelConfirmMsg": "Are you sure?"
+}

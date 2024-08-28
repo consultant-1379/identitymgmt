@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Overview</title>
+    <conbody>
+        <p>
+          Role Management allows the administrator to manage ENM System roles, COM roles, COM role alias and custom roles.
+        </p>
+        <p>
+            <ul>
+                <li>
+                    System roles are roles predefined in the ENM system. There is no possibility to modify system roles.
+                </li>
+                <li>
+                    COM roles allocate specific privileges on nodes supporting ECIM.
+                </li>
+                <li>
+                    COM role alias is a set of COM roles, which groups these roles for easier assignment to user.
+                </li>
+                <li>
+                    Custom roles consist of a combination of ENM application privileges and COM roles. Custom roles allows creation of a fine-grained set of application access rights in the form of resource-action pairs.
+                </li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

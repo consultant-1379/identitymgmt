@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="rolemanagement-CreateCustomRole">
+    <title>Create New User Custom Role</title>
+    <taskbody>
+        <prereq>
+          <ul>
+           <li>You must have the SECURITY_ADMIN role.</li>
+           <li>To check currently assigned role(s), select the User ID on the top right hand corner, 
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial explains how to create new user custom role to be associated to a user. A custom role allows you to assign capabilities and COM Roles.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+
+                <li>
+                    <xref href="#1">Launch Create User Role</xref>
+                </li>
+                <li>
+                    <xref href="#2">Enter Role Details</xref>
+                </li>
+                <li>
+                    <xref href="#3">Select Custom Role Type</xref>
+                </li>
+                <li>
+                    <xref href="#4">Save the Custom Role</xref>
+                </li>
+            </ol>
+        </context>
+
+        <steps>
+
+            <step id="1">
+                <cmd>Launch Create User Role</cmd>
+                <info>
+                    <ol>
+                     <li>Launch <xref scope="external" href="#rolemanagement"> Role Management</xref>.</li>
+                    <li>Click <b>Create User Role</b>. The <b>Create User Role</b> page is displayed.
+                        </li>
+                    </ol>
+                </info>
+
+            </step>
+
+            <step id="2">
+                <cmd>Enter Role Details</cmd>
+                <info>
+                    <ol>
+                        <li>Enter required <b>Name</b></li>
+                        <li>Enter required <b>Description</b></li>
+                        <li>Click required <b>Status</b></li>
+                    </ol>
+
+                </info>
+
+            </step>
+            <step id="3">
+                <cmd>Select Custom Role Type</cmd>
+                <info>
+                    <ol>
+                       <li>Select the <b>Custom Role</b> from the drop down list <b>Role Type</b>.</li>
+                       <li>Select the role <b>Capabilities</b> (optional).</li>
+                       <li>Select the <b>COM Roles</b> (optional).</li>
+                       <li>Select the <b>Task Profiles Roles</b> (optional).</li>
+                    </ol>
+                    <p>
+                        For more information on <b>Create Custom Role</b>, see <i>
+                            <xref href="../ui.xml#CR">Create Role</xref></i>.
+                    </p>
+                </info>
+            </step>
+
+            <step id="4">
+                <cmd>Save the Custom Role</cmd>
+                <info>
+                    <ol>
+                       <li> Click <b>Save</b> to create the new Custom role.</li>
+                    </ol>
+                </info>
+
+            </step>
+
+        </steps>
+        <result>
+            <p>The Custom role is successfully created.</p>
+        </result>
+
+
+    </taskbody>
+</task>
+

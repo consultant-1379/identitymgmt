@@ -1,0 +1,63 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "userprofilechangepass",
+        "name": "Userprofilechangepass",
+        "version": "1.0.0",
+        "skeleton": "2.1.2",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "copy-bit-lib": {
+            "copy": {
+                "from": "../../Utils/bit/lib",
+                "to": "test/bit/"
+            }
+        },
+        "clean-bit-lib": {
+            "delete": {
+                "target": "test/bit/lib/"
+            }
+        },
+        "copy-common-steps": {
+            "copy": {
+                "from": "../../IdentityManagementLibrary-ui/identitymgmtlib/test/bit/common/*",
+                "to": "test/bit/common/identitymgmtlib/"
+            }
+        },
+        "clean-common-steps": {
+            "delete": {
+                "target": "test/bit/common/"
+            }
+        },
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "clean-bit-lib",
+                "copy-bit-lib",
+                "clean-common-steps",
+                "copy-common-steps",
+                "test",
+                "compile",
+                "compress"
+            ]
+        },
+        "package-notest": {
+            "depends": [
+                "clean",
+                "analyze",
+                "clean-bit-lib",
+                "copy-bit-lib",
+                "clean-common-steps",
+                "copy-common-steps",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "clientsdk": "1.90.1"
+    }
+}

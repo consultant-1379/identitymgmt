@@ -1,0 +1,18 @@
+<div class="eaUsermanagement-ListTgsFlyoutContent">
+<div class="eaUsermanagement-ListTgsFlyoutContent-usernamebox">
+    <div class="ebText">{{Dictionary.userProfile}}</div>
+    <div class="eaUsermanagement-ListTgsFlyoutContent-username ebText ebColor_grey_60">
+        {{data.username}}
+    </div>
+</div>
+{{#if data.nodeRole}}
+<div class="eaUsermanagement-ListTgsFlyoutContent-rolenamebox">
+    <div class="ebText">{{Dictionary.role}}</div>
+    <div class="eaUsermanagement-ListTgsFlyoutContent-username ebText ebColor_grey_60">
+        {{data.rolename}}
+    </div>
+</div>
+{{/if}}
+    <div class="eaUsermanagement-ListTgsFlyoutContent-table-container"/>
+</div>
+<e-link src="./listTgsFlyoutContent.less"></e-link>

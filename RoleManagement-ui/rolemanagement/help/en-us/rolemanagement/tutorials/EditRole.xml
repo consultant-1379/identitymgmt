@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="rolemanagement-EditRole">
+    <title>Edit User Role</title>
+    <taskbody>
+        <prereq>
+           <ul>
+           <li>You must have the SECURITY_ADMIN role.</li>
+           <li>To check currently assigned role(s), select the User ID on the top right hand corner, 
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial describes the steps required to edit a user role.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Select the Role</xref>
+                </li>
+                <li>
+                    <xref href="#2">Enter Role Details</xref>
+                </li>
+                <li>
+                    <xref href="#3">Save the Role</xref>
+                </li>
+            </ol>
+        </context>
+
+        <steps>
+
+        <step id="1">
+                <cmd>Select the Role</cmd>
+                <info>
+                 <ol>
+                     <li>Launch <xref scope="external" href="#rolemanagement"> Role Management</xref>.</li>
+                     <li> Select the role from the <b>Roles</b> list.</li>
+
+                   <li>Click <b>Edit</b> to update the role. The <b>Edit User Role</b> page is displayed.</li>
+                   </ol>
+                </info>
+       </step>
+
+
+            <step id="2">
+                <cmd>Enter Role Details</cmd>
+                <info>
+                      <ol>
+                       <li>Enter <b>Name</b>: this detail can be changed only in case of COM Role and COM Role Alias.</li>
+                       <li>Enter <b>Description</b>.</li>
+                       <li>Enter <b>Status</b></li>
+                    </ol>
+
+                    <p>
+                        <b>Description</b> and <b>Status</b> can be changed in case of COM Role, Custom Role, COM Role Alias or Task Profile Role. <b>Name</b> can be changed only in COM Role and COM Role Alias.
+                    </p>
+
+                    <p>
+                        <b>COM Role Alias</b>, <b>COM Roles</b> can be edited.
+                    </p>
+                    <p>
+                        In case of <b>Custom Role</b> type, <b>Capabilities</b>, <b>COM Roles</b> and <b>Task Profile Roles</b> can be modified.
+                    </p>
+
+                    <p>
+                        For more information check <i>
+                            <xref href="../ui.xml#ER">Edit Role</xref></i>.
+                    </p>
+                </info>
+
+            </step>
+
+            <step id="3">
+                <cmd>Save the Role</cmd>
+                <info>
+                    <p>
+                        Click <b>Save</b> to update the role.
+                    </p>
+
+                </info>
+
+            </step>
+
+        </steps>
+        <result>
+            <p>The role has been edited.</p>
+        </result>
+
+
+    </taskbody>
+</task>
+
+

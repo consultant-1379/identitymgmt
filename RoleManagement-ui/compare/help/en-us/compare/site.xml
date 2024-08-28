@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<site>
+    <title>Compare Roles</title>
+    <homeTitle>Home</homeTitle>
+    <home>
+        <blocks>
+            <block color="purple" icon="page" href="overview.xml">
+                <title>Overview</title>
+                <desc>Learn about the demo app.</desc>
+            </block>
+        </blocks>
+    </home>
+</site>

@@ -1,0 +1,33 @@
+{
+    "title": "Target Group",
+    "headers": {
+        "create": "Create Target Group",
+        "edit": "Edit Target Group",
+        "view": "Target Group Details"
+    },
+    "notifications": {
+        "targetgroupCreated": "Target Group created",
+        "targetgroupEdited": "Target Group Successfully Edited",
+        "targetsLoaded": "New targets loaded",
+        "targetsLoadedWithErrors": "New targets loaded. Some targets are invalid.",
+        "noNewTargetsAdded": "No new targets loaded.",
+        "collectionEmpty": "No targets selected (collection or saved search is emtpy)."
+    },
+    "errorSummary": {
+        "title": "Save Target Group",
+        "elementColumnName": "Operation",
+        "actionUpdateDescription": "Update description",
+        "actionUpdateTargetGroups": "Update targets"
+    },
+    "ok": "OK",
+    "error": "Error",
+    "details": "Details",
+    "save": "Save",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "removeNode": "Remove Node",
+    "confirmNav": "There are unsaved changes on this page. Do you want to leave the page and discard your changes?",
+    "nameNotUnique": "Target Group name must be unique",
+    "errorTargetGroupNotCreated": "Unexpected error. Target Group was not created",
+    "unexpectedError": "Unexpected error occurred"
+}

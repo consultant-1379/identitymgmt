@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="EditExistingUSer">
+    <title>Edit Existing User</title>
+    <taskbody>
+        <prereq>
+           <ul>
+                <li>You must have a valid ENM user account.</li>
+            </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial describes the steps required to edit an existing user.</p>
+
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Click Edit Data</xref>
+                </li>
+                <li>
+                    <xref href="#2">Enter User Details</xref>
+                </li>
+                <li>
+                    <xref href="#3">Save the User</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+
+            <step id="1">
+                <cmd>Click Edit Data</cmd>
+                <info>
+                    <ol>
+                      <li>
+                        Launch <xref scope="external" href="/#userprofile">User Profile</xref>.
+
+                      </li>
+                    <li>
+                        Click <b>Edit Data</b>. The <b>Edit Profile</b> GUI is displayed.  
+                        </li>
+                        </ol>
+
+                </info>
+
+            </step>
+
+            <step id="2">
+                <cmd>Enter User Details</cmd>
+                <info>
+                    <p>
+                <ol>
+                    <li>Enter <b>Name</b>.</li>
+                    <li>Enter <b>Surname</b>.</li>
+                    <li>Enter <b>Email</b>.</li>
+                </ol>
+            </p>
+            <p>For more information, see <i>
+                            <xref href="../ui.xml#EP">Edit Profile</xref></i>.</p>
+
+
+</info>
+
+            </step>
+
+            <step id="3">
+                <cmd>Save the User</cmd>
+                <info>
+                    <p>
+                        Click <b>Save</b> button in action bar to save changes.
+                        A notification confirms that the user has been successfully edited.
+                    </p>
+                    <p>
+                        Click <b>Cancel</b> to return to main window.
+                    </p>
+                </info>
+
+            </step>
+
+        </steps>
+        <result>
+            <p>The existing user has been changed.</p>
+        </result>
+
+
+                </taskbody>
+            </task>

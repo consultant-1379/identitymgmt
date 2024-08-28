@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BIT tests</title>
+    <script src="lib/Promise-polyfill.js"></script>
+    <!--script src="lib/promiscuous-browser.js"></script-->
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script src="../resources/polyfills/object.assign.js"></script>
+    <script type="text/javascript" src="lib/script.js"></script>
+    <script>
+    loadTestDependencies({
+        requireConfig: {
+            baseUrl: "../..",
+            resources: "../../resources",
+            i18n: {
+                locales: ['en-us'],
+                localesDir: "../../locales"
+            }
+        },
+        tests: [
+            "usermgmtprofile/test_create",
+            "usermgmtprofile/test_edit",
+            "usermgmtprofile/test_duplicate",
+            "usermgmtprofile/test_filters"
+        ]
+    });
+    </script>
+</head>
+
+<body>
+    <div id="window" tabindex="1" onclick="restoreWindow();">
+        <div id="document-header">
+            <div id="document-title">ENM Basic Integration Test</div>
+            <div id="document-location" contenteditable="false"></div>
+            <div id="document-hide" tabindex="1" onclick="minimiseWindow();event.stopPropagation();">⇲</div>
+        </div>
+        <div id="document" onclick="event.stopPropagation();">
+            <div id="bitContainer"></div>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/assets.css" />
+    <link rel="stylesheet" type="text/css" href="lib/style.css" />
+</body>
+
+</html>

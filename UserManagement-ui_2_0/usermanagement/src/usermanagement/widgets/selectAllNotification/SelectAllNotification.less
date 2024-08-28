@@ -1,0 +1,69 @@
+.eaUsermanagement-wSelectedUsersMessage {
+    display : none !important;
+
+    &-innerWrapper {
+        &_show_true {
+          padding-bottom: 6px;
+        }
+
+        &_show_false {
+          display : none !important;
+        }
+    }
+
+   &-content {
+       background-color: #E6F6FB;
+       border-color: #66CBE5 !important;
+       border: 1px solid;
+       border-radius: 3px;
+       color: #0053A9;
+       padding: 3px 3px 5px;
+       display: inline-block;
+
+       &-icon {
+            position: relative;
+            top: 1px;
+            margin-left: 2px;
+       }
+
+
+       &-selectedRowsInfo {
+           color: #0053A9;
+           font-size: 1.3rem;
+           position: relative;
+       }
+       
+       &-selectAllOnCurrentPage {
+           color: #0053A9;
+           font-size: 1.3rem;
+           position: relative;
+           cursor: pointer;
+
+           &:hover {
+              text-decoration: underline;
+           }
+       }
+       
+      &-selectAllOnAllPage {
+           color: #0053A9;
+           font-size: 1.3rem;
+           position: relative;
+           cursor: pointer;
+
+           &:hover {
+              text-decoration: underline;
+           }
+       }
+
+       &-clearAll {
+          color: #0053A9;
+          font-size: 1.3rem;
+          position: relative;
+          cursor: pointer;
+
+          &:hover {
+              text-decoration: underline;
+          }
+       }
+   }
+}

@@ -1,0 +1,33 @@
+<div class="eaUsermanagement-wImportSummary">
+    <div class="eaUsermanagement-wImportSummary-container">
+        <div class="eaUsermanagement-wImportSummary-row">
+            <div class="eaUsermanagement-wImportSummary-labelContainer">
+                <span class="eaUsermanagement-wImportSummary-label">
+                {{#if frontLabel}}<span class="eaUsermanagement-wImportSummary-frontLabel {{color}}" e-id="frontLabel">{{frontLabel}}</span>{{/if}}
+                {{label}}</span>
+            </div>
+            <div class="eaUsermanagement-wImportSummary-closeIconContainer">
+                <span class="eaUsermanagement-wImportSummary-closeIcon ebIcon ebIcon_close" e-id="closeIcon"></span>
+            </div>
+        </div>
+        <div class="eaUsermanagement-wImportSummary-row">
+            <div class="eaUsermanagement-wImportSummary-contentContainer">
+                {{#if error}}
+                <span class="eaUsermanagement-wImportSummary-errorIcon ebIcon ebIcon_error"></span>
+                {{else}}
+                    {{#if warning}}
+                <span class="eaUsermanagement-wImportSummary-errorIcon ebIcon ebIcon_warning"></span>
+                    {{/if}}
+                {{/if}}
+                <span class="eaUsermanagement-wImportSummary-content ebText_alternative">{{summary}}</span>
+            </div>
+            <div class="eaUsermanagement-wImportSummary-timestampContainer">
+                <span class="eaUsermanagement-wImportSummary-timestamp ebText_alternative">{{timestamp}}</span>
+            </div>
+        </div>
+        <div class="eaUsermanagement-wImportSummary-buttonContainer">
+            <e-element src="widgets/Button" e-id="reportButton" e-options="reportButtonOptions" />
+        </div>
+    </div>
+</div>
+<e-link src="./ImportSummary.less"></e-link>

@@ -1,0 +1,12 @@
+<td class="eaUsermanagement-TgsListButton">
+    <div id="tgs" class="eaUsermanagement-TgsListButton-text eaUsermgmtlib-TgsListButton-tgs" ></div>
+    <div class="eaUsermanagement-TgsListButton-infoIconBox"></div>
+    <div id="buttonContainer" class="eaUsermanagement-TgsListButton-buttonContainer">
+        {{#if data.nodeRole}}
+            <a href="javascript:;"  class="eaUsermanagement-TgsListButton-button">{{Dictionary.view}}</a>
+        {{else}}
+            <button class="ebBtn eaUsermanagement-TgsListButton-button" typs=button>{{Dictionary.view}}</button>
+        {{/if}}
+    </div>
+</td>
+<e-link src="./TgsListButton.less"></e-link>

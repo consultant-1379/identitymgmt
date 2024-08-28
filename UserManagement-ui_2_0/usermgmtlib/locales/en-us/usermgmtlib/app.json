@@ -1,0 +1,129 @@
+{
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "notAssignable": "Not Assignable",
+    "not_assignable": "Not Assignable",
+    "view": "View",
+    "userProfile": "User Profile",
+    "role": "Role",
+    "passwordPolicies": {
+        "header": "Local Password Policies:",
+        "maximumLength": "The maximum length of password is ",
+        "minimumLength": "The minimum length of password is ",
+        "minimumLowerCase": "The minimum lowercase letter(s) is ",
+        "minimumUpperCase": "The minimum uppercase letter(s) is ",
+        "minimumDigits": "The minimum digit(s) is ",
+        "minimumSpecialChars": "The minimum special character(s) is ",
+        "list_of_special_char": ". List of special characters: ! \" # $ % ^ & ' ( ) * + , / | : ; < > ? @ = [ ] ` ~ { } - _ . \\",
+        "maximumRepeatingChars": "The maximum repeating character(s) is ",
+        "maximumConsecutiveChars": "The maximum consecutive character(s) is ",
+        "mustNotContainUserId": "Must not contain Username, Name or Surname ",
+        "mustNotContainDictionaryWords": "Must not contain dictionary words",
+        "mustNotContainUnsupportedChars" : "Every character in password must be one of : a-z, A-Z, 0-9,! \" # $ % ^ & ' ( ) * + , / | : ; < > ? @ = [ ] ` ~ { } - _ . \\",
+        "default": "Password Policies must be fulfilled"
+    },
+    "validator": {
+        "username": {
+            "must_be_specified": "Username required",
+            "cannot_contain_characters": "Cannot contain: ",
+            "use_only_characters": "Use only: a-z, A-Z, 0-9, _, -, .",
+            "to_long": "The maximum length of username is 32",
+            "cannot_be": "The username cannot be: '{0}'",
+            "username_already_exist": "This username already exists. Please specify a different name."
+        },
+        "password": {
+            "enter_pass_and_reppass": "Password and Repeat Password required",
+            "enter_password": "You must enter Password",
+            "passwords_must_match": "Passwords must match",
+            "policies_must_fulfilled": "Passwords polices must be fulfilled"
+        },
+        "name": {
+            "must_be_specified": "Name required"
+        },
+        "surname": {
+            "must_be_specified": "Surname required"
+        },
+        "email": {
+            "must_be_specified": "Email address required",
+            "invalid_email": "Invalid email address"
+        },
+        "roles": {
+            "conflict": "Invalid combination of roles detected. Please unassign roles in conflict",
+            "assigned": "Roles must be assigned"
+        },
+        "pwdMaxAge": {
+            "must_be_specified": "Input is empty",
+            "policies_must_fulfilled": "Invalid value. Must be integer with valid range: 1-180"
+        },
+        "pwdExpireWarning": {
+            "must_be_specified": "Input is empty",
+            "policies_must_fulfilled": "Invalid value. Must be integer with valid range: 0-14",
+            "must_be_less_than": "Value is not less than Number of days password is valid"
+        }
+    },
+    "responseDialog": {
+        "fail_header": "Cannot force change password(s) for user(s)",
+        "partial_success_header": "Force change password results",
+        "user": "User"
+    },
+    "deleteUser": {
+        "failHeader": "Cannot delete user(s)",
+        "partialSuccessHeader": "Delete results",
+        "userDeleteSuccess": "User deleted",
+        "multipleUsersDeleteSuccess": "Users deleted ({0})",
+        "deleteUsersConfirmationHeader": "Confirm Delete",
+        "errorGetUsersSession": "Error: Problem with get information about users session",
+        "deleteZeroUsersAllLoggin": "All users are logged in. Selected users haven't been deleted",
+        "active": "Active",
+        "inactive": "Inactive"
+    },
+    "confirmationDeleteSummaryList": {
+        "info": "Are you sure you want to delete the selected user(s)?",
+        "columnHeader": "Delete User",
+        "deleteAllUserCaption": "Delete",
+        "deleteCancelCaption": "Cancel"
+    },
+    "flyoutPanel": {
+        "tgAssignListEmptyErrorMessage": "Assign roles by selecting roles from the list below and assign target groups by clicking ‘Assign/View Target Group’ button.",
+        "tgAssignListEmptyFlyoutPanelErrorMessage": "At least one Target Group must be assigned",
+        "newRoleInfoPopup": "<b>Assign Manually</b>: User must manually assign at least one Target Group. <br /> <b>Assign ALL</b>: Predefined Target Group assigns all Network Elements. <br /><b>Assign NONE</b>: Predefined Target Group assigns no Network Elements.",
+        "add": "Add",
+        "addAll": "Add all",
+        "remove": "Remove",
+        "removeAll": "Remove all",
+        "source": {
+            "filter": "Type to find event",
+            "title": "Available Target Groups",
+            "titleToUnassign": "Target Groups to Unassign"
+        },
+        "destination": {
+            "filter": "Type to find event",
+            "title": "Assigned Target Groups"
+        },
+        "assignManually": "Assign Manually",
+        "all": "ALL",
+        "none": "NONE",
+        "apply": "Apply",
+        "cancel": "Cancel",
+        "roleName": "Role Name",
+        "inlineWarningMessage1": "Target Group can be assigned only to users which have custom role(s) consisting of specific FM, Topology Browser, CM-CLI, AMOS, ElementManager and CabinetViewer capabilities (see below).",
+        "inlineWarningMessage2": "Assigning Target Group to users with capabilities other than those will result in inconsistent Target Based Access Control (TBAC).",
+        "inlineWarningMessage3": "Only the capabilities on the following resources can be part of the custom role assigned to a user that shall be subject to TBAC: (alarm_export, alarm_overview, alarm_search, open_alarms, nodes, error_event, persistentobjectservice, rootAssociations, topologySearchService, element_manager, amos_em, cm_editor, cm_config, Collections_Public, Collections_Private, CollectionsOthers_Public, SavedSearch_Public, SavedSearch_Private, SavedSearchOther_Public, searchExecutor, modelInformationService, bulkimport, cppinventorysynch_service)."
+    },
+
+    "targetGroupPanel": {
+        "service": "Service Target Groups ({0})",
+        "comTGButton": "COM Target Groups ({0})",
+        "cppTGButton": "Task Profile Target Groups ({0})",
+        "info": "Service Target Groups has to be assigned/unassigned by the related button at the top of the Roles table.",
+        "titleComTG": "Assign COM Target Groups",
+        "titleCppTG": "Assign Task Profile Target Groups",
+        "titleServiceTG": "Assign Service Target Groups",
+        "titleUnassign": "Unassign COM Target Groups",
+        "titleCppUnassign": "Unassign Task Profile Target Groups",
+        "titleUnassignServiceTG": "Unassign Service Target Groups",
+        "flyPanelButton": "Assign/View Target Groups",
+        "flyPanelButtonUnassign": "Unassign/View Target Groups",
+        "tbacWarningMessage": "TBAC, at service level, is supported for users that are assigned only a specific custom role containing specific capabilities. (See ENM Identity and Access Management System Administrator Guide for further information)"
+    }
+}

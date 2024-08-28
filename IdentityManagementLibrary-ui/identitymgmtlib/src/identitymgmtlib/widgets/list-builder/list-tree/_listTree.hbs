@@ -1,0 +1,11 @@
+<div class="eaIdentitymgmtlib-wListTree">
+    {{#if hasTitle}}
+        <h3 class="eaIdentitymgmtlib-wListTree-header" e-id="listTitle">{{labels.title}}</h3>
+    {{/if}}
+    <div class="eaIdentitymgmtlib-wListTree-filter">
+        <input type="text" class="ebInput ebInput_width_full eaIdentitymgmtlib-wListTree-filterInput" e-id="filter" placeholder="{{labels.filter}}"/>
+        <i class="ebIcon ebIcon_close ebIcon_interactive eaIdentitymgmtlib-wListTree-filterIcon" e-id="filterIcon"></i>
+    </div>
+    <div class="eaIdentitymgmtlib-wListTree-tree" e-id="tree"></div>
+</div>
+<e-link src="./_listTree.less"/>

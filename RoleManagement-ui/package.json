@@ -1,0 +1,14 @@
+{
+    "name":"RoleManagement",
+    "version":"1.0.10-SNAPSHOT",
+    "dependencies": {
+        "cdt-build": "*",
+        "cdt-package": "*"
+    },
+    "devDependencies":{
+        "cdt-build":"*",
+        "cdt-package":"*"
+    }
+}
+
+

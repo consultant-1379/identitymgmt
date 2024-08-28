@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document was created with Syntext Serna Free. -->
+<concept xmlns:xsa3="http://dita.oasis-open.org/architecture/2005/" id="Tutorials">
+   <title>Tutorials</title>
+   <abstract>
+      <shortdesc>These tutorials explain how to configure the Target Group Management.</shortdesc>
+   </abstract>
+   <conbody>
+      <section>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/CreateTargetGroup.xml">Create Target Group</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/EditTargetGroup.xml">Edit Target Group</xref>
+         </p>
+<!--
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/IpSecLevelManagement.xml"> Configure IPSec Level</xref>
+         </p>
+-->
+      </section>
+   </conbody>
+</concept>

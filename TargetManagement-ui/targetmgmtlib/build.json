@@ -1,0 +1,34 @@
+{
+    "parent": "$(parentJson)/library.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "targetmgmtlib",
+        "name": "Targetmgmtlib",
+        "version": "1.0.0",
+        "skeleton": "2.1.2",
+        "skeletonType": "library"
+    },
+    "phases": {
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "test",
+                "compile",
+                "compress"
+            ]
+        },
+        "package-notest": {
+            "depends": [
+                "clean",
+                "analyze",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "clientsdk": "1.90.1",
+        "scopingpanel": "1.29.1"
+    }
+}

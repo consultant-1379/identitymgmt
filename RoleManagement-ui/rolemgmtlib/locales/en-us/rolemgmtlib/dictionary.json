@@ -1,0 +1,91 @@
+{
+  "roleForm": {
+    "role_status_enabled": "Enabled",
+    "role_status_disabled": "Disabled",
+    "role_status_disabledassignment": "Nonassignable",
+    "role_type": "Role Type",
+    "role_status": "Status",
+    "role_name": "Name",
+    "role_description": "Description",
+    "description_placeholder": "Enter a role description",
+    "name_placeholder": "Enter a role name",
+    "create_role_header": "Details",
+    "custom": "Custom Role",
+    "com": "COM Role",
+    "comalias": "COM Role Alias",
+    "system": "ENM System Role",
+    "cpp": "Task Profile Role",
+    "type_not_selected": "Select from list",
+    "disabledassignment_status_tooltip": "Cannot assign User to the Role"
+  },
+  "compareRoleForm": {
+        "status": "Status",
+        "description": "Description",
+        "actions": "Different actions",
+        "status1": "status for role #1",
+        "status2": "status for role #2",
+        "description1": "description for role #1",
+        "description2": "description for role #2",
+        "actions1": "actions for role #1",
+        "actions2": "actions for role #2",
+        "roleName1": "roleName for role #1",
+        "roleName2": "roleName for role #2",
+        "noRoleTittle": "Cannot load role '{0}' ",
+        "noRoleMessage": "Unable to Compare Roles. Role '{0}' cannot be found. Please select a different role or try again later. ",
+        "noRoleExist": "Unable to Compare Roles. Role '{0}' does not exist. Please back to list and choose roles! ",
+        "noRoleExistErrorNumber": "Error {0}.",
+        "noContrastingActions": "There are no contrasting actions",
+        "possibleToDoAction": "Possible to {0} {1} ",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "disabled_assignment": "Nonassignable"
+    },
+  "roleModel": {
+    "name_empty":"Role name required",
+    "name_not_match_pattern": "Use only:a-z, A-Z, 0-9, _, -, .",
+    "name_not_start_with_alphanumeric": "Role name must start with an alphanumeric character",
+    "name_end_with_alphanumeric": "Role name must end with an alphanumeric character",
+    "extend_max_role_name_length": "Role name must not contain more than 64 characters",
+    "description_empty":"Role description required",
+    "description_not_match_pattern": "Description contains forbidden characters",
+    "extend_max_role_description_length": "Role description must not contain more than 255 characters",
+    "type_not_selected": "Selection required",
+    "alias_cannot_be_empty": "Please add at least one COM role."
+  },
+  "notifications":{
+    "role_save_success":"Role successfully saved",
+    "role_save_error": "Something went wrong",
+    "form_has_errors": "There are some errors in the form",
+    "server_error": "Server Error occured"
+  },
+  "basicFilterHeaderCell": {
+    "placeholder": "Type to filter"
+  },
+  "comAliasDetails": {
+    "fetch_error_header": "Fetch COM Roles failed",
+    "fetch_error_content": "Something went wrong during COM Roles fetching. See troubleshooting guide to find possible solutions.",
+    "name_column_header": "Role Name",
+    "description_column_header": "Description",
+    "table_title": "COM Roles",
+    "selected_caption": "Selected"
+  },
+  "customRoleDetails": {
+    "details_title": "Custom Roles",
+    "role_tab_title": "Roles",
+    "custom_role_tab_title": "COM Roles",
+    "capabilities_tab_title": "Capabilities",
+    "task_profile_role_tab_title": "Task Profile Roles",
+    "capabilities_application": "Application",
+    "capabilities_resource": "Resource",
+    "capabilities_operation": "Operation",
+    "capabilities_description": "Description",
+    "roles_name": "Name",
+    "roles_type": "Role Type",
+    "roles_description": "Description",
+    "fetch_roles_error_header": "Fetch roles failed",
+    "fetch_roles_error_content": "Something went wrong during roles fetching. See troubleshooting guide to find possible solutions.",
+    "fetch_capabilities_error_header": "Fetch capabilities failed",
+    "fetch_capabilities_error_content": "Something went wrong during capabilities fetching. See troubleshooting guide to find possible solutions.",
+    "selected_caption": "Selected"
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "title": "User Profile",
+    "details": "Details",
+    "generalInformation": "General Information",
+    "confirmNav": "There are unsaved changes on this page. Do you want to leave the page and discard your changes?",
+    "passwordHeader": "Authentication",
+    "detailHeader": "Details",
+    "username": "Username",
+    "usermgmtprofile": {
+        "create_user_profile": "Create User Profile",
+        "edit_user_profile": "Edit User Profile"
+    },
+    "usernamePolicy": {
+        "header": "Policies",
+        "subheader": "Username Policy:",
+        "textLine1": "The user name can contain small and capital letters, but a user cannot have multiple accounts with case mismatch",
+        "textLine2": "Every character in user name must be one of : a-z, A-Z, 0-9, _, -, .",
+        "textLine3": "The user name cannot match with invalid names.",
+        "infoPopup": "<b>Invalid names</b>: ., .., root, bin, daemon, adm, lp, sync, shutdown, halt, mail, news, uucp, operator, games, gopher, ftp, nobody, rpm, vcsa, dbus, ntp, canna, nscd, rpc, postfix, mailman, named, amanda, postgres, exim, sshd, rpcuser, nsfnobody, pvm, apache, xfs, gdm, htt, mysql, webalizer, mailnull, smmsp, squid, ldap, netdump, pcap, radiusd, radvd, quagga, wnn, dovecot, litp-admin, saslauth, nfsnobody, ovirtagent, cloud-user, tcpdump, haproxy, enmadm, jboss_user, nslcd, ssouser, ldapapplicationuser, npamuser."
+    },
+    "passwordAgeingPolicy": {
+        "subheader": "Password Ageing Policies:",
+        "textLine1": "Validity ranges from 1 to 180 days",
+        "textLine2": "Expiration warning ranges from 0 to 14 days"
+    }
+}

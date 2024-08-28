@@ -1,0 +1,49 @@
+define(function() {
+    'use strict';
+
+    return [{
+        user: "user_enabled_already_logged_1",
+        role: "custom_enabled_1",
+        targetGroup: "tg3"
+    }, {
+        user: "user_enabled_already_logged_2",
+        role: "system_enabled_2",
+        targetGroup: "TG3"
+    }, {
+        user: "user_disabled_already_logged_1",
+        role: "application_enabled_1",
+        targetGroup: "TG3"
+    }, {
+        user: "user_disabled_already_logged_2",
+        role: "application_enabled_2",
+        targetGroup: "TG2"
+    }, {
+        user: "user_disabled_already_logged_2",
+        role: "system_enabled_1",
+        targetGroup: "ALL"
+    }, {
+        user: "user_enabled_never_logged_1",
+        role: "com_enabled_1",
+        targetGroup: "ALL"
+    }, {
+        user: "user_enabled_never_logged_2",
+        role: "com_enabled_2",
+        targetGroup: "TG2"
+    }, {
+        user: "user_disabled_never_logged_1",
+        role: "custom_enabled_1",
+        targetGroup: "ALL"
+    }, {
+        user: "user_disabled_never_logged_2",
+        role: "comalias_enabled_1",
+        targetGroup: "TG2"
+    }, {
+        user: "user_disabled_never_logged_2",
+        role: "custom_enabled_1",
+        targetGroup: "TG3"
+    }, {
+        user: "user_disabled_never_logged_2",
+        role: "application_enabled_2",
+        targetGroup: "TG1"
+    }];
+});

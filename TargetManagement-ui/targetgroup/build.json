@@ -1,0 +1,68 @@
+{
+    "parent": "$(parentJson)/app.json",
+    "defaultPhase": "package",
+    "properties": {
+        "package": "targetgroup",
+        "name": "Targetgroup",
+        "version": "1.0.0",
+        "skeleton": "2.1.2",
+        "skeletonType": "app"
+    },
+    "phases": {
+        "copy-bit-lib": {
+            "copy": {
+                "from": "../../Utils/bit/lib",
+                "to": "test/bit/"
+            }
+        },
+        "clean-bit-lib": {
+            "delete": {
+                "target": "test/bit/lib/"
+            }
+        },
+        "copy-identitymgmtlib-bit-steps": {
+            "copy": {
+                "from": "../../IdentityManagementLibrary-ui/identitymgmtlib/test/bit/common/*",
+                "to": "test/bit/common/identitymgmtlib/"
+            }
+        },
+        "copy-targetmgmtlib-bit-steps": {
+            "copy": {
+                "from": "../targetmgmtlib/test/bit/common/*",
+                "to": "test/bit/common/targetmgmtlib/"
+            }
+        },
+        "clean-common-bit-steps": {
+            "delete": {
+                "target": "test/bit/common/"
+            }
+        },
+        "package": {
+            "depends": [
+                "clean",
+                "analyze",
+                "copy-bit-lib",
+                "copy-identitymgmtlib-bit-steps",
+                "copy-targetmgmtlib-bit-steps",
+                "test",
+                "compile",
+                "compress"
+            ]
+        },
+        "package-notest": {
+            "depends": [
+                "clean",
+                "analyze",
+                "copy-bit-lib",
+                "copy-identitymgmtlib-bit-steps",
+                "copy-targetmgmtlib-bit-steps",
+                "compile",
+                "compress"
+            ]
+        }
+    },
+    "dependencies": {
+        "clientsdk": "1.90.1",
+        "scopingpanel": "1.29.1"
+    }
+}

@@ -1,0 +1,19 @@
+<div class="eaUsermanagement-ProfileSummaryRoles-RowContent">
+    <table class="ebList ebList_striped eaUsermanagement-ProfileSummaryRoles-RowContent-list">
+     {{#each data}}
+      <tr>
+        <td class="eaUsermanagement-ProfileSummaryRoles-RowContent-type-label">{{label}}</td>
+        <td class="eaUsermanagement-ProfileSummaryRoles-RowContent-type-value">
+        {{value}}
+        <span>
+            {{#if flyoutoptions.tgs}}
+            <e-element src="../TgsListButton/TgsListButton" e-id="viewButton" class="eaUsermanagement-ProfileSummaryRoles-RowContent-viewButton" e-options="data[{{@index}}].flyoutoptions"></e-element>
+            {{/if}}
+            </span>
+        </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<e-link src="./profilesummaryrolerowcontent.less" />
+

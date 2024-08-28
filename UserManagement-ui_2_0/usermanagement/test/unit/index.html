@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                i18n:  {
+                    localesDir: "../../locales",
+                    locales: ["en-us"]
+                }
+            },
+            tests: [
+                "Usermanagement",
+                "Dictionary",
+                "widgets/datecell/DateCell",
+                "widgets/filterWidget/FilterWidget",
+                "ActionsManager",
+                "widgets/selectAllNotification/SelectAllNotification",
+                "widgets/selectAllNotification/SelectAllNotificationView",
+                "widgets/ProfileSummaryRoles/ProfileSummaryRoles",
+                "widgets/importWidgets/notificationsFlyout/NotificationsFlyout",
+                "widgets/importWidgets/analysisDialog/AnalysisDialog",
+                "widgets/importWidgets/importAnalysis/ImportAnalysis",
+                "widgets/importWidgets/expandedImportNotification/ExpandedImportNotification",
+                "widgets/importWidgets/usernameList/UsernameList",
+                "widgets/importWidgets/importProgressBar/ImportProgressBar",
+                "widgets/federatedStatusNotification/FederatedStatusNotification",
+                "regions/mainregion/MainRegion",
+                "regions/mainregion/MainRegionView",
+                "regions/ProfileSummary/ProfileSummary",
+                "DataHandler",
+                "filters/CredentialsStatusFilterComparator",
+                "filters/LoginFilterComparator",
+                "filters/PwdAgeFilterComparator",
+                "filters/CustomPwdAgeFilterComparator"
+            ]
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

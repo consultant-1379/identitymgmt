@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="About">
+    <title>About</title>
+    <conbody>
+        <dl>
+            <dlentry id="appName">
+                <dt><b>App</b></dt>
+                <dd>User Management</dd>
+            </dlentry>
+            <dlentry id="productNumber">
+                <dt><b>Product Number</b></dt>
+                <dd>CNA 403 3016 R1A</dd>
+            </dlentry>
+            <dlentry id="version">
+                <dt><b>Version</b></dt>
+                <dd>{{version}}</dd>
+            </dlentry>
+          <dlentry id="link">
+                <dt><b>App Link</b></dt>
+                <dd>#usermanagement</dd>
+            </dlentry>
+        </dl>
+
+    </conbody>
+</concept>

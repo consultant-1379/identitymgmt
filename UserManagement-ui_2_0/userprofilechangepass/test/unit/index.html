@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit tests</title>
+    <script src="../../_tools/index.js"></script>
+    <script src="../../.cdt/require.config.js"></script>
+    <script>
+        loadTestDependencies({
+            requireConfig: {
+                baseUrl: "../../src",
+                i18n:  {
+                    localesDir: "../../locales",
+                    locales: ["en-us"]
+                }
+            },
+            tests: [
+                "Userprofilechangepass",
+                "Dictionary",
+                "regions/mainregion/MainRegion",
+                "widgets/UserProfileChangePassWidget/UserProfileChangePassWidget"
+            ]
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

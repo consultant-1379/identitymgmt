@@ -1,0 +1,130 @@
+.eaTargetmgmtlib{
+
+    &-targetgroupForm { 
+        &-entry{
+            margin: 12px;
+            &_error{
+                display:none;
+            }
+        }
+
+        &-detailsContainerBox {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            width: calc(50% - 3px);
+        }
+
+        &-policiyContainerBox {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(45% - 3px);
+            max-width: 546px;
+            float: right;
+            margin-left: 5%;
+        }
+
+        &-targetgroupnamePolicy {
+
+            &-container {
+                margin-top: 2px;
+                background: #fafafa;
+                max-width: 546px;
+                padding: 2px 16px 0 15px;
+
+                &-header {
+                    font-weight: bold;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                }
+
+                &-textField {
+                    margin-bottom: 5px;
+                    padding: 3px;
+
+                    &-text {
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 586px) {
+
+            &-detailsContainerBox {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                width: 100%;
+            }
+
+            &-policiyContainerBox {
+                display: inline-block;
+                vertical-align: top; 
+                width: 100%;            
+            }
+        }
+
+        @media screen and (min-width: 460px){
+            &-entryFlex{
+                display: flex;
+            }
+
+        }
+
+        @media screen and (max-width: 459px){
+            &-entryFlex{
+                display: flex;
+                flex-flow: row wrap;
+            }
+        }
+
+        @media screen and (max-width: 369px){
+            &-statusWrapper{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 370px){
+            &-statusWrapper{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &-entryLabel{
+            min-width: 100px;
+        }
+
+        &-statusOptionLabel{
+            display: inline-block;
+            margin-right: 12px;
+        }
+
+        &-nameStatus,
+        &-descriptionStatus,
+        &-typeStatus{
+            display:none;
+        }
+
+        &-inputWrapper{
+            width: 100%;
+            max-width: 350px;
+            min-width: 180px;
+            margin-right: 12px;
+        }
+
+        &-type{
+            display: inline-block;
+        }
+
+        &-topologyDataWidgetWrapper{
+            margin-top: 50px;
+        }
+    }
+
+    &-textarea_borderColor_red{
+        border: 1px solid #E32119;
+    }
+}

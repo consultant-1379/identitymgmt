@@ -1,0 +1,67 @@
+<div class="eaRolemgmtlib-roleForm">
+    <h2 class="eaRolemgmtlib-roleForm-header">{{roleForm.create_role_header}}</h2>
+    <div class="eaRolemgmtlib-roleForm-content">
+        <div class="eaRolemgmtlib-roleForm-entry">
+            <label class="ebLabel eaRolemgmtlib-roleForm-entryFlex">
+                <span class="ebLabel-text ebLabel-text_required eaRolemgmtlib-roleForm-entryLabel">{{roleForm.role_name}}</span>
+                <div class="eaRolemgmtlib-roleForm-inputWrapper eaRolemgmtlib-roleForm-nameWrapper">
+                    <input type="text" class="ebInput ebInput_width_full eaRolemgmtlib-roleForm-name" placeholder="{{roleForm.name_placeholder}}"/>
+                    <span class="ebInput-status eaRolemgmtlib-roleForm-nameStatus">
+                        <span class="ebInput-statusError"></span>
+                        <span class="ebInput-statusOk">OK</span>
+                    </span>
+                </div>
+            </label>
+        </div>
+        <div class="eaRolemgmtlib-roleForm-entry">
+            <label class="ebLabel eaRolemgmtlib-roleForm-entryFlex">
+                <span class="ebLabel-text ebLabel-text_required eaRolemgmtlib-roleForm-entryLabel">{{roleForm.role_description}}</span>
+                <div class="eaRolemgmtlib-roleForm-inputWrapper eaRolemgmtlib-roleForm-descriptionWrapper">
+                    <textarea class="ebTextArea ebTextArea_width_full eaRolemgmtlib-roleForm-description" rows="4" placeholder="{{roleForm.description_placeholder}}"></textarea>
+                    <span class="ebInput-status eaRolemgmtlib-roleForm-descriptionStatus">
+                        <span class="ebInput-statusError"></span>
+                        <span class="ebInput-statusOk">OK</span>
+                    </span>
+                </div>
+            </label>
+        </div>
+        <div class="eaRolemgmtlib-roleForm-entry eaRolemgmtlib-roleForm-entryFlex">
+            <label class="ebLabel eaRolemgmtlib-roleForm-entryLabel">
+                <span class="ebLabel-text">{{roleForm.role_status}}</span>
+            </label>
+
+            <div class="eaRolemgmtlib-roleForm-inputWrapper eaRolemgmtlib-roleForm-statusWrapper">
+                <label class="eaRolemgmtlib-roleForm-statusOptionLabel">
+                    <input class="ebRadioBtn" type="radio" name="roleStatus" value="ENABLED" checked="true"/>
+                    <span class="ebRadioBtn-inputStatus"></span>
+                    <span class="ebRadioBtn-label">{{roleForm.role_status_enabled}}</span>
+                </label>
+                <label class="eaRolemgmtlib-roleForm-statusOptionLabel">
+                    <input class="ebRadioBtn" type="radio" name="roleStatus" value="DISABLED"/>
+                    <span class="ebRadioBtn-inputStatus"></span>
+                    <span class="ebRadioBtn-label">{{roleForm.role_status_disabled}}</span>
+                </label>
+                <label class="eaRolemgmtlib-roleForm-statusOptionLabel eaRolemgmtlib-roleForm-nonassignable" >
+                    <input class="ebRadioBtn" type="radio" name="roleStatus" value="DISABLED_ASSIGNMENT" title="{{roleForm.disabledassignment_status_tooltip}}"/>
+                    <span class="ebRadioBtn-inputStatus"></span>
+                    <span class="ebRadioBtn-label">{{roleForm.role_status_disabledassignment}}</span>
+                </label>
+            </div>
+        </div>
+        <div class="eaRolemgmtlib-roleForm-entry eaRolemgmtlib-roleForm-entryFlex">
+          <label class="ebLabel eaRolemgmtlib-roleForm-entryLabel">
+              <span class="ebLabel-text ebLabel-text_required">{{roleForm.role_type}}</span>
+          </label>
+          <div class="eaRolemgmtlib-roleForm-typeWrapper">
+            <span class="ebInput-status eaRolemgmtlib-roleForm-typeStatus">
+                <span class="ebInput-statusError"></span>
+                <span class="ebInput-statusOk">OK</span>
+            </span>
+          </div>
+
+        </div>
+
+    </div>
+    <div class="eaRolemgmtlib-roleForm-comRolesList"></div>
+    <div class="eaRolemgmtlib-roleForm-customRolesDetails"></div>
+</div>

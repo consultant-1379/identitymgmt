@@ -1,0 +1,29 @@
+<div class="eaUserprofile-wUserProfileEditWidget">
+    <div class="eaUserprofile-wUserProfileEditWidget-detailsContainer">
+        <div class="eaUserprofile-wUserProfileEditWidget-details">
+            <div class="eaUserprofile-wUserProfileEditWidget-details-userDetails">
+                <label class="eaUserprofile-wUserProfileEditWidget-details-userDetails-label">{{Dictionary.userProfileTable.username}}</label>
+                <span class="eaUserprofile-wUserProfileEditWidget-details-userDetails-span" id="username"></span>
+            </div>
+            {{#each inputFields}}
+                {{#unless this.editable}}
+                    <div class="eaUserprofile-wUserProfileEditWidget-details-userDetails">
+                        <label class="eaUserprofile-wUserProfileEditWidget-details-userDetails-label">{{this.name}}</label>
+                        <span class="eaUserprofile-wUserProfileEditWidget-details-userDetails-span" id="{{this.id}}"></span>
+                    </div>
+                {{else}}
+                    <div class="eaUserprofile-wUserProfileEditWidget-details-innerWrapper">
+                        <label class="eaUserprofile-wUserProfileEditWidget-details-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+                        <div class="eaUserprofile-wUserProfileEditWidget-details-input-content">
+                            <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/InputWidget/InputWidget" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+                            {{#if this.validator}}
+                            <e-element e-id="{{this.validator}}" src="usermgmtlib/widgets/ValidationResultWidget/ValidationResultWidget"></e-element>
+                            {{/if}}
+                        </div>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+<e-link src="./UserProfileEditWidget.less" />

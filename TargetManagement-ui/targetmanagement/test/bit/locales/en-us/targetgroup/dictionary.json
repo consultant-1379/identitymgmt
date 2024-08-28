@@ -1,0 +1,62 @@
+{
+    "errorCodes": {
+        "200": {
+            "default": "Success"
+        },
+        "201": {
+            "default": "Created"
+        },
+        "204": {
+            "default": "No Content"
+        },
+        "403": {
+            "default": "Forbidden",
+            "internalCodes": {
+                "1.14": "Insufficient privileges"
+            }
+        },
+        "404": {
+            "default": "Not found",
+            "internalCodes": {
+                "1.13": "Target group not found"
+            }
+        },
+        "422": {
+            "default": "Unprocessable Entity"
+        },
+        "500": {
+            "default": "Internal Server Error"
+        },
+        "503": {
+            "default": "Service Unavailable"
+        },
+        "unexpected": "Code {0} - Unexpected reason"
+    },
+    "headers": {
+        "create": "Create Target Group",
+        "edit": "Edit Target Group",
+        "view": "Target Group Details"
+    },
+    "notifications": {
+        "targetgroupCreated": "Target Group Successfully Created",
+        "targetgroupEdited": "Target Group Successfully Edited",
+        "targetsLoaded": "New targets loaded"
+    },
+    "errorSummary": {
+        "title": "Save Target Group",
+        "elementColumnName": "Operation",
+        "actionUpdateDescription": "Update description",
+        "actionUpdateTargetGroups": "Update targets"
+    },
+    "ok": "OK",
+    "error": "Error",
+    "details": "Details",
+    "save": "Save",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "removeNode": "Remove Node",
+    "confirmNav": "There are Unsaved Changes on this page. Do you want to leave the page and discard your Changes?",
+    "nameNotUnique": "Target Group name must be unique",
+    "errorTargetGroupNotCreated": "Unexpected error. Target Group was not created",
+    "unexpectedError": "Unexpected error occurred"
+}

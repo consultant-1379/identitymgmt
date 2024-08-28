@@ -1,0 +1,52 @@
+{
+    "title": "User Profile",
+    "editPassword": "Change Password",
+    "editData": "Edit Data",
+    "credentials": "Get Credentials",
+    "save": "Save",
+    "disabled": "Disabled",
+    "enabled": "Enabled",
+    "cancel": "Cancel",
+    "neverLoggedIn": "Never",
+    "userprofile":{
+        "general_information": "General Information",
+        "details": "Details",
+        "view_user_profile": "User Profile",
+        "view_user_roles_header": "User Roles",
+        "edit_user_profile": "Edit Profile",
+        "edit_user_profile_roles_header": "Roles"
+    },
+    "userProfileTable": {
+        "username" : "Username",
+        "name" : "Name",
+        "surname" : "Surname",
+        "description" : "Description",
+        "email": "Email Address",
+        "status" : "Status",
+        "login": "Previous Login"
+
+    },
+    "errorMessages": {
+        "invalidEmail" : "Invalid email address",
+        "emptyEmail" : "Email address required",
+        "emptyName" : "Name required",
+        "emptySurname" : "Surname required"
+    },
+    "credentialsForm": {
+        "credentialsGetSuccess": "Credentials Successfully Generated",
+        "entityPasswordLabel": "PKI Entity One Time Password",
+        "entityValidationError": "PKI entity does not exist or entity one time password is invalid. Contact your system administrator",
+        "passwordLabel": "Certificate File Password",
+        "confirmPasswordLabel": "Repeat Certificate File Password",
+        "currentUserPasswordLabel": "Current User Password",
+        "invalidPasswordMessage": "Invalid entity or password",
+        "credentialsHeader": "Get Credentials",
+        "credentialsFormatLabel": "Credentials Format",
+        "entityPasswordTooltipContent": "PKI Entity One Time Password is provided by the administrator.",
+        "submitButton": "Submit",
+        "cancelButton": "Cancel",
+        "validator":{
+            "empty_PKIEntity_password": "PKI Entity One Time Password is required"
+        }
+    }
+}

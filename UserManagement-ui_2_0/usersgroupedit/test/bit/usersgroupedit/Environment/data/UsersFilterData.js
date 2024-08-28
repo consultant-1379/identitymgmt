@@ -1,0 +1,89 @@
+define(function() {
+    'use strict';
+
+    return [{
+        'username': 'user_enabled_already_logged_1',
+        'password': '********',
+        'status': 'enabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'lastLogin': '20151125183300+0000',
+        'failedLogins': 0,
+        'passwordChangeTime': '20160701102034+0001'
+    }, {
+
+        'username': 'user_enabled_already_logged_2',
+        'password': '********',
+        'status': 'enabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'lastLogin': '20151125183300+0000',
+        'failedLogins': 0,
+        'passwordChangeTime': '20160701102034+0001'
+    }, {
+        'username': 'user_disabled_already_logged_1',
+        'password': '********',
+        'status': 'disabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'lastLogin': '20151125183300+0000',
+        'failedLogins': 0,
+        'passwordChangeTime': '20160701102034+0001'
+    }, {
+
+        'username': 'user_disabled_already_logged_2',
+        'password': '********',
+        'status': 'disabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'lastLogin': '20151125183300+0000',
+        'failedLogins': 0,
+        'passwordChangeTime': '20160701102034+0001'
+    }, {
+        'username': 'user_enabled_never_logged_1',
+        'password': '********',
+        'status': 'enabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'passwordChangeTime': '20160701122034+0001'
+    }, {
+
+        'username': 'user_enabled_never_logged_2',
+        'password': '********',
+        'status': 'enabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'passwordChangeTime': '20160701122034+0001'
+    }, {
+        'username': 'user_disabled_never_logged_1',
+        'password': '********',
+        'status': 'disabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'passwordChangeTime': '20160701122034+0001'
+    }, {
+
+        'username': 'user_disabled_never_logged_2',
+        'password': '********',
+        'status': 'disabled',
+        'name': 'security',
+        'surname': 'admin',
+        'email': 'security@administrator.com',
+        'previousLogin': null,
+        'passwordChangeTime': '20160701122034+0001'
+    }]
+});

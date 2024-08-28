@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document was created with Syntext Serna Free. -->
+<concept xmlns:xsa3="http://dita.oasis-open.org/architecture/2005/" id="Tutorials">
+   <title>Tutorials</title>
+   <abstract>
+      <shortdesc>These tutorials explain how to act on Users.</shortdesc>
+   </abstract>
+   <conbody>
+      <section>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/createuser.xml">Create User</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/edituser.xml">Edit User</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/EditMultipleUsers.xml">Edit Multiple Users</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/duplicate.xml">Duplicate User</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/changeuserpassword.xml">Change User Local Password</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/import.xml">Import User Profiles</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/export.xml">Export User Profiles</xref>
+         </p>
+         <p>
+            <image href="/resources/Tutorial.svg" alt="Tutorial" /><xref type="task" href="tutorials/migration.xml">Users Migration between ENM Systems</xref>
+         </p>
+      </section>
+   </conbody>
+</concept>

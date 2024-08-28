@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Overview</title>
+    <conbody>
+        <p>
+            A Target is a network element, management system, virtual network function manager or network 
+            function virtualization orchestrator. A Target Group is a logical grouping of targets.
+            Target Groups are then used for granting access to a grouping of network elements, management system, 
+            virtual network function manager or network function virtualization orchestrator.
+        </p>
+        <p>
+            Target Group Management application allows the administrator or operator to perform following operations:
+            <ul>
+                <li>
+                    Define a Target Group
+                </li>
+                <li>
+                    Delete a Target Group
+                </li>
+                <li>
+                    Update an existing Target Group
+                </li>
+            </ul>
+        </p>
+        <p>
+            There are two predefined Target Groups:
+            <ul>
+                <li>
+                    ALL - Target Group containing all targets.
+                </li>
+                <li>
+                    NONE - Target Group containing no targets.
+                </li>
+            </ul>
+        </p>
+        <p>
+            By default, all users in ENM are assigned roles with predefined Target Group ALL, which means the user has privileges on all targets.
+            It is possible to define a target group for a user to allow user to access to a part of ENM network i.e. to only targets in the associated target groups.
+        </p>
+    </conbody>
+</concept>

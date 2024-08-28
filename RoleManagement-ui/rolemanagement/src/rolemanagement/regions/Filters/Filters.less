@@ -1,0 +1,138 @@
+.eaRolemanagement-Filters {
+    height: 100%;
+
+    &-content{
+        max-height: calc(~"100% - 80px");
+        overflow-y: auto;
+    }
+
+    &-applyFilterButtonContainer{
+       padding-top: 10px;
+       padding-bottom: 4px;
+       display: inline-block;
+    }
+
+    &-clearFilterButtonContainer{
+       padding-top: 10px;
+       padding-left: 5px;
+       padding-bottom: 4px;
+       display: inline-block;
+    }
+
+   &-cancelFilterButtonContainer{
+       padding-top: 10px;
+       padding-left: 5px;
+       padding-bottom: 4px;
+       display: inline-block;
+   }
+
+    &-filterReset{
+        float : right;
+
+        &_show_true{
+            display : block !important;
+        }
+
+        &_show_false{
+            display : none !important;
+        }
+
+        &-resetLink{
+            cursor : pointer;
+        }
+    }
+
+   &-searchInput {
+
+      padding-right: 18px;
+
+      &-filterSearchIcon{
+        left: 201px;
+        position: relative;
+        top: -20px;
+      }
+
+      &-searchIcon {
+         &_show_true{
+           display: block !important;
+         }
+
+         &_show_false{
+           display: none !important;
+         }
+      }
+
+      &-filterCloseIcon{
+         left: 201px;
+         position: relative;
+         top: -19px;
+      }
+
+      &-closeIcon {
+         &_show_true{
+           display: block !important;
+         }
+
+         &_show_false{
+           display: none !important;
+         }
+      }
+   }
+
+    &-checkBoxTitle {
+        padding-top: 10px;
+    }
+
+    &-checkBoxEnabled {
+        padding-left: 5px;
+        padding-top: 10px;
+
+       &-enabled {
+            padding: 2px;
+       }
+    }
+
+    &-checkBoxDisabled {
+        padding-left: 5px;
+        padding-top: 10px;
+
+       &-disabled {
+           padding: 2px;
+       }
+    }
+
+    &-checkBoxNonassignable {
+        padding-left: 5px;
+        padding-top: 10px;
+
+       &-nonassignable {
+           padding: 2px;
+       }
+    }
+
+    &-checkBoxNeverLogin {
+        padding-left: 5px;
+        padding-top: 10px;
+
+        &-checkbox {
+            padding: 2px;
+        }
+    }
+
+    &-checkBoxLastLogin {
+        padding-left: 5px;
+        padding-top: 10px;
+
+        &-checkbox {
+            padding: 2px;
+        }
+    }
+
+  &-SectionHeading {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 1rem 0 0 0
+  }
+
+}

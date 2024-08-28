@@ -1,0 +1,284 @@
+{
+    "User": "User",
+    "successful": "Successful",
+    "editPassword": "Change Password",
+    "duplicate_message_text": "Disabled roles will not be assigned.",
+    "forcePasswordChange": "Force Password Change",
+    "disablePasswordChange": "Revoke Force Password Change",
+    "enableUser": "Enable User",
+    "disableUser": "Disable User",
+    "terminateSessions": "Terminate Sessions",
+    "revokeCertificate": "Revoke Certificate",
+    "All": "All",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "notAssignable": "Not Assignable",
+    "not_assignable": "Not Assignable",
+    "save": "Save",
+    "cancel": "Cancel",
+    "name": "Name",
+    "description": "Description",
+    "status": "Status",
+    "details": "Details",
+    "username": "Username",
+    "surname": "Surname",
+    "password": "Local Password",
+    "repeatPassword": "Repeat Local Password",
+    "authMode": "Authentication Mode",
+    "local" : "Local",
+    "remote": "Remote",
+    "federated": "Federated",
+    "email": "Email",
+    "emailAddress": "Email Address",
+    "credentialStatus": "Credential Status",
+    "acknowledge": "Acknowledge",
+    "clear": "Clear",
+    "critical": "Critical",
+    "major": "Major",
+    "minor": "Minor",
+    "warning": "Warning",
+    "indeterminate": "Indeterminate",
+    "cleared": "Cleared",
+    "tableSettings": "Table Settings",
+    "filter": "Filter",
+    "filterPlaceHolder": "Type to filter",
+    "assigned": "Assigned",
+    "notAssigned": "Not Assigned",
+    "role": "Role",
+    "roles": "Roles",
+    "edit": "Edit",
+    "delete": "Delete",
+    "show": "Show",
+    "show_details": "Show Details",
+    "to": "to",
+    "result": "Result",
+    "id": "Id",
+    "timestamp": "Timestamp",
+    "node": "Node",
+    "invalid": "Invalid",
+    "yes": "Yes",
+    "no": "No",
+    "duplicate": "Duplicate",
+    "ok": "OK",
+    "On" : "On",
+    "Off" : "Off",
+    "access_denied": "Access Denied",
+    "no_access_rights_message": "Your Role does not allow you access to this application. Contact your System Administrator to change your access rights or return to the Application Launcher.",
+    "password_note": "Password Policy:",
+    "confirmationSummaryList": {
+        "total": "Total",
+        "resultHeader": "Result"
+    },
+    "tableHeader": {
+        "selectedNone":"Selected (0)",
+        "selected":"Selected ({0}) -",
+        "filtered": "Filter applied - ",
+        "clear": "Clear"
+    },
+    "tableSettingsForm": {
+        "buttons": {
+            "apply": "Apply",
+            "cancel": "Cancel"
+        }
+    },
+    "filters": {
+        "buttons": {
+            "apply": "Apply",
+            "clear": "Clear all Filters",
+            "cancel": "Cancel"
+        },
+        "label": "Filters",
+        "all": "All",
+        "username": {
+            "title": "Username",
+            "placeholder": "Type to filter by username"
+        },
+        "name": {
+            "title": "Name",
+            "placeholder": "Type to filter by name"
+        },
+        "surname": {
+            "title": "Surname",
+            "placeholder": "Type to filter by surname"
+        },
+        "description": {
+            "title": "Description",
+            "placeholder": "Type to filter by description"
+        },
+        "status": {
+            "title": "Status",
+            "enabled": "Enabled",
+            "disabled": "Disabled"
+        },
+        "login": {
+            "title": "Last Login",
+            "never": "Never Logged In",
+            "within": "Logged in within",
+            "days": "days"
+        },
+        "failedLogins": {
+            "title": "Failed Logins",
+            "withfailed": "Yes",
+            "withoutfailed": "No"
+        },
+        "credentialStatus": {
+            "title": "Credential Status",
+            "names": {
+                "active": "ACTIVE",
+                "inactive": "INACTIVE",
+                "not_applicable": "NOT APPLICABLE",
+                "new": "NEW",
+                "deleted": "DELETED",
+                "reissue": "REISSUE"
+            },
+            "active": "Active",
+            "inactive": "Inactive",
+            "new": "New",
+            "deleted": "Deleted",
+            "not_applicable": "Not Applicable"
+        },
+        "passwordExpiration": {
+            "title": "Expired Password",
+            "expired": "Yes",
+            "notExpired": "No"
+        },
+        "passwordAgeing": {
+            "title": "Password Ageing",
+            "system": "System Settings",
+            "custom": "Custom Settings"
+        },
+        "loggedIn": {
+            "title": "Currently Logged In",
+            "yes": "Yes",
+            "no": "No"
+        },
+        "roles": {
+            "title": "Roles",
+            "info": "Select the roles to filter on.<br/><br/>For a selected role you can further specify if the role <br/>needs to be assigned (=) or not assigned (!=) by <br/>selecting the corresponding option in the select box.<br /><br />Click the ‘No Role Assigned’ action to quickly find the <br/>users that don’t have any role assigned at all.",
+            "placeholder": "Type to find roles",
+            "not_role_assigned": "No Role Assigned",
+            "clear": "Clear",
+            "selectBox": {
+                "equals": "Filtering on users with this role assigned",
+                "notEquals": "Filtering on users with this role not assigned"
+            }
+
+        },
+        "authMode": {
+            "title": "Authentication Mode",
+            "local": "Local",
+            "remote": "Remote"
+        }
+    },
+
+    "filterNoResult" : {
+        "title": "No Results Found",
+        "info": "Filters are applied. Try modifying filter criteria."
+    },
+
+    "table_messages": {
+        "error_loading_table": " Error in List",
+        "details": "The data could not be retrieved from the server.",
+        "guide_p1": "Check ",
+        "guide_link": "Troubleshooting guide",
+        "guide_p2": " for help."
+
+    },
+
+    "responsesSummaryList": {
+        "total": "Total",
+        "succeded": "Succeded",
+        "failed": "Failed",
+        "resultHeader": "Result"
+    },
+
+    "tableSelectionInfoWidget": {
+        "All": "All",
+        "defaultItemSingularPredicate": "Item",
+        "defaultItemPluralPredicate": "Items",
+        "selectOnAllPages": "Select all {0} on all pages.",
+        "clearSelection": "Clear Selection.",
+        "itemSelected": "{0} {1} selected.",
+        "allItemsSelected": "All {0} {1} are selected.",
+        "itemsSelected": "{0} {1} are selected.",
+        "selectOnCurrentPages": "Select all items on this page"
+    },
+
+    "typeCell": {
+        "RoleTypeCom": "COM Role",
+        "RoleTypeAlias": "COM Role Alias",
+        "RoleTypeCustom": "Custom Role",
+        "RoleTypeSystem": "ENM System Role",
+        "RoleTypeCpp": "Task Profile Role"
+    },
+    "roleTable": {
+        "columns": {
+            "name": "Name",
+            "type": "Type",
+            "status": "Status",
+            "description": "Description",
+            "tgs": "Target Groups Assigned",
+            "tgsToAssign": "Target Groups To Assign",
+            "tgsToUnassign": "Target Groups To Unassign"
+        },
+        "invalid_combination_button_text": "Unassign Roles in conflict",
+        "searchPlaceholder": "Type to find roles",
+        "title": "Roles and Target Groups",
+        "titleToUnassign": "Roles and Target Groups",
+        "roles": "Roles",
+        "roles2": "Roles ({0})",
+        "roles_assigned": "Assigned",
+        "roles_assigned2": "Assigned ({0})",
+        "assign_roles": "Assign Roles",
+        "unassign_roles": "Unassign Roles",
+        "all": "Assign All",
+        "none": "Unassign All",
+        "clearSelection": "Clear Selection",
+        "notApplicable": "Not applicable",
+        "create_role": "Create a New Role",
+        "role_not_here": " The Role you were looking for is not here?",
+        "create_target_group": "Create a New Target Group",
+        "target_group_not_here": " The Target Group you were looking for is not here?",
+        "infoPopup": "Assign roles by selecting roles from the list below and assign target groups by clicking 'Assign/View Target Group' button.",
+        "infoPopupUnassign": "Unassign roles by unselecting roles from the list below and unassign target groups by clicking 'Unassign/View Target Group' button.",
+        "role_can_be_in_conflict_with": "Role can be in conflict with: {0}",
+        "edit_role_link": "Edit",
+        "available_roles": "Available roles",
+        "role_name": "Role Name",
+        "assigned_roles": "Assigned roles",
+        "assigned_roles2": "Assigned roles ({0})",
+        "roles_to_assign": "Roles to assign",
+        "roles_to_unassign": "Roles to unassign",
+        "select_roles": "Select roles",
+        "service_target_groups": "Service Target Groups",
+        "service_target_groups1": "Service Target Groups ({0})",
+        "service_target_groupsToAssign": "Service Target Groups to Assign ({0})",
+        "service_target_groupsToUnassign": "Service Target Groups to Unassign ({0})"
+    },
+    "userPasswordAgeing": {
+        "pwdAgeingHeader": "Password Ageing",
+        "globalPwdAge": "Use System Settings",
+        "customizedPasswordAgeingEnable": "Customize Password Ageing",
+        "passwordAgeingEnable": "Enable Password Ageing",
+        "pwdMaxAge": "Number of days password is valid",
+        "pwdExpireWarning": "Number of days to password expiration warning",
+        "infoPopup": "<strong>Use System Settings</strong> The selected user(s) will have password ageing set to the system settings</br> <strong>Customize Password Ageing</strong> The selected user(s) will have password ageing customized. When this choice is selected, values from the system settings are initially proposed as a starting point for the customization</br> <strong>Enable Password Ageing</strong> When manually unchecked the selected user(s) will have a password that will never expire",
+        "infoPopupMultipleIntro": "Select this checkbox if you want password ageing to be modified for the selected user(s).</br>"
+    },
+    "odpTable": {
+        "title": "ODP Profiles",
+        "columns": {
+            "name": "Application Name",
+            "profile": "Profile Name",
+            "description": "Description"
+        },
+        "searchPlaceholder": "Type to find ODP profiles",
+        "odpProfiles": "ODP Profiles",
+        "odpProfiles2": "ODP Profiles ({0})",
+        "notApplicable": "Not applicable",
+        "infoPopup": "ODP profile list for application."
+    },
+    "odpDefaultProfile": "Use System Settings",
+    "odpDefaultProfileDescription": "The user will use the smaller ODP profile"
+
+}

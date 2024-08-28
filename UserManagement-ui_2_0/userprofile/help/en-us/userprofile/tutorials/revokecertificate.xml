@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorial1">
+    <title>User Interface</title>
+    <conbody>
+        <section>
+            <title id="RevokeCertificate">Revoke User Certificate</title>
+            <p>
+                A User Certification is revoked by clicking the <b>Revoke Certificate</b> link from the action bar in the User Profile. The User is no longer able to make SSL based communication with a network node.
+ 				Current implementation revokes all User assigned certifications.
+            </p>
+            <p>
+                The User will not be able to be authenticated by network node. In particular credential is required to start the SSL session on the node.
+            </p>
+
+            <sectiondiv>
+                <p>
+                    <b>Prerequisities</b>
+                </p>
+                <p>
+                    The User has a certificate.
+                </p>
+            </sectiondiv>
+       	</section>
+    </conbody>
+</concept>

@@ -1,0 +1,77 @@
+.eaRolemgmtlib{
+
+    &-roleForm {
+        &-entry{
+            margin: 12px;
+        }
+
+        @media screen and (min-width: 460px){
+            &-entryFlex{
+                display: flex;
+            }
+        }
+
+        @media screen and (max-width: 459px){
+            &-entryFlex{
+                display: flex;
+                flex-flow: row wrap;
+            }
+        }
+
+        @media screen and (max-width: 369px){
+            &-statusWrapper{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 370px){
+            &-statusWrapper{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &-entryLabel{
+            min-width: 100px;
+        }
+
+        &-statusOptionLabel{
+            display: inline-block;
+            margin-right: 12px;
+        }
+
+        &-nameStatus,
+        &-descriptionStatus,
+        &-typeStatus{
+            display:none;
+        }
+
+        &-inputWrapper{
+            width: 100%;
+            max-width: 350px;
+            min-width: 180px;
+            margin-right: 12px;
+        }
+
+        &-type{
+            display: inline-block;
+        }
+
+        &-error {
+            display: none;
+
+            &-ebNotification-content {
+              width: 100%;
+            }
+          }
+
+          &-error_displayed {
+            display: block;
+          }
+    }
+
+    &-textarea_borderColor_red{
+        border: 1px solid #E32119;
+    }
+}

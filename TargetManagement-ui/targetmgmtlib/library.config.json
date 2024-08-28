@@ -1,0 +1,12 @@
+{
+  "exports": {
+    "targetmgmtlib/widgets/TargetgroupForm": "targetmgmtlib/widgets/TargetgroupForm/TargetgroupForm",
+    "targetmgmtlib/model/TargetgroupModel": "targetmgmtlib/model/TargetgroupModel",
+    "targetmgmtlib/widgets/TargetsListWidget": "targetmgmtlib/widgets/TargetsList/TargetsListWidget",
+    "targetmgmtlib/NetworkExplorerManager": "targetmgmtlib/utils/NetworkExplorerManager",
+    "targetmgmtlib/ServerResponseCodes": "targetmgmtlib/utils/ServerResponseCodes"
+  },
+  "i18n": {
+    "locales": ["en-us"]
+  }
+}

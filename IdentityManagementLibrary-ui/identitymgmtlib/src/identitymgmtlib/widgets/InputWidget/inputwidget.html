@@ -1,0 +1,11 @@
+<div class="eaIdentitymgmtlib-wInputWidget eaIdentitymgmtlib-wInputWidget-{{identifier}}">
+    <input type="{{type}}" class="ebInput eaIdentitymgmtlib-wInputWidget-input {{subclass}}" value="" autoComplete="off" maxlength={{maxlength}}></input>
+    {{#if this.info}}
+        <span class="eaIdentitymgmtlib-wInputWidget-info  eaIdentitymgmtlib-infoIconHolder-{{identifier}}"></span>
+    {{/if}}
+    {{#if this.passwordEye}}
+        <span class="ebIcon eaIdentitymgmtlib-wInputWidget-eye"></span>
+    {{/if}}
+    <div class="eaIdentitymgmtlib-wInputWidget-clear"></div>
+</div>
+<e-link src="./inputwidget.less"/>

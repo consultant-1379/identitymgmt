@@ -1,0 +1,20 @@
+<div class="elIdentitymgmtlib-radioListFilterPlugin">
+    {{#if addHeader}}
+    <label class="elIdentitymgmtlib-radioListFilterPlugin-header">{{title}}</label>
+    {{/if}}
+    <ul>
+        {{#each elements}}
+        <li class="elIdentitymgmtlib-radioListFilterPlugin-listItem elIdentitymgmtlib-radioListFilterPlugin-listItem-{{id}} ebList-item" data-id="{{id}}">
+            <label>
+                <input class="ebRadioBtn elIdentitymgmtlib-radioListFilterPlugin-listItem-{{id}}-input" 
+                name="{{group}}" type="radio" e-id="{{id}}" />
+                <span class="ebRadioBtn-inputStatus"></span>
+                <span class="ebRadioBtn-label">
+                        <span class="ebCheckbox-label-text-{{id}}" title="{{title}}">{{title}}</span>
+                </span>
+            </label>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+<e-link src="./radioListFilterPlugin.less"></e-link>

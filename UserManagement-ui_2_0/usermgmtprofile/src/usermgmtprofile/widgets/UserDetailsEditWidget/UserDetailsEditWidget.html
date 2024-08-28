@@ -1,0 +1,53 @@
+<div class="eaUsermgmtprofile-wUserDetailsEditWidget">
+    <div class="eaUsermgmtprofile-wUserDetailsEditWidget-detailsContainer">
+        <h3>{{Dictionary.details}}</h3>
+        <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details">
+            <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-userDetails">
+                <label class="eaUsermgmtprofile-wUserDetailsEditWidget-details-userDetails-label {{#if this.required}}ebLabel-text_required{{/if}}">{{Dictionary.username}}</label>
+                <span class="eaUsermgmtprofile-wUserDetailsEditWidget-details-userDetails-span" id="username"></span>
+            </div>
+            {{#each inputFields}}
+            <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-innerWrapper">
+                <label class="eaUsermgmtprofile-wUserDetailsEditWidget-details-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+                <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-input-content">
+                    {{#if this.checkbox}}
+                        <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/CheckboxWidget/CheckboxWidget" identifier="{{this.id}}" type="{{this.type}}" on-label="{{this.onLabel}}" off-label="{{this.offLabel}}" on-value="{{this.onValue}}" off-value="{{this.offValue}}"></e-element>
+                    {{else}}
+                        {{#if this.textarea}}
+                            <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/TextareaWidget/TextareaWidget" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+                        {{else}}
+                            <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/InputWidget/InputWidget" identifier="{{this.id}}" type="{{this.type}}" maxlength="{{this.maxlength}}"></e-element>
+                        {{/if}}
+                    {{/if}} {{#if this.validator}}
+                    <e-element e-id="{{this.validator}}" src="usermgmtlib/widgets/ValidationResultWidget/ValidationResultWidget"></e-element>
+                    {{/if}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-passwordBox eaUsermgmtprofile-wUserDetailsEditWidget-detailsContainer">
+        <h3 class="eaUsermgmtprofile-wUserDetailsEditWidget-details-subheader">{{Dictionary.passwordHeader}}</h3>
+        {{#each inputPasswordFields}}
+        <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-innerWrapper">
+            <label class="eaUsermgmtprofile-wUserDetailsEditWidget-details-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+            <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-input-content">
+            {{#if this.selectBox}}
+                <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/SelectBoxWidget/SelectBoxWidget" e-options="inputPasswordFields[{{@index}}].sbOptions" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+            {{/if}}
+            </div>
+        </div>
+        {{/each}}
+
+        <div class="eaUsermgmtprofile-wUserDetailsEditWidget-details-innerWrapper">
+            <e-element e-id="passwordAgeing"  e-options="passwordAgeingWidget" src="usermgmtlib/widgets/CustomPasswordAgeingWidget/CustomPasswordAgeingWidget" ></e-element>
+        </div>
+
+
+        <div class="eaUsermgmtprofile-wUserDetailsEditWidget-eausermanagementlibrary-userForm-usernamePolicy-container">
+        </div>
+
+
+    </div>
+</div>
+<e-link src="./UserDetailsEditWidget.less" />

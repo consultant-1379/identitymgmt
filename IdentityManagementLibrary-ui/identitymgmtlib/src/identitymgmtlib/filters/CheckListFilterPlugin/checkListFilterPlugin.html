@@ -1,0 +1,20 @@
+<div class="elIdentitymgmtlib-checkListFilterPlugin">
+    {{#if addHeader}}
+    <label class="elIdentitymgmtlib-checkListFilterPlugin-header">{{title}}</label>
+    {{/if}}
+    <ul>
+        {{#each elements}}
+        <li class="elIdentitymgmtlib-checkListFilterPlugin-listItem elIdentitymgmtlib-checkListFilterPlugin-listItem-{{id}} ebList-item" data-id="{{id}}">
+            <label>
+                <input class="ebCheckbox elIdentitymgmtlib-checkListFilterPlugin-listItem-{{id}}-input" type="checkbox" e-id="{{id}}"/>
+                <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">
+                        <span class="ebCheckbox-label-text-{{id}}" title="{{id}}">{{title}}</span>
+                    </span>
+            </label>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<e-link src="./checkListFilterPlugin.less"></e-link>

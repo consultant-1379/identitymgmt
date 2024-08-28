@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorial1">
+    <title>Target Group Management User Interface</title>
+    <conbody>
+<section>
+          <p><xref type="concept" href="#TGM">Target Group Management</xref></p>
+          <p><xref type="concept" href="#CTG">Create Target Group</xref></p>
+          <p><xref type="concept" href="#ETG">Edit Target Group</xref></p>
+          <p><xref type="concept" href="#topology">Topology</xref></p>
+          <p><xref type="concept" href="#searchfornetworkobjects">Search</xref></p>
+          <p><xref type="concept" href="#addcollections">Collections</xref></p>
+          <p><xref type="concept" href="#addsavedsearches">Saved Searches</xref></p>
+          <p><xref type="concept" href="#DTG">Delete Target Groups</xref></p>
+          <p><xref type="concept" href="#VTG">View Target Group</xref></p>
+          <p><xref type="concept" href="#TGMF">Filter Target Groups</xref></p>
+       </section>
+
+       <section>
+            <title id="TGM">Target Group Management</title>
+            <p>
+                The Target Group Management main page lists all the available Target Groups in ENM.
+            </p>
+            <p>
+                <image href="/resources/listtargetgroup/ListTargetGroups.png" alt="ListTargetGroups"/>
+            </p>
+            <p>
+                If the number of defined Target Groups exceeds the number of groups to display, the list can exceed one page.
+            </p>
+
+            <title>Selecting target groups</title>
+            <p>
+                Target groups can be selected separately by clicking the group row or by using the checkbox next to the Target Group name.
+            </p>
+            <p>
+                It is possible to select multiple groups by using the checkboxes or a range of groups by using the <b>Shift</b> key.
+            </p>
+            <p>
+                The first checkbox in the top left column is to select all the groups or deselect all groups that are displayed on the current page.
+            </p>
+            <p>
+                <image href="/resources/listtargetgroup/ListTargetGroupsSelectAll.png" alt="ListTargetGroupsSelectAll"/>
+            </p>
+            <p>
+                After selecting target group(s), additional options appears in top section. The set of available actions depends on selected number of target groups and their types.
+            </p>
+
+            <title>Action bar</title>
+            <p>
+                After selecting group(s), additional options appear in the action bar.
+            </p>
+            <p>
+                <image href="/resources/listtargetgroup/TargetGroupActionBar.png" alt="ActionBar"/>
+            </p>
+            <p>
+                <b>Create Target Group</b> - creating new target group <i>
+                        <xref href="/ui.xml#CTG">(More Information)</xref></i>.
+            </p>
+            <p>
+                <b>Edit</b> - editing target group <i><xref href="/ui.xml#ETG">(More Information)</xref></i>.
+            </p>
+            <p>
+                <b>Delete</b> - deleting target groups  <i><xref href="/ui.xml#DTG">(More Information)</xref></i>.
+            </p>
+            <p>
+                <b>View Target Group</b> - checking details of single target group <i><xref href="/ui.xml#VTG">(More Information)</xref></i>.
+            </p>
+            <p>
+                <b>Filter Target Groups</b> - filtering target groups <i><xref href="/ui.xml#TGMF">(More Information)</xref></i>.
+            </p>
+    </section>
+
+    <section>
+            <title id="CTG">Create Target Group</title>
+            <p>
+                <image href="/resources/createtargetgroup/CreateTargetGroup.jpg" alt="Create Target Group"/>
+            </p>
+            <p>
+                The following fields are mandatory:
+                <ul>
+                    <li><b>Name</b> - target group name is validated against the following rules:
+                        <ul>
+                            <li>must be unique;</li>
+                            <li>must be at least 1 character and no more than 255 characters;</li>
+                            <li>only alphanumeric (upper and lower case), underscore, dash, and dot characters are accepted;</li>
+                            <li>must start with a letter;</li>
+                            <li>must end with alphanumeric character (letter or digit).</li>
+                        </ul>
+                    </li>
+                    <li><b>Description</b> - target group description.</li>
+                </ul>
+            </p>
+            <p>The following errors can occur when defining groups:</p>
+            <sectiondiv>
+                <p>
+                    <ul>
+                        <li>
+                            <p>
+                                Target Group does not comply with naming policies.
+                            </p>
+                            <image href="/resources/createtargetgroup/TargetGroupNameContainsForbiddenCharacters.png" alt="TargetGroupNameContainsForbiddenCharacters"></image>
+                        </li>
+                        <li>
+                            <p>
+                                Target Group name is empty.
+                            </p>
+                            <image href="/resources/createtargetgroup/TargetGroupNameCannotBeEmpty.png" alt="TargetGroupNameCannotBeEmpty"></image>
+                        </li>
+                        <li>
+                            <p>
+                                Target Group description is empty.
+                            </p>
+                            <image href="/resources/createtargetgroup/TargetGroupDescriptionCannotBeEmpty.png" alt="TargetGroupDescriptionCannotBeEmpty"></image>
+                        </li>
+                    </ul>
+                </p>
+            </sectiondiv>
+            <p>Clicking <b>Save</b>, the Target Group is created.</p>
+            <p>Clicking <b>Cancel</b>, an additional dialog is displayed to confirm that changes are not saved.
+            </p>
+            <p>
+                <image href="/resources/createtargetgroup/createTgConfirmation.png" alt="Leave Page confirmation dialog"/>
+            </p>
+        </section>
+
+        <section>
+            <title id="ETG">Edit Target Group</title>
+            <p>
+                <image href="/resources/edittargetgroup/EditTargetGroup.png" alt="Edit Target Group"/>
+            </p>
+            <p>
+                It is possible to edit the <b>Description</b> field of an existing target group.
+            </p>
+            <p>
+                Clicking <b>Add Topology Data</b>, it is possible to <b>add targets</b> (network elements, management system, virtual network function manager, or network function virtualization orchestrator) filtering on Network Objects, Collections, and Saved Searches.
+            </p>
+            <p>
+                <image href="/resources/edittargetgroup/EditTargetGroupWithTargets.png" alt="Edit Target Group"/>
+            </p>
+            <ul>
+                <li>The Edit command fails if the maximum number of CPP node Users (48) is exceeded. </li>
+            </ul>
+            <p>
+                <image href="/resources/edittargetgroup/SaveTGExceedingMaxCPPUsers.png" alt="Maximum number of Users per CPP node exceeded"/>
+            </p>
+            <ul>
+                <li>When the <b>Cancel</b> button is selected, an additional dialog is displayed to confirm that changes are not saved.</li>
+            </ul>
+            <p>
+                <image href="/resources/edittargetgroup/CancelEditTargetGroup.png" alt="Leave Page confirmation dialog"/>
+            </p>
+   
+            <p>
+                After adding targets to target group, it is possible to remove targets clicking the related check boxes and clicking <b>Remove Node</b> button.
+            </p>
+
+            <p>
+                <image href="/resources/edittargetgroup/RemoveNode.png" alt="Edit Target Group"/>
+            </p>
+
+            <p>
+                <b>Note:</b>
+                At the end of the command, LAAD file distribution has to be performed for the CPP Nodes added/removed to the Target Group.
+            </p>
+     </section>
+
+        <section>
+            <title id="topology">Topology</title>
+            <p>
+                Clicking on Tab <b>Topology</b>, it is possible to add targets to the selected target group.
+            </p>
+            <p>
+                After targets selection, click <b>Add</b> to return to <b>Edit Target Group</b> page where the selected targets are in the list of targets for edited target group.
+            </p>
+        </section>
+      <section>
+           <title id="searchfornetworkobjects">Search</title>
+             <p>
+             Clicking on Tab <b>Search</b>, it is possible to add targets to the selected target group executing a filtering action.
+             </p>
+             <p>
+               Filter on target name, for example: LTE* and select the targets to be added to target group.
+             </p>
+             <p>
+                After targets selection, click <b>Add</b> to return to <b>Edit Target Group </b> page. The selected targets will be in the list of targets for edited target group.
+            </p>
+      </section>
+
+      <section>
+         <title id="addcollections">Collections</title>
+            <p>
+            Clicking on Tab <b> Collections</b>, the user can add the targets contained in the collection to target group.</p>
+            <p>Select one or more collections, containing the targets to be added to the target group.
+            </p>
+            <p>
+                After collection(s) selection, click <b>Add</b> to return to <b>Edit Target Group</b> page where the targets contained into the selected collections are in the list of targets for edited target group.
+            </p>
+            <p>Note: the content of the selected collections is statically added to the Target Group at the moment of the assignation; following changes to the collections are not reflected automatically into the Target Group.</p>
+      </section>
+
+      <section>
+          <title id="addsavedsearches">Saved Searches</title>
+            <p>Clicking on Tab<b> Saved Searches</b>, the user can add the targets returned by the selected saved searches to target group.</p>
+            <p>Select one or more saved searches, returning the targets to be added to the target group.</p>
+            <p>
+                After saved searches selection, click <b>Add</b> to return to <b>Edit Target Group</b> page where the targets returned by the selected saved searches are in the list of targets for edited target group.
+            </p>
+            <p>Note: the result of the saved searches is statically added to the Target Group at the moment of the assignation; if later the saved searches are providing different results, they are not reflected automatically into the Target Group.</p>
+      </section>
+
+      <section>
+            <title id="DTG">Delete Target Groups</title>
+            <p>It is possible to delete one or more Target Groups. Predefined Target Groups (ALL, NONE) cannot be deleted.</p>
+            <p>After selecting at least one Target Group in Target Group Management, the <b>Delete</b> button is displayed in the main action bar.</p>
+            <p>If the selection includes at least one default target group (ALL or NONE), the <b>Delete</b> button is not displayed in the main action bar.</p>
+
+            <p>
+                <image href="/resources/deletetargetgroup/DeleteTargetGroup.png" alt="Delete Target Group"/>
+            </p>
+            <p>
+                After clicking the <b>Delete</b> button, a confirmation dialog is displayed.
+            </p>
+
+            <p>
+                <image href="/resources/deletetargetgroup/DeleteTargetGroupConfirmationDialog.png" alt="Confirmation dialog"/>
+            </p>
+
+            <p>
+                When all selected Target Groups have been successfully deleted, a notification is displayed.
+            </p>
+
+            <p>
+                <image href="/resources/deletetargetgroup/DeleteSuccessfullNotification.png" alt="Delete successfull notification"/>
+            </p>
+
+            <p>
+                 If, during the deletion of more than one Target group, some of the specified groups are not deleted, the following summary is displayed:
+            </p>
+
+            <p>
+                <image href="/resources/deletetargetgroup/DeleteTargetGroupSummary.png" alt="Summary for deleting more than one Target Group with different operation results"/>
+            </p>
+            or
+            <p>
+                <image href="/resources/deletetargetgroup/DeleteTargetGroupSummary2.png" alt="Summary for deleting more than one Target Group with different operation results"/>
+            </p>
+    </section>
+
+    <section>
+            <title id="VTG">View Target Group</title>
+            <p>
+                It is possible to view details about a Target Group. When a Target Group is selected,
+                <b>View Target Group</b> button is displayed on the main action bar.
+            </p>
+
+            <p>
+                This functionality is not available for default Target Group (ALL, NONE) because it is not meaningful.
+            </p>
+
+            <p>
+                <image href="/resources/viewtargetgroup/ViewTargetGroupButton.png" alt="ViewTargetGroupButton"/>
+            </p>
+            <p>
+                <b>View Target Group</b> action displays the following information about the selected Target Group.
+            </p>
+            <p>
+                <ul>
+                    <li>Target Group Name</li>
+                    <li>Target Group Description</li>
+                    <li>List of targets in Target Group</li>
+                </ul>
+            </p>
+            <p>
+                <image href="/resources/viewtargetgroup/DisplayTargetGroup1.PNG" alt="DisplayTargetGroup"/>
+            </p>
+            <p>
+                If the selected Target Group can be edited, the <b>Edit</b> button is not enabled and the Edit Target Group page is displayed.
+            </p>
+        </section>
+
+    <section>
+            <title id="TGMF">Filter Target Groups</title>
+            <p>
+                Click on the filters button to display the filter options.
+            </p>
+            <p>
+                It is possible to filter target groups using the following criteria:
+            </p>
+            <ul>
+                <li>Target Group Name</li>
+            </ul>
+            <p>
+                The search field supports Unix regular expressions for target group name.
+            </p>
+            <p>
+                Example:
+            </p>
+
+            <p>
+                <ul>
+                    <li>Dot <b>.</b> matches any single character. For example: <b>"tg1.2"</b> matches "tg1a2","tg112a" etc.
+                    </li>
+                    <li>Bracket expression <b>[ ]</b> matches a single character that is contained within the brackets.
+                        For example: <b>"Kat[a-k]"</b> matches "Kate" or "Katherine" but doesn't match "Katty".
+                    </li>
+                    <li>Star <b>*</b> matches the preceding element zero or more times.
+                        For example: <b>tg10*4</b> matches "tg14", "tg104", "tg140", "tg141", "tg142" etc.
+                    </li>
+                    <li>Curly brackets <b>{m,n}</b> matches the preceding element at least m and not more than n times.
+                        For example: <b>ll{1,3}</b>  matches "Allexander", "Emilly", and "Lili".
+                    </li>
+                </ul>
+            </p>
+            <p>
+                After selecting filters, click<b> Apply</b> to apply the filters.
+            </p>
+
+            <p>
+                To clear the filter, click <b>Clear</b>.
+            </p>
+
+            <p>To close the <b>Filters</b> panel click the <b>X</b> symbol.</p>
+
+            <p>
+                <image href="/resources/listtargetgroup/ListTargetGroupsFilters.png" alt="ListTargetGroupsFilters"/>
+            </p>
+     </section>
+
+
+    </conbody>
+</concept>

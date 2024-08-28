@@ -1,0 +1,11 @@
+{
+    "title": "Change User Local Password",
+    "newPassword": "New Local Password",
+    "repeatNewPassword": "Repeat New Local Password",
+    "forcePasswordChange": "Force Password Change",
+    "topInfoText1": "Enter a new local password for user ",
+    "topInfoText2": "We highly recommend you create a unique password",
+    "validator": {
+        "password_in_password_history": "New password must not repeat user's previous {0} password(s)"
+    }
+}

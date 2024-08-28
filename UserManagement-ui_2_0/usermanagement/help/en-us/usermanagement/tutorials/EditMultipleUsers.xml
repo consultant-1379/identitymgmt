@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="usermanagement-EditMultipleUsers">
+    <title>Edit Multiple Users</title>
+    <taskbody>
+        <prereq>
+           <ul>
+            <li>An user with SECURITY_ADMIN role is available in ENM system and at least two users with assigned administrator role are configured in the system with default target group ALL.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner,
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           <li>The TG1 target group is available in ENM system.
+           </li>
+           </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial explains how to assign to more users the Amos_administrator system role with TG1 target group.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Click Edit Profile</xref>
+                </li>
+                <li>
+                    <xref href="#2">Update Users Details</xref>
+                </li>
+                <li>
+                    <xref href="#3">Edit Roles and Target Groups</xref>
+                </li>
+                <li>
+                    <xref href="#4">Edit Authentication</xref>
+                </li>
+                <li>
+                    <xref href="#5">Go to Summary tab</xref>
+                </li>
+                <li>
+                    <xref href="#6">Save the Users</xref>
+                </li>
+                <li>
+                    <xref href="#7">Click Finish</xref>
+                </li>
+                <li>
+                    <xref href="#8">Repeat Steps from Step 1 to Step 9 to Assign TG1 Target Group</xref>
+                </li>
+
+            </ol>
+        </context>
+
+        <steps>
+            <step id="1">
+                <cmd>Click Edit Profile</cmd>
+                <info>
+                   <ol>
+                     <li>Launch <xref scope="external" href="/#usermanagement">
+                            User Management.</xref></li>
+                     <li>Select two or more users from the users list and click <b>Edit Profile</b>.
+                         The <b>Edit User Profiles</b> page is displayed.
+                     </li>
+                   </ol>
+                </info>
+            </step>
+
+            <step id="2">
+               <cmd>Update Users Details</cmd>
+               <info>
+                  <ol>
+                    <li>Select the checkbox <b>Modify Status</b> (optional).
+                    </li>
+                    <li>Select the <b>Status</b>.
+                    </li>
+                    <li>Select the checkbox <b>Modify Description</b> (optional).
+                    </li>
+                    <li>Enter the <b>Description</b>.
+                    </li>
+                  </ol>
+               </info>
+            </step>
+
+            <step id="3">
+                <cmd>Edit Roles and Target Groups</cmd>
+                <info>
+                  <ol>
+                    <li>
+                        Click <b>Roles and Target Groups</b> section or click <b>Next -></b>.
+                    </li>
+                    <li>Select the checkbox <b>Modify Roles and Target Groups</b> (optional).
+                    </li>
+                    <li>Select the role(s) from the list to assign to the users.
+                    </li>
+                    <li>Click <b>Service Target Group to Assign</b> and select NONE as target group to assign and click on <b>Apply</b> from the <b>Assign Service Target Groups</b> panel.
+                    </li>
+                    </ol>
+                </info>
+            </step>
+
+            <step id="4">
+               <cmd>Edit Authentication</cmd>
+               <info>
+                 <ol>
+                   <li>
+                     Click <b>Authentication</b> section or click <b>Next -></b>.
+                   </li>
+                   <li>Select the checkbox <b>Modify Authentication Mode</b> (optional) to update the authentication mode for the users.
+                   </li>
+                   <li>Select the checkbox <b>Modify Password Ageing</b> (optional) to update the password aging setting for the users.
+                   </li>
+                   <li>Enter details for the password aging:
+                      <ul>
+                        <li>Select <b>Use System Settings</b></li>
+                      </ul>
+                       or
+                       <ul>
+                        <li>select <b>Customize Password Ageing</b> and enter the related details.
+                        </li>
+                      </ul>
+                    </li>
+                 </ol>
+               </info>
+            </step>
+
+            <step id="5">
+                <cmd>Go to Summary</cmd>
+            <info>
+                <p>
+                     Click <b>Summary</b> section or click <b>Next -></b>. The summary of the entered changes is displayed.
+                </p>
+            </info>
+            </step>
+
+            <step id="6">
+                <cmd>Save the Users</cmd>
+                <info>
+                <p>
+                    Click <b>Apply</b> to apply the changes.
+                </p>
+                </info>
+            </step>
+            <step id="7">
+                <cmd>Click Finish</cmd>
+                <info>
+                <p>
+                    Click <b>Finish</b> to be redirected to users list.
+                </p>
+            </info>
+            </step>
+            <step id="8">
+                <cmd>Repeat Steps from Step 1 to Step 8 to Assign TG1 Target Group</cmd>
+                <info>
+                <p>
+                    Repeat all steps from 1 to 9 to assign TG1 target group to system roles for the selected users. The only difference is that from the <b>Assign Service Target Groups</b> panel the TG1 target group has to be selected instead of NONE for step 6.
+                </p>
+                <p>For more information on editing more user profiles, see the <i>
+                            <xref href="../ui.xml#editmultipleusers">Edit Multiple Users</xref></i>.
+                </p>
+                </info>
+            </step>
+
+        </steps>
+        <result>
+            <p>Users are updated.</p>
+        </result>
+
+    </taskbody>
+</task>
+
+
+

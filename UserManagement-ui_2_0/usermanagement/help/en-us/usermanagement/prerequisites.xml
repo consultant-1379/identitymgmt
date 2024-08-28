@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Prerequisites">
+    <title>Prerequisites</title>
+    <conbody>
+        <section>
+            <title id="Prerequisites">Required User Roles</title>
+            <p>
+                Only users with the assigned role SECURITY_ADMIN have access to User Management application.
+            </p>
+        </section>
+         <section><title>Documentation</title>
+        <p>It is expected that you are familiar with the following documents:</p>
+        <ul>
+           <li>ENM Security System Administrator Guide, 2/1543-AOM 901 151.</li>
+           <li>ENM Identity and Access Management System Administrator Guide, 2/1543-AOM 901 151-1.</li>
+            <li>ENM System Security Configuration Programmers Guide, 1/19817-CNA 403 3065.</li>
+           <li>ENM Security Management Troubleshooting Guide, 1/159 01-AOM 901 151-4.</li>
+       </ul>
+             The documents are available in the ENM CPI Library, EN/LZN 703 0205.
+        </section>
+    </conbody>
+</concept>
+
+
+

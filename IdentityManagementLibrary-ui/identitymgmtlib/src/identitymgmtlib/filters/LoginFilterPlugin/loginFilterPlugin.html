@@ -1,0 +1,37 @@
+<div class="elIdentitymgmtlib-loginFilterPlugin">
+    {{#if addHeader}}
+    <label class="elIdentitymgmtlib-loginFilterPlugin-header">{{title}}</label>
+    {{/if}}
+    <ul>
+        <li class="elIdentitymgmtlib-loginFilterPlugin-listItem elIdentitymgmtlib-loginFilterPlugin-listItem-all ebList-item" data-id="all">
+            <label>
+                <input class="ebRadioBtn elIdentitymgmtlib-loginFilterPlugin-listItem-all-input" name="{{group}}" type="radio" e-id="allOption" />
+                <span class="ebRadioBtn-inputStatus"></span>
+                <span class="ebRadioBtn-label">
+                        <span class="ebRadioBtn-label-text-all" title="All">{{Dictionary.all}}</span>
+                </span>
+            </label>
+        </li>
+        <li class="elIdentitymgmtlib-loginFilterPlugin-listItem elIdentitymgmtlib-loginFilterPlugin-listItem-neverLoggedIn ebList-item" data-id="neverLoggedIn">
+            <label>
+                <input class="ebRadioBtn elIdentitymgmtlib-loginFilterPlugin-listItem-neverLoggedIn-input" name="{{group}}" type="radio" e-id="neverLoggedIn" />
+                <span class="ebRadioBtn-inputStatus"></span>
+                <span class="ebRadioBtn-label">
+                        <span class="ebRadioBtn-label-text-neverLoggedIn" title="Never Logged In">{{Dictionary.login.never}}</span>
+                </span>
+            </label>
+        </li>
+        <li class="elIdentitymgmtlib-loginFilterPlugin-listItem elIdentitymgmtlib-loginFilterPlugin-listItem-loggedWithin ebList-item" data-id="loggedWithin">
+            <label>
+                <input class="ebRadioBtn elIdentitymgmtlib-loginFilterPlugin-listItem-loggedWithin-input" name="{{group}}" type="radio" e-id="loggedWithin" />
+                <span class="ebRadioBtn-inputStatus"></span>
+                <span class="ebRadioBtn-label">
+                        <span class="ebRadioBtn-label-text-loggedWithin" title="Logged in within">{{Dictionary.login.within}}
+                            <input type="text" class="elIdentitymgmtlib-loginFilterPlugin-listItem-loggedWithin-daysInput ebInput ebInput_width_mini" e-id="loggedWithinDayInput"/>
+                            {{Dictionary.login.days}}</span>
+                </span>
+            </label>
+        </li>
+    </ul>
+</div>
+<e-link src="./loginFilterPlugin.less"></e-link>

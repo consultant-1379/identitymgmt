@@ -1,0 +1,8 @@
+.cdt/
+tmp/
+target/
+node_modules/
+test/bit/lib/
+test/bit/common/
+*.tar.gz
+*.tgz

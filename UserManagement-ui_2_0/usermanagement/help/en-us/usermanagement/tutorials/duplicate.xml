@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="usermanagement-DuplicateUser">
+    <title>Duplicate User</title>
+    <taskbody>
+        <prereq>
+           <ul>
+            <li>You must have the SECURITY_ADMIN role.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner,
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           </ul>
+        </prereq>
+        <context>
+           <p>
+                <b>Objective</b>
+            </p>
+           <p>This tutorial describes the steps to duplicate an ENM user.
+            </p>
+
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+               <li>
+                  <xref href="#1">Click Duplicate</xref>
+               </li>
+               <li>
+                  <xref href="#2">Enter User Fields</xref>
+               </li>
+               <li>
+                  <xref href="#3">Click Save</xref>
+               </li>
+            </ol>
+        </context>
+       <steps>
+            <step id="1">
+                <cmd>Click Duplicate</cmd>
+                <info>
+                   <ol>
+                     <li>Launch <xref scope="external" href="/#usermanagement"> User Management.</xref></li>
+                     <li>Select a user from the <b>Users Profiles</b> table.</li>
+                     <li>Click <b>Duplicate</b>. The <b>Create User Profile</b> page is displayed.</li>
+                   </ol>
+                </info>
+           </step>
+           <step id="2">
+                <cmd>Enter User Details</cmd>
+                <info>
+                    <p>Enter required <b>General Information</b>.</p>
+                            <ul>
+                                <li>
+                                    <b>Username</b>
+                                </li>
+                                <li>
+                                    <b>Name</b>
+                                </li>
+                                <li>
+                                    <b>Surname</b>
+                                </li>
+                                <li>
+                                    <b>Email Address</b>
+                                    (optional)
+                                </li>
+                                <li>
+                                    <b>Status</b>
+                                    (optional and disabled by default)
+                                </li>
+                                <li>
+                                    <b>Description</b>
+                                    (optional)
+                                </li>
+                                <li>
+                                    <b>Authentication Mode</b>: the displayed value is the same of the original user.
+                                </li>
+                                <li>
+                                   <b>Local Password</b>
+                                </li>
+                                <li><b>Repeat Local Password</b>
+                                </li>
+                                <li><b>Force Password Change</b>
+                                </li>
+                                <li>
+                                    <b>Password Ageing</b>
+                                </li>
+                            </ul>
+                    <p>For more information on duplicating a User Profile, see the <i>
+                            <xref href="../ui.xml#duplicateuser">Duplicate User</xref></i>.
+                    </p>
+                </info>
+           </step>
+           <step id="3">
+                <cmd>Save the User</cmd>
+                <info>
+                    Click Save to duplicate the user.
+                </info>
+           </step>
+       </steps>
+       <result>
+           <p>
+                The new user is created.
+            </p>
+      </result>
+   </taskbody>
+</task>

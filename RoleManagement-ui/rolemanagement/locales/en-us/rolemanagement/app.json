@@ -1,0 +1,116 @@
+{
+    "title": "Role Management",
+    "tableHeaderInformation": "({0}-{1} of {2})",
+
+    "roles": "Roles",
+
+    "actions": {
+        "CreateUserRole": "Create User Role",
+        "EditUserRole": "Edit",
+        "DeleteUserRole": "Delete",
+        "RoleSummary": "Role Summary",
+        "CompareRoles": "Compare",
+        "Enable": "Enable",
+        "Disable": "Disable",
+        "Nonassignable": "Nonassignable"
+    },
+
+    "errorCodes": {
+        "204": {
+            "default": "Success"
+        },
+        "400": {
+            "default": "Role assigned to group role"
+        },
+        "404": {
+            "default": "Role not found"
+        },
+        "422": {
+            "default": "Role assigned to user"
+        },
+        "500": {
+            "default": "Internal server error"
+        },
+        "unexpected": "Code {0} - Unexpected reason"
+    },
+
+    "dialogues": {
+        "deleteRolesHeader": "Confirm Delete",
+        "deleteRolesContent": "Are you sure you want to delete selected role(s)?",
+        "confirmOk": "OK",
+        "cancel" : "Cancel"
+    },
+
+    "actionsResponses": {
+        "DeleteResults": "Delete Results",
+        "CannotDeletedRoles": "Unable to Delete Role",
+        "RoleDeleted": "Role deleted",
+        "RolesDeleted": "Roles deleted ",
+        "RolesDeleted2": "Roles deleted {0}",
+        "StatusEnabled": "Role Status Enabled",
+        "StatusDisabled": "Role Status Disabled",
+        "StatusNonassignable": "Role Status Nonassignable"
+    },
+
+    "roleMgmt": {
+        "RoleNameHeader": "Role Name",
+        "RoleTypeHeader": "Role Type",
+        "RoleDescriptionHeader": "Description",
+        "RoleStatusHeader": "Status"
+    },
+
+    "roleActions": {
+        "RoleCreate": "Create role"
+    },
+
+    "typeCell": {
+        "RoleTypeCom": "COM Role",
+        "RoleTypeAlias": "COM Role Alias",
+        "RoleTypeCustom": "Custom Role",
+        "RoleTypeSystem": "ENM System Role",
+        "RoleTypeCpp": "Task Profile Role"
+    },
+
+    "statusCell": {
+        "RoleStatusEnabled": "Enabled",
+        "RoleStatusDisabled": "Disabled",
+        "RoleStatusNonassignable": "Nonassignable"
+    },
+
+    "filter": {
+        "title": "Filters",
+        "placeholder": "Type to filter by role name",
+        "apply": "Apply",
+        "clear": "Clear",
+        "cancel": "Cancel",
+        "label": "Filters"
+    },
+
+    "roleSummary": {
+        "title": "Role Summary",
+        "description": "Description",
+        "roleType": "Role Type",
+        "status": "Status",
+        "capabilities": "Capabilities",
+        "capabilitiesInfo": "({0}) Capabilities assigned to this role.",
+        "roles": "Roles",
+        "comRoles": "COM Roles",
+        "enmSystemRole": "ENM System Role",
+        "customRole": "Custom Role",
+        "comRole": "COM Role",
+        "comRoleAlias": "COM Role Alias",
+        "cppRole": "Task Profile Role",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "nonassignable": "Nonassignable",
+        "noRoleSelected": "No role selected",
+        "colon": ":",
+        "viewRoleDetails": "View all details"
+    },
+
+    "tableSelectionInfoWidget": {
+        "roleSingularPredicate": "Role",
+        "rolePluralPredicate": "Roles"
+    }
+
+}

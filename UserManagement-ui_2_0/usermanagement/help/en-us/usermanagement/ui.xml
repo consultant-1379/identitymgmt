@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorial1">
+    <title>User Management User Interface</title>
+       <abstract>
+      <shortdesc>This section describe the User Management User Interfaces.</shortdesc>
+   </abstract>
+    <conbody>
+       <section>
+          <p><xref type="concept" href="#usermanagement">User Management</xref></p>
+          <p><xref type="concept" href="#createuser">Create User</xref></p>
+          <p><xref type="concept" href="#edituser">Edit User</xref></p>
+          <p><xref type="concept" href="#editmultipleusers">Edit Multiple Users</xref></p>
+          <p><xref type="concept" href="#duplicateuser">Duplicate User</xref></p>
+          <p><xref type="concept" href="#deleteusers">Delete Users</xref></p>
+          <p><xref type="concept" href="#terminatesessions">Terminate Sessions</xref></p>
+          <p><xref type="concept" href="#profilesummary">Profile Summary</xref></p>
+          <p><xref type="concept" href="#enabledisableuser">Enable/Disable User</xref></p>
+          <p><xref type="concept" href="#changeuserpassword">Change User Local Password</xref></p>
+          <p><xref type="concept" href="#forcepasswordchange">Force Password Change</xref></p>
+          <p><xref type="concept" href="#revokeforcepwchange">Revoke Force Password Change</xref></p>
+          <p><xref type="concept" href="#importexport">Import and Export</xref></p>
+          <p><xref type="concept" href="#filters">Filters</xref></p>
+
+       </section>
+
+       <section>
+          <title id="usermanagement">User Management</title>
+          <p>
+            <image href="/resources/ListingAllUsersMarker.png" alt="ListingAllUsers"/>
+          </p>
+
+          <p>
+            The User Management main page consists of the following components:
+            <ol>
+               <li>Users List Tabs</li>
+               <li>Action Bar</li>
+            </ol>
+          </p>
+        </section>
+
+        <section>
+            <title id="UserManagementUI">Users List Tabs</title>
+
+            <p>Local Users Tab</p>
+
+            <p>
+                <image href="/resources/SelectedAll.png" alt="SelectedAll"/>
+            </p>
+
+            <p>Federated Users Tab</p>
+            <p>
+                <image href="/resources/SelectedAllFederated.png" alt="SelectedAllFederated"/>
+            </p>
+
+            <p>
+                Federated users are remote users syncrhonized from an external Identity Provider (IdP) to ENM by Federated Identity Syncrhonizer security function.
+                See the  document ENM Identity and Access Management System Administrator Guide, 2/1543-AOM 901 151-1 for details. This is available in the ENM CPI Library, EN/LZN 703 0205.
+            </p>
+
+            <p>
+                The tables give the details on each user:
+            </p>
+
+            <p>
+                <ul>
+                    <li>Username: is the user identity, used to log on to ENM.</li>
+                    <li>Status: is the status of the user. The values are enabled and disabled.</li>
+                    <li>Name</li>
+                    <li>Surname</li>
+                    <li>Description: additional free text field. It can be used to describe users that belong a certain location or department.</li>
+                    <li>Authentication Mode: it can be set local or remote.</li>
+                    <li>Email</li>
+                    <li>Credential Status: is the information about the user certificate. The possible values are:
+                       <ul>
+                       <li>Not Applicable: it occurs when no corresponding PKI End Entity for the user exists.</li>
+                       <li>New: it occurs when the corresponding PKI End Entity for the user has been created but no certificates are associated to the user.</li>
+                       <li>Active: it occurs when the corresponding PKI End Entity for the user has been created and a valid certificate is associated to the user.</li>
+                       <li>Deleted: it occurs when the corresponding PKI End Entity for the user has been deleted.</li>
+                       <li>Inactive: it occurs when the corresponding PKI End Entity for the user has been created but no valid certificate is associated to the user (this happens when all certificates associated to the user are revoked or expired).</li>
+                       </ul>
+                    <p>Credential Status values meaning:
+                       <ul>
+                       <li>Active: means that the user has a valid certificate associated.</li>
+                       <li>New, Deleted, Inactive, Not Applicable: means that the user has no valid certificate associated.</li>
+                       </ul>
+                    </p>
+                    </li>
+                    <li>Last Login: is the last time user successful logged in to ENM.</li>
+                    <li>Failed Logins: is the counter of failed user logins since the last successful login. It is reset on successful user login. 0 values are hidden.</li>
+                    <li>Force Password Change: is the information about the force password change.</li>
+                    <li>Password Ageing: is the information about password ageing. It can be set to system settings or can be customized<xref href="#help/app/userprofile/ui~PAW" type="concept" scope="external"> (More information)</xref>.</li>
+                    <li>Information on Sync Status: is the information about the synchronization status <b>for only</b> Federared Users of an external LDAP with ENM system.</li>
+
+                </ul>
+           </p>
+            <p>
+                For Local Users all the previous information indicated below is reported in Local Users table. For Federated Users, only Username, Credential Status, Last Login and Failed Logins
+                is reported in Federated Users table.
+            </p>
+
+            <p>
+                In the Local User tab a warning box is reported if the WebPush subscription for Import events is not established.
+                In this case the Import function is disabled. Install the ENM trusted certificates into the client browser and restart the server.
+                See the document ENM Identity and Access Management System Administration Guide, 2/1543-AOM 901 151-1 for details. This is available in the ENM CPI Library, EN/LZN 703 0205.
+            </p>
+            <p>
+                <image href="/resources/WebPushFailed.png" alt="WebPushFailed"/>
+            </p>
+
+            <p>
+                When a user is selected in the User Management table, the Selected Users Information message is displayed.
+                The message indicates how many users have been selected. Clicking the <b>Clear
+                Selection</b> clears all selected users and the Selected User Information Message disappears
+                from the screen.
+            </p>
+
+            <p>
+                It is also possible to select all users on the User Management table.
+                Once the link has been clicked on, the message automatically updates to indicate that all users have now
+                been selected and a new link appears with the option to clear all selected users.
+            </p>
+
+               <p> In the Federated Users table, into Federated tab an info box is reported with the synchronization status and the date of the last synchronization.</p>
+
+            <p>
+                <image href="/resources/SyncStatus.png" alt="SyncStatus"/>
+            </p>
+
+            <p>The possible Sync Status values are:
+                <ul>
+                    <li>Init: the configuration data not yet retrieved (from PSQL via GIC).</li>
+                    <li>Not Configured: the configuration data have been never imported.</li>
+                    <li>Disabled: the administrative state of synchronization is disabled.</li>
+                    <li>Idle: the administrative state of synchronization is enable. No synchronization is currently in progress.</li>
+                    <li>Periodic Sync in Progress: periodic synchronization is currently in progress.</li>
+                    <li>Forced Sync in Progress: forced synchronization is currently in progress.</li>
+                    <li>Test Sync in Progress: test synchronization is currently in progress.</li>
+                    <li>Forced Delete In Progress: forced delete of all federated users is currently in progress.</li>
+                </ul>
+
+            </p>
+
+            <p>Click the <b>Refresh</b> to refresh the synchronization data and The Federated Users list.</p>
+
+            <p>
+                If the number of defined users exceeds the number of users to display, the list exceeds one page:
+            </p>
+
+            <p>
+                <image href="/resources/Pagination.png" alt="Pagination"/>
+            </p>
+
+            <p>
+                It is possible to adjust the number of users displayed.
+            </p>
+
+            <p>
+                <image href="/resources/ResultsPerPage.png" alt="ResultsPerPag"/>
+            </p>
+
+        </section>
+
+        <section id="Settings">
+            <title>Table Settings</title>
+
+            <p> The Table Settings option <image href="resources/tablesettings/tableSettingsSmall.png"
+                                          alt="Table Settings" />
+                 configures the columns
+                according to user preference. On selection of preferred
+                settings, click the Apply button to save the table
+                settings to the Workflows table.
+            </p>
+            <p>
+            Local Users
+            <image href="resources/tablesettings/tableSettings.png" alt="Table Settings Local Users" />
+            </p>
+            <p>
+            Federated Users
+            <image href="resources/tablesettings/tableSettingsFederated.png" alt="Table Settings Federated Users" />
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        <b>Drag option</b>
+                    </p>
+                    <image href="resources/tablesettings/tableSettingsDrag.png"
+                           alt="Table Settings Drag Option" />
+                    <p>Rearrange displayed columns being displayed by
+                        dragging the icon displayed.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Sorting</b>
+                    </p>
+                    <p>
+                        The
+                        <image href="resources/tablesettings/sortingArrows.png"
+                               alt="Table Row Sorting Option" />
+                        icon in the header indicates that sorting is
+                        enabled on the column. The darkened arrow
+                        indicates current sort mode.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Resizable Headers</b>
+                    </p>
+                    <p>All columns in the table are resizable to allow
+                        easy access to content larger than the displayed
+                        in the cell.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <title>Action Bar</title>
+
+            <p>
+                After selecting one or more users, additional options appear in the action bar accordingly with the selected tab, Local Users or Federated Users.
+            </p>
+
+
+            <p>
+                Local Users Tab
+                <image href="/resources/ActionBarLocal.png" alt="ActionBarLocal"/>
+            </p>
+
+            <p>
+                Federated Users Tab
+                <image href="/resources/ActionBarFederated.png" alt="ActionBarFederated"/>
+            </p>
+
+            <p>
+                Create User Profile - to create new user <i>
+                        <xref href="/ui.xml#createuser">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Import - to import user profiles from an XML file <i><xref href="/ui.xml#importexport">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Edit Profile - to edit user <i>
+                        <xref href="/ui.xml#edituser">(More Information)</xref></i>.
+            </p>
+            <p>
+                Edit Multiple Users - to edit users <i><xref href="/ui.xml#editmultipleusers">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Change Password - to change user local password <i><xref href="/ui.xml#changeuserpassword">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Duplicate - to create user by using another user as a template  <i><xref href="/ui.xml#duplicateuser">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Delete - to delete user(s) <i><xref href="/ui.xml#deleteusers">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Terminate Sessions - terminate all active sessions <i><xref href="/ui.xml#terminatesessions">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Enable/Disable User - enable or disable one or more selected users <i><xref href="/ui.xml#enabledisableuser">(More Information)</xref></i>.
+            </p>
+            <p>
+                Profile Summary - checking summary of single user <i><xref href="/ui.xml#profilesummary">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Force Password Change - change user password when the user is in view mode <i><xref href="/ui.xml#forcepasswordchange">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Revoke Force Password Change - Force password change operation has been revoked <i><xref href="/ui.xml#revokeforcepwchange">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Export - to export selected user profiles to an XML file <i><xref href="/ui.xml#importexport">(More Information)</xref></i>.
+            </p>
+
+            <p>
+                Envelope - to check status of ongoing Import process <i><xref href="ui.xml#notification" type="concept">(More information)</xref></i>.
+            </p>
+
+            <p>
+                Filters - User can filter users list using criteria <i><xref href="/ui.xml#filters">(More Information)</xref></i>.
+            </p>
+
+            <p>For a selected federated user, the list of available actions is: Change Password, Terminate Session, and Revoke Certificate (if a valid certificate is available for the selected user).</p>
+
+        </section>
+
+       <section>
+          <title id="createuser">Create User</title>
+                <p>
+                    <image href="/resources/CreateUser.png" alt="CreateUser"/>
+                </p>
+
+                <p>
+                    The user needs to fill eight mandatory fields:
+                </p>
+
+                <p>
+                    <ul>
+                        <li><i>Username:</i> the username can contain small and capital letters, but a user cannot have multiple accounts
+                            with case mismatch.
+                            <lines />
+                            Only alphanumeric characters are accepted: every character in user name must be one of : a-z, A-Z, 0-9, _, -, .
+                            <lines />
+                            Furthermore some names are invalid: ".", "..", "root", "bin", "daemon", "adm", "lp", "sync", "shutdown", "halt", "mail", "news", "uucp", "operator", "games", "gopher", "ftp", "nobody", "rpm", "vcsa", "dbus", "ntp", "canna", "nscd", "rpc", "postfix", "mailman", "named", "amanda", "postgres", "exim", "sshd", "rpcuser", "nsfnobody", "pvm", "apache", "xfs", "gdm", "htt", "mysql", "webalizer", "mailnull", "smmsp", "squid", "ldap", "netdump", "pcap", "radiusd", "radvd", "quagga", "wnn", "dovecot", "litp-admin", "saslauth", "nfsnobody", "ovirtagent", "cloud-user", "tcpdump", "haproxy", "enmadm", "jboss_user", "nslcd", "ssouser", "ldapapplicationuser", "npamuser".
+                            <lines />
+                        </li>
+                        <li><i>Authentication Mode</i>: the authentication mode can be Local or Remote. The default value is Local.</li>
+                        <li><i>Local Password</i>: the password must comply with the password policy displayed in box on the right of screen. Only alphanumeric characters are accepted. Password policy can change depending on system security settings.</li>
+                        <li><i>Repeat Local Password</i>: Local Password and Repeat Local Password fields must match.</li>
+                        <li><i>Force Password Change:</i>
+                            <ul>
+                                <li><i>Off (Disabled):</i> the user is redirected to Application Launcher page at first login.</li>
+                                <li><i>On (Enabled):</i> the user has permissions to access applications it has roles assigned to when it is already logged in.</li>
+                                <li>The default value is <i>On (Enabled).</i></li>
+                            </ul>
+                        </li>
+                        <li><i>Name</i></li>
+                        <li><i>Surname</i></li>
+                        <li><i>Status</i>
+                            <ul>
+                                <li><i>Disabled:</i> the user can not log on ENM.</li>
+                                <li><i>Enabled:</i> the user can log on ENM.</li>
+                                <li>The default value is <i>Disabled.</i></li>
+                             </ul>
+                        </li>
+                        <li><i>Password Ageing</i>
+                            <ul>
+                                <li><i>Use System Settings:</i> user password time ageing keeps the global settings from the System Security Configuration app.</li>
+                                <li><i>Customize Password Ageing:</i> allows to set customized values for password ageing.
+                                   <ul>
+                                      <li><i>Enable Password Ageing:</i> enable/disable user password time validity; if disabled, password never expires.</li>
+                                      <li><i>Number of days password is valid.</i></li>
+                                      <li><i>Number of days to password expiration warning:</i> a warning about password expiration is shown the inserted number of days before that happens.</li>
+                                   </ul>
+                                </li>
+                            </ul>
+                            <p>For more information, see also <xref href="#help/app/userprofile/ui~PAW" type="concept" scope="external"> Password Aging Warning</xref> page.
+                            </p>
+                        </li>
+                        <li><i>Roles and Target Groups:</i>
+                            <ul>
+                                <li>At least a role must be assigned to a user.</li>
+                                <li>
+                                    Roles can be divided into three families:
+                                    <ul>
+                                        <li><b>Service Role family:</b>
+                                            <ul>
+                                            <li>System Role</li>
+                                            <li>Custom Role</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <lines />
+                                    <ul>
+                                        <li><b>COM Role family:</b>
+                                            <ul>
+                                                <li>COM Role</li>
+                                                <li>COM Role Alias</li>
+                                            </ul>
+                                         </li>
+                                    </ul>
+                                    <lines />
+                                    <ul>
+                                        <li><b>Task Profile Role family:</b>
+                                            <ul>
+                                                <li>Task Profile Role</li>
+                                            </ul>
+                                         </li>
+                                    </ul>
+                                    <lines />
+                                            When a role is assigned to a user profile, target groups are handled differently based on the role family:
+                                         <ul>
+                                             <li>All associated roles belonging to the Service Role family refer to a common list of target groups</li>
+                                             <li>All associated roles belonging to the COM Role family refer to their own list of target groups</li>
+                                             <li>All associated roles belonging to the Task Profile Role family refer to their own list of target groups</li>
+                                         </ul>
+                                    <lines />
+                                            To assign one or more target groups to a Service Role a button <b>"Service Target Groups"</b> is located above the column header Target Groups Assigned with the information of number of associated target groups.
+
+                                    <lines />
+                                            To assign one or more target groups to a COM Role a button <b>"COM Target Groups"</b> is available with the information of number of associated target groups in the column <b>Target Groups Assigned</b> in Roles table.
+                                    <lines />
+                                            To assign one or more target groups to a Task Profile Role a button <b>"Task Profile Target Groups"</b> is available with the information of number of associated target groups in the column <b>Target Groups Assigned</b> in Roles table.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                <b>Notes:</b>
+                <ul><li>the Authentication Mode parameter is used in case of configured external IdP with RAuthN set to true value.<lines />
+                In case no external IdP is configured or RAuthN is set to false, the user is locally authenticated regardless of Authentication Mode selected on the UI.<lines />
+                In case an external IdP is configured and RAuthN is set to true, the user is remotely authenticated if the Authentication Mode selected on the UI is Remote.<lines />
+                No check is done by UI on graying out of Local or Remote accordingly with the server setup.
+                </li>
+                <li> If BO/Netan capabilities are assigned to user it must not exceed 20 characters in length, due to Active Directory limitation.
+                </li>
+                <li> If the user has at least a Task Profile Role or a Custom Role containing Task Proifile Roles, the LAAD file has to be redistributed to the CPP nodes that the user access to.
+                </li>
+                <li>
+                    Maximum 48 users per CPP node are allowed (this includes disabled users).
+                </li>
+                <li>
+                    Maximum 10 Task Profile Roles per user are allowed.
+                </li>
+                <li>
+                    It is not possible to create a federated user.
+                </li>
+                <li>
+                    Since the PKI Entity name cannot be less than 3 chars, if the username length is less than 3 chars the user can't have an own certificate. It is a limitation for all ENM applications that require a user certificate.
+                </li>
+                <li>
+                    In case of  Enforce User Hardening, password ageing is always enabled.
+                </li>
+                <li>
+                    The Force Change Password switcher is disabled (grayed) and set to On if the Enforce User Hardening is enabled. See the document ENM Node Hardening Guidelines and Instructions, 1/17473-AOM 901 151-1 for details. This is available in the ENM CPI Library, EN/LZN 703 0205.
+                </li>
+                </ul>
+                    
+                </p>
+                <p>
+                    <b>
+                    Following errors can occur when saving users:
+                    </b>
+                </p>
+
+                <p>
+                     Use username does not comply with naming policies:
+                    <ul>
+                        <li>Every character in user name must be one of : a-z, A-Z, 0-9, _, -, .</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/Username.png" alt="Username"/>
+                </p>
+
+                <p>
+                    <ul>
+                        <li> Password and Repeat New Password fields must match.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/RepeatPassword.png" alt="RepeatPassword"/>
+                </p>
+
+                <p>
+                    <ul>
+                        <li>The email, if present, must be valid in the form john@example.com.
+                            <lines />
+                        <b>Note</b>: the first character must not be a number.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/Email.png" alt="Email"/>
+                </p>
+
+                <p>
+                    <ul>
+                        <li>User role is not selected.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/Roles.png" alt="Roles"/>
+                </p>
+
+                <p>
+                    <ul>
+
+                        <li>Username is not unique.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/UsernameExist.png" alt="UsernameExist"/>
+                </p>
+
+                <p>
+                    <ul>
+                        <li>Username is invalid.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/UserNameInvalid.png" alt="UsernameInvalid"/>
+                </p>
+
+                <p>
+                    <ul>
+                        <li>Limit of 48 Users per CPP node has been exceeded.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/MoreThan48CPPUsers.png" alt="MoreThan48CPPUsers"/>
+                </p>
+
+                <p>
+                    <image href="/resources/MoreThan48CPPUsersTGALL.png" alt="MoreThan48CPPUsersTGALL"/>
+                </p>
+
+                <p>
+                    <ul>
+                        <li>Limit of 10 Task Profile Roles per user has been exceeded.</li>
+                    </ul>
+                </p>
+
+                <p>
+                    <image href="/resources/UserExceedMaxTaskProfile.png" alt="UserExceedMaxTaskProfile"/>
+                </p>
+    </section>
+
+       <section>
+          <title id="edituser">Edit User</title>
+                    <p>
+                        <image href="/resources/Edit.png" alt="Edit"/>
+                    </p>
+
+                    <p>
+                        The following fields can be edited only for Local Users:
+                        <ul>
+                            <li><i>Name</i></li>
+                            <li><i>Surname</i></li>
+                            <li><i>Email</i></li>
+                            <li><i>Description</i></li>
+                            <li><i>Status</i>
+                                <ul>
+                                    <li><i>Disabled:</i> the user is not be able to log on ENM next time.
+                                        <p><b>Security Warning: Disable User does not include terminating all the user sessions – use <i><xref href="/ui.xml#terminatesessions">Terminate Sessions</xref></i> for that purpose.</b></p>
+                                        <p><b>Security Warning: The user cannot disable himself.</b></p></li>
+                                    <li><i>Enabled:</i> the user can log on ENM.</li>
+                                 </ul>
+                            </li>
+                            <li><i>Authentication Mode</i>: the authentication mode can be Local or Remote. The default value is Local.</li>
+                            <li><i>Password Ageing</i>
+                                <ul>
+                                    <li><i>Use System Settings:</i> user password time aging keeps the global settings from the System Security Configuration app.</li>
+                                    <li><i>Customize Password Ageing:</i> allows to set customized values for password aging.
+                                       <ul>
+                                         <li><i>Enable Password Ageing:</i> enable/disable user password time validity; if disabled, password never expires.</li>
+                                         <li><i>Number of days password is valid.</i></li>
+                                         <li><i>Number of days to password expiration warning:</i> a warning about password expiration is shown the inserted number of days before that happens.</li>
+                                       </ul>
+                                    </li>
+                                </ul>
+                                <p>For more information see also <xref href="#help/app/userprofile/ui~PAW" type="concept" scope="external">Password Ageing Warning</xref> page.
+                                </p>
+                            </li>
+                            <li><i>Roles and Target Groups:</i>
+                                <ul>
+                                    <li>At least a role must be assigned to a user.</li>
+                                    <li>Roles can be divided into three families:
+                                        <ul>
+                                            <li><b>Service Role family:</b>
+                                                <ul>
+                                                <li>System Role</li>
+                                                <li>Custom Role</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <lines />
+                                        <ul>
+                                            <li><b>COM Role family:</b>
+                                                <ul>
+                                                    <li>COM Role</li>
+                                                    <li>COM Role Alias</li>
+                                                </ul>
+                                             </li>
+                                        </ul>
+                                        <lines />
+                                        <ul>
+                                            <li><b>Task Profile Role family:</b>
+                                                <ul>
+                                                    <li>Task Profile Role</li>
+                                                </ul>
+                                             </li>
+                                        </ul>
+                                        When a role is assigned to a user profile, target groups are handled differently based on the Role family:
+                                        <ul>
+                                             <li>All associated Roles belonging to the Service Role family refer to a common list of target groups</li>
+                                             <li>All associated Roles belonging to the COM Role family refer to their own list of target groups</li>
+                                             <li>All associated Roles belonging to the Task Profile Role family refer to their own list of target groups</li>
+                                         </ul>
+                                        To assign one or more target groups to a Service Role a button <b>"Service Target Groups"</b> is located above the column header Target Groups Assigned with the information of number of associated target groups.
+                                        <lines />
+                                        To assign one or more target groups to a COM Role a button <b>"COM Target Groups"</b> is available with the information of number of associated target groups in the column <b>Target Groups Assigned</b> in Roles table.
+                                        <lines />
+                                        To assign one or more target groups to a Task Profile Role a button <b>"Task Profile Target Groups"</b> is available with the information of number of associated target groups in the column <b>Target Groups Assigned</b> in Roles table.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        The user cannot edit the Username field.
+                    </p>
+
+                    <p>
+                        <b>Notes:</b>
+                        <ul>
+                            <li>It is possible to associate one or more target groups to user roles.</li>
+                            <li>Not assign more than 10 Task Profile Roles to a user.</li>
+                            <li>If the user change is about:
+                                <ul>
+                                    <li>Assign/Unassign a Task Profile Role or change the own Task Profile Target Groups list</li>
+                                    <li>Assign/Unassign a Custom Role containing Task Profile Roles or change Service Target Groups list</li>
+                                    <li>Status field of a user with at least a Task Profile Role or a Custom Role containing Task Profile Roles assigned</li>
+                                </ul>
+                             The LAAD file has to be redistributed to the involved CPP nodes.
+                            </li>
+                            <li>Maximum 48 users per CPP node are allowed (this includes disabled users).</li>
+                            <li>
+                                Maximum 10 Task Profile Roles per user are allowed.
+                            </li>
+                            <li>
+                                In case of  Enforce User Hardening, password ageing is always enabled.
+                            </li>
+                        </ul>
+                    </p>
+
+           It is not possible to update a federated user.
+
+     </section>
+
+     <section>
+       <title id="editmultipleusers">Edit Multiple Users</title>
+       <p>
+         The Edit User Profiles page consists of the following components:
+         <ul>
+             <li>Details</li>
+             <li>Roles and Target Groups</li>
+             <li>Authentication</li>
+             <li>Summary</li>
+             <li>Apply</li>
+         </ul>
+       </p>
+
+       <p>
+         In the section <b>Details</b> the user can edit the fields:
+         <ul>
+            <li> Modify Status - Allows the user to change the status to enable or disable.</li>
+            <li> Modify Description - Allows the user to edit field description.</li>
+         </ul>
+       </p>
+       <p>
+         <image href="/resources/EditDetails.png" alt="EditDetails"/>
+       </p>
+       <p>
+         In the section <b>Roles and Target Groups</b> the user can edit the fields:
+         <ul>
+            <li> Modify Roles and Target Groups - Allows the user to assign and unassign roles and target groups.
+            </li>
+         </ul>
+       </p>
+       <p>
+         <image href="/resources/EditPrivileges.png" alt="EditPrivileges"/>
+       </p>
+       <p>
+         <b>Notes:</b>
+         <ul>
+            <li>It is possible to filter on Assigned/Not Assigned Roles, <b>Type</b> (COM Role, COM Role Alias, Custom Role, ENM System Role, Task Profile) and <b>Status</b> (Enabled,
+                 Disabled, Not Assignable).</li>
+            <li>It is possible to associate one or more target groups to users roles.</li>
+            <li>Not assign more than 10 Task Profile Roles to a user.</li>
+            <li>If the user change is about:
+               <ul>
+                  <li>Assign/Unassign a Task Profile Role or change the own Task Profile Target Groups list</li>
+                  <li>Assign/Unassign a Custom Role containing Task Profile Roles or change Service Target Groups list</li>
+                  <li>Status field of a user with at least a Task Profile Role or a Custom Role containing Task Profile Roles assigned</li>
+               </ul>
+               The LAAD file has to be redistributed to the relevant CPP nodes.
+            </li>
+            <li>Maximum 48 users per CPP node are allowed (this includes disabled users).</li>
+            <li>
+               Maximum 10 Task Profile Roles per user are allowed.
+            </li>
+          </ul>
+
+           It is not possible to update a federated user.
+        </p>
+
+        <p>
+          In the section <b>Authentication</b> the user can edit the fields:
+          <ul>
+             <li> Modify Authentication Mode - Allows the user to change authentication mode to Local or Remote.</li>
+          </ul>          
+          <ul>
+             <li> Modify Password Ageing - Allows the user to customize the password ageing <xref href="#help/app/userprofile/ui~PAW" type="concept" scope="external"> (More information)</xref>.</li>
+          </ul>
+        </p>
+
+        <p>
+          <image href="/resources/EditAuthentication.png" alt="EditAuthentication"/>
+        </p>
+        <p>
+          The section <b>Summary</b> displays what changes have been entered.
+        </p>
+
+        <p>
+          <image href="/resources/EditSummary.png" alt="EditSummary"/>
+        </p>
+        <p>
+          After selecting field "Modify Roles" and not selecting any roles, it appears the following information in module Summary <b>No user role has been selected.</b>
+        </p>
+
+        <p>
+          <image href="/resources/EditSummaryNoRole.png" alt="EditSummaryNoRole"/>
+        </p>
+
+        <p>
+          The section <b>Apply</b> displays how many users have been edited.
+        </p>
+
+        <p>
+          <image href="/resources/EditApply.png" alt="EditApply"/>
+        </p>
+     </section>
+
+     <section>
+       <title id="duplicateuser">Duplicate User</title>
+         <p>
+             <image href="/resources/Duplicat.png" alt="Duplicat"/>
+         </p>
+
+         <p>
+             A user can be created using another user as a template. The new user is assigned any roles assigned to the original user.
+         </p>
+         <p>
+             The mandatory fields have to be filled as they are empty by default:
+             <ul>
+                 <li>Username</li>
+                 <li>Name</li>
+                 <li>Surname</li>
+                 <li>Local Password</li>
+                 <li>Repeat Local Password</li>
+             </ul>
+         </p>
+
+         <p>
+             The optional fields can be filled:
+             <ul>
+                 <li>Email</li>
+                 <li>Status</li>
+                 <li>Description</li>
+                 <li>Roles</li>
+                 <li>Force Password Change</li>
+                 <li>Password Ageing <xref href="#help/app/userprofile/ui~PAW" type="concept" scope="external"> (More information)</xref></li>
+                 <li>Authentication Mode</li>
+             </ul>
+         </p>
+
+         <p><b>Note:</b></p>
+         <ul>
+             <li>The Authentication Mode value for duplicated user is the same of the original ones.</li>
+             <li>Maximum 48 users per CPP node are allowed (this includes disabled users).</li>
+             <li>
+                 Maximum 10 Task Profile Roles per user are allowed.
+             </li>
+         </ul>
+         It is not possible to duplicate a federated user.
+     </section>
+
+     <section>
+       <title id="deleteusers">Delete Users</title>
+        <p>
+          Select any user(s) in the list and click <b>Delete</b> to delete the user(s). A notification displays how many users have been selected for deletion.
+        </p>
+
+        <p>
+          <image href="/resources/DeleteMessage.png" alt="DeleteMessage"/>
+        </p>
+
+        <p>
+          To confirm deletion, click <b>Delete</b> on the <b>Delete Selected Users</b> window.
+        </p>
+
+        <p>
+          To cancel the operation and return to the main page, click <b>Cancel</b>.
+        </p>
+
+        <p>
+          Successful deletion of a user profile is confirmed when following notification is displayed:
+        </p>
+
+        <p>
+          <image href="/resources/DeleteWindow.png" alt="DeleteWindow"/>
+        </p>
+
+        <p><b>Note:</b></p>
+        <ul>
+            <li><b>Security Warning: The user cannot delete himself.</b></li>
+            <li>If the user has at least a Task Profile Roles or a Custom Roles containg Task Profile Roles assigned, the LAAD file has to be redistributed to the relevant CPP nodes. </li>
+            <li>It is not possible delete a federated user. See the document ENM System Security Configuration Programmers Guide, 1/19817-CNA 403 3065 to remove all the federated users.</li>
+        </ul>
+
+     </section>
+
+     <section>
+       <title id="terminatesessions">Terminate Sessions</title>
+         <p>
+            <image href="/resources/TerminateSession.png" alt="TerminateSession"/>
+         </p>
+
+         <p>
+           To terminate user session, there are two ways:
+         </p>
+         <ul>
+           <li>Select the user(s) and then click <b>Terminate Sessions</b> in the action bar.
+           </li>
+         </ul>
+           or
+         <ul>
+           <li>Select the user and click <b>Profile Summary</b> on the actions bar to display the <b>Profile Summary</b> panel.
+               The <b>Profile Summary</b> gives a count of the active sessions for the user.
+               Click <b>Terminate Session</b> to terminate all active sessions of the selected user.
+           </li>
+         </ul>
+
+         <p>
+           The following message is displayed:
+         </p>
+         <p>
+           <image href="/resources/Terminate.png" alt="Terminate"/>
+         </p>
+     </section>
+     <section>
+            <title id="enabledisableuser">Enable/Disable Users</title>
+         <p>
+             <image href="/resources/EnabledUserToDisable.png" alt="Enabledisableuser"/>
+         </p>
+           <p>
+                To disable a user:
+            <ul>
+                <li>Select one or more user(s) and then click <b>Disable User</b> button in the action bar.
+                </li>
+            </ul>
+             <image href="/resources/EnabledUserToDisable.png" alt="enableuser"/>
+         </p>
+         <p>
+             To enable a user:
+         <ul>
+             <li>Select one or more disabled user(s) and then click <b>Enable User</b> button in the action bar.
+             </li>
+         </ul>
+             <image href="/resources/DisabledUserToEnable.png" alt="disableuser"/>
+         </p>
+     </section>
+
+     <section>
+       <title id="profilesummary">Profile Summary</title>
+         <p>
+             Local Users
+         </p>
+         <p>
+           <image href="/resources/ProfileSummary.png" alt="ProfileSummary"/>
+         </p>
+
+         <p>
+             Federated Users </p>
+         <p>
+             <image href="/resources/ProfileSummaryFederated.png" alt="ProfileSummaryFederated"/>
+         </p>
+
+         <p>
+            A summary of the topmost selected users profile appears on the right panel. This displays their username and the users roles.
+         </p>
+
+         <p>
+           To open Profile Summary panel, select a single user in the table and click Profile Summary icon on the actions bar.</p>
+         <p>
+           If the Profile Summary panel is opened and no user is selected, "Select one User to view details" is displayed in Profile Summary.
+         </p>
+
+         <p>
+           The Profile Summary panel contains Session Details information.
+         </p>
+
+         <p>
+           <ul>
+              <li><b>Session Instance</b> field, indicating the number of active sessions of a particular user.</li>
+              <li><b>Terminate Sessions</b> button, to terminate all active sessions.</li>
+           </ul>
+
+             For the federated users the Edit button is not available.
+         </p>
+     </section>
+
+      <section>
+       <title id="changeuserpassword">Change User Local Password</title>
+            <p>
+                <image href="/resources/ChangePassword.png" alt="ChangePassword"/>
+            </p>
+
+            <p>
+                The user needs to fill three mandatory fields:
+            </p>
+
+            <p>
+                <ul>
+                    <li><i>New Local Password</i>: the password must comply with the local password policy displayed in box on the right of screen. Only alphanumeric characters are accepted.</li>
+                    <li><i>Repeat New Local Password</i>: password and Repeat New Local Password fields must match.</li>
+                    <li><i>Force Password Change:</i>
+                        <ul>
+                            <li><i>Off (Disabled):</i> the user is redirected to Application Launcher page at first login.</li>
+                            <li><i>On (Enabled):</i> the user has permissions to access applications it has roles assigned to when it is already logged in.</li>
+                            <li>The default value in the status is <i>On (Enabled)</i>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            
+            <b>Note:</b>
+            <ul>
+                <li>
+                    If the user has at least a Task Profile Role assigned or a Custom Role containing Task Profile Roles, the LAAD file has to be redistribute to the CPP nodes that user has access to.
+                    In case of federated user and local user with remote authentication, the local password is used for ENM authentication in case of LDAP remote is not available and for
+                CPP nodes with Local Authentication and Authorization activated.
+                </li>
+                <li>
+                    The Force Change Password switcher is disabled (grayed) and set to On if the Enforce User Hardening is enabled. See the document ENM Node Hardening Guidelines and Instructions, 1/17473-AOM 901 151-1 for details. This is available in the ENM CPI Library, EN/LZN 703 0205.
+                </li>
+            </ul>
+
+            <p>
+                In case of successfully changed password, the following message appears:
+            </p>
+
+            <p>
+                <image href="/resources/CreateUserMessage.png" alt="ChangePassword"/>
+            </p>
+
+            <p>
+                Following errors can occur:
+            </p>
+
+            <ul>
+                <li><b>New Local Password</b> and <b>Repeat New Local Password</b> fields do not match.
+                    <p>
+                        <image href="/resources/RepeatPassword.png" alt="RepeatPassword"/>
+                    </p>
+                </li>
+                <li><b>New Local Password</b> does not fulfill the <b>Local Password Policies</b>.
+                    <p>
+                        <image href="/resources/PasswordPolicy.png" alt="PasswordPolicy"/>
+                    </p>
+                </li>
+            </ul>
+     </section>
+
+     <section>
+       <title id="forcepasswordchange">Force Password Change</title>
+         <p>
+           To force the change of the password at next login, select the user and click <b>Force Password Change</b> in the action bar when the user is in view mode.
+         </p>
+
+         <p>
+           The following message is displayed:
+         </p>
+
+         <p>
+           <image href="/resources/ForcePasswordChange.png" alt="ForcePasswordChange"/>
+         </p>
+
+         <p>
+           User(s) needs to update the password on the next login.
+         </p>
+
+         <p>
+           After filling the field <b>Current Local Password</b>, the fields <b>New Local Password</b> and <b>Repeat New Local Password</b> are unlocked.
+         </p>
+         <p>It is not possible to force the local password change for federated users.</p>
+     </section>
+
+     <section>
+       <title id="revokeforcepwchange">Revoke Force Password Change</title>
+         <p>
+           To revoke change password, select the user and click <b>Revoke Force Password Change</b> in the action bar when the user is in view mode.
+         </p>
+
+         <p>
+           The following message is displayed:
+         </p>
+
+         <p>
+           <image href="/resources/UnForcePasswordChange.png" alt="UnForcePasswordChange"/>
+         </p>
+
+         <p>
+           User(s) does not need to update the password on the next login.
+         </p>
+         <p>It is not possible to revoke the force local password change for federated users.</p>
+         <p>It is not possible to revoke the force local password change if the Enforced User Hardening is enabled. See the document ENM Node Hardening Guidelines and Instructions, 1/17473-AOM 901 151-1 for details. This is available in the ENM CPI Library, EN/LZN 703 0205.</p>
+     </section>
+
+     <section>
+       <title id="importexport">Import and Export</title>
+         <p>
+           Import user profiles from an XML file. Up to 1,000 users can be imported from a single file.
+         </p>
+
+         <p>
+           Click <b>Import</b> button to open file selection window.
+         </p>
+         <p>
+           <b>Note:</b> If Import button is disabled means that the WebPush subscription is not performed correctly.
+           In this case install the ENM trusted certificates into the client browser and restart the server. See the document ENM Identity and Access Management System Administration Guide, 2/1543-AOM 901 151-1 for details. This is available in the ENM CPI Library, EN/LZN 703 0205.
+         </p>
+
+         <p>
+           <image href="/resources/Import.png" alt="Import"/>
+         </p>
+
+         <p>
+           Select file to be imported and click <b>OK</b>. Import process starts.
+         </p>
+         <p>It is not possible to import a federated user.</p>
+
+         <p>
+           The following assumptions must be met:
+         </p>
+
+         <p>
+           <ul>
+              <li>At least one privilege assigned to a user is required.</li>
+              <li>Import option cannot be used to change user password.</li>
+              <li>A user password is required to create a new user profile.</li>
+              <li>Role(s) and target group (s) to be assigned to user has to be already available in the ENM system.</li>
+
+              <li>The file containing user profiles must have following structure:</li>
+           </ul>
+        </p>
+        <p>
+          <codeblock>
+                   &lt;users&gt;
+                        &lt;user&gt;
+                            &lt;name&gt;johny&lt;/name&gt;
+                            &lt;password&gt;TestPassw0rd&lt;/password&gt;
+                            &lt;changePasswordFlag&gt;true&lt;/changePasswordFlag&gt;
+                            &lt;status&gt;enabled&lt;/status&gt;
+                            &lt;firstname&gt;John&lt;/firstname&gt;
+                            &lt;surname&gt;Smith&lt;/surname&gt;
+                            &lt;privileges&gt;
+                                &lt;privilege&gt;
+                                    &lt;role&gt;Cmedit_Operator&lt;/role&gt;
+                                    &lt;targetGroup&gt;tg1&lt;/targetGroup&gt;
+                                &lt;/privilege&gt;
+                                &lt;privilege&gt;
+                                    &lt;role&gt;Cmedit_Operator&lt;/role&gt;
+                                    &lt;targetGroup&gt;tg2&lt;/targetGroup&gt;
+                                &lt;/privilege&gt;
+                                &lt;privilege&gt;
+                                    &lt;role&gt;BscApplicationAdministrator&lt;/role&gt;
+                                    &lt;targetGroup&gt;tg3&lt;/targetGroup&gt;
+                                &lt;/privilege&gt;
+                                &lt;privilege&gt;
+                                    &lt;role&gt;CM-Advanced&lt;/role&gt;
+                                    &lt;targetGroup&gt;tg4&lt;/targetGroup&gt;
+                                &lt;/privilege&gt;
+                            &lt;/privileges&gt;
+                        &lt;/user&gt;
+                        &lt;user&gt;
+                            &lt;name&gt;jimmy&lt;/name&gt;
+                            &lt;password&gt;TestPassw0rd&lt;/password&gt;
+                            &lt;changePasswordFlag&gt;true&lt;/changePasswordFlag&gt;
+                            &lt;status&gt;enabled&lt;/status&gt;
+                            &lt;firstname&gt;James&lt;/firstname&gt;
+                            &lt;surname&gt;Bretella&lt;/surname&gt;
+                            &lt;privileges&gt;
+                                &lt;privilege&gt;
+                                    &lt;role&gt;ADMINISTRATOR&lt;/role&gt;
+                                    &lt;targetGroup&gt;ALL&lt;/targetGroup&gt;
+                                &lt;/privilege&gt;
+                            &lt;/privileges&gt;
+                        &lt;/user&gt;
+                    &lt;/users&gt;
+          </codeblock>
+         </p>
+
+         <p>
+           Optional tags <i>description</i>, <i>email</i>, <i>passwordAgeing</i>, <i>authMode</i>  can be added to the user profiles XML file, for example:
+         </p>
+
+         <p>
+          <codeblock>
+                        &lt;users&gt;
+                            &lt;user&gt;
+                                &lt;name&gt;johny&lt;/name&gt;
+                                &lt;password&gt;TestPassw0rd&lt;/password&gt;
+                                &lt;changePasswordFlag&gt;true&lt;/changePasswordFlag&gt;
+                                &lt;status&gt;enabled&lt;/status&gt;
+                                &lt;firstname&gt;John&lt;/firstname&gt;
+                                &lt;surname&gt;Smith&lt;/surname&gt;
+                                &lt;email&gt;john.smith@ericsson.com&lt;/email&gt;
+                                &lt;description&gt;Example description&lt;/description&gt;
+                                &lt;authMode&gt;local&lt;/authMode&gt;
+                                &lt;passwordAgeing&gt;
+                                    &lt;customizedPasswordAgeingEnable&gt;true&lt;/customizedPasswordAgeingEnable&gt;
+                                    &lt;passwordAgeingEnable&gt;true&lt;/passwordAgeingEnable&gt;
+                                    &lt;pwdMaxAge&gt;60&lt;/pwdMaxAge&gt;
+                                    &lt;pwdExpireWarning&gt;5&lt;/pwdExpireWarning&gt;
+                                &lt;/passwordAgeing&gt;
+                                &lt;privileges&gt;
+                                    &lt;privilege&gt;
+                                        &lt;role&gt;Cmedit_Operator&lt;/role&gt;
+                                        &lt;targetGroup&gt;tg1&lt;/targetGroup&gt;
+                                    &lt;/privilege&gt;
+                                    &lt;privilege&gt;
+                                        &lt;role&gt;Cmedit_Operator&lt;/role&gt;
+                                        &lt;targetGroup&gt;tg2&lt;/targetGroup&gt;
+                                    &lt;/privilege&gt;
+                                    &lt;privilege&gt;
+                                        &lt;role&gt;BscApplicationAdministrator&lt;/role&gt;
+                                        &lt;targetGroup&gt;tg3&lt;/targetGroup&gt;
+                                    &lt;/privilege&gt;
+                                    &lt;privilege&gt;
+                                        &lt;role&gt;CM-Advanced&lt;/role&gt;
+                                        &lt;targetGroup&gt;tg4&lt;/targetGroup&gt;
+                                    &lt;/privilege&gt;
+                                &lt;/privileges&gt;
+                            &lt;/user&gt;
+                        &lt;/users&gt;
+          </codeblock>
+         </p>
+
+         <p>
+           <b>Notes:</b>
+         </p>
+
+         <p>
+            <ul>
+               <li>authMode can be set local or remote.</li>
+               <li>pwdMaxAge, pwdExpireWarning are mandatory only if customizedPasswordAgeingEnable and passwordAgeingEnable are set to true.</li>
+               <li>Not assign more than 10 Task Profile Roles to a user.</li>
+            </ul>
+         </p>
+
+         <p>
+           Import process starts with analysis of file to be imported. The summary is presented in dialog window.
+         </p>
+
+         <p>
+           <image href="/resources/ImportReady.png" alt="Analysis summary"/>
+         </p>
+
+         <p>
+           Warning is presented in case system wide roles are removed as a result of Import operation.
+         </p>
+
+         <p>
+           <image href="/resources/ImportReadyWarning.png" alt="Analysis summary"/>
+         </p>
+
+         <p>
+           <b>Import Only New</b> button appears in case there are new and existing user profiles to import.
+         </p>
+
+         <p>
+           <image href="/resources/ImportReadyWarningNewOnly.png" alt="Analysis summary"/>
+         </p>
+
+         <p>
+           Click <b>View</b> link button to list users who are going to lose system wide roles.
+         </p>
+
+         <p>
+           <image href="/resources/UsersLosingRoles.png" alt="Analysis summary"/>
+         </p>
+
+         <p>
+           To continue import process click <b>Import All</b> button. To terminate it, click <b>Cancel</b>.
+         </p>
+
+         <p>
+           Progress info pill appears, visible by all users.
+         </p>
+
+         <p>
+           <image href="/resources/ProgressInfoPillBeingExported.png" alt="Progress info pill"/>
+         </p>
+
+         <p>
+           When import process completes progress info pill content is refreshed automatically.
+         </p>
+
+         <p>
+           <image href="/resources/ProgressInfoPill.png" alt="Progress info pill"/>
+         </p>
+
+         <p id="notification">
+           Click <b>Import Progress</b> button or envelope button to make <b>Notifications</b> panel visible.
+           <b>Notifications</b> panel displays current state of import operation.
+         </p>
+
+         <p>
+           <image href="/resources/NotificationsProgress.png" alt="Import progress"/>
+         </p>
+
+         <p>
+           Notification panel for successfully completed import operation.
+         </p>
+
+         <p>
+           <image href="/resources/NotificationsImported.png" alt="Imported user profiles"/>
+         </p>
+
+         <p>
+           Click <b>View Report</b> to get import report file.
+         </p>
+
+         <p>
+           An example of <i>report.json</i> file:
+         </p>
+
+         <p>
+           <image href="/resources/ImportReportPartialSuccess.png" alt="Import Report"/>
+         </p>
+
+         <p>
+           A value of <i>importStatus</i> can be:
+         </p>
+
+         <p>
+           <ul>
+              <li><i>SUCCESS</i> - when all user profiles have been imported successfully.</li>
+              <li><i>PARTIAL_SUCCESS</i> - when not all user profiles have been imported.</li>
+              <li><i>FAILURE</i> - when no user profile has been imported or import process failed.</li>
+            </ul>
+          </p>
+
+       <title id="ImportExportUI_Export">Export</title>
+
+         <p>
+           Export selected user profiles to an XML file. Up to 1,000 users can be exported to a single file.
+         </p>
+
+         <p>
+           Exported file can be used to modify users profiles by using <b>Import</b> option.
+         </p>
+
+         <p>
+           Due to security reasons a password is not exported.
+         </p>
+
+         <p>
+           As result, the Export function cannot be used as a backup of defined ENM users.
+         </p>
+
+         <p>
+           To export users, select users and click <b>Export</b> button.
+         </p>
+
+         <p>
+           In the pop-up window, choose a localization to save UsersProfiles.xml.
+         </p>
+
+         <p>
+           There is an availability to filter users with chosen attribute and then export filtered users profiles.
+         </p>
+
+         <p>
+           <image href="/resources/Export.png" alt="Export"/>
+         </p>
+
+         <p>
+           After successful export of user profiles, the following message is displayed:
+         </p>
+
+         <p>
+           <image href="/resources/SuccessfulExportToast.png" alt="SuccessfulExportToast"/>
+         </p>
+
+         <p>
+           Trying to export more than a 1,000 users profiles results in an error message:
+         </p>
+
+         <p>
+            <image href="/resources/ErrorExportDialog.png" alt="ErrorExportDialog"/>
+         </p>
+
+     </section>
+
+     <section>
+       <title id="filters">Filters</title>
+         <p>
+           Filters configuration section slides from right side of User Management application after clicking Filters button in top-right section on action bar.
+         </p>
+
+         <p>
+           <image href="/resources/FilterByUsername1.png" alt="FilterByUsername1"/>
+         </p>
+         <p>
+           <image href="/resources/FilterByUsername2.png" alt="FilterByUsername2"/>
+         </p>
+         <p>
+           <image href="/resources/FilterByUsername3.png" alt="FilterByUsername3"/>
+         </p>
+
+         <p>
+           User can filter local users list using following criteria:
+         </p>
+
+         <p>
+            <ul>
+               <li>Username - Filter the users displayed in Users table by entering the full username or Unix regular expression. Capitalization does not matter.</li>
+               <li>Name - Filter the users displayed in Users table by entering the full name or Unix regular expression. Capitalization does not matter.</li>
+               <li>Surname - Filter the users displayed in Users table by entering the full surname or Unix regular expression. Capitalization does not matter.</li>
+               <li>Description - Filter the users displayed in Users table by entering the full description or Unix regular expression. Capitalization does not matter.</li>
+               <li>Status - Filter users according to their status by selecting the Enabled or Disabled option.</li>
+               <li>Last Login - In an empty field in Logged in within last days, enter the number of days.</li>
+               <li>Failed Logins - Filter users with or without failed login attempts by selecting the Yes or No option.</li>
+               <li>Authentication Mode - Filter users with local or remote authentication mode by selecting the Local or Remote option.</li>
+               <li>Credential Status - Filter the credential status values by checking the relevant checkboxes:
+                   <ul>
+                       <li>Active: means that the user has a valid certificate associated.</li>
+                       <li>New, Deleted, Inactive, Not Applicable: means that the user has no valid certificate associated.</li>
+                   </ul>
+               </li>
+               <li>Currently Logged in - Filter the currently logged in or not logged in users by selecting the Yes or No option.</li>
+               <li>Expired Password - Filter users with expired or not expired password by selecting Yes or No option.</li>
+               <li>Password Ageing - Filter users with customized or not customized password ageing by selecting Custom Settings or System Settings option.</li>
+               <li>Roles - Filter the roles in users by checking the roles checkbox.
+                  <ul>
+                     <li> = Filtering on users with this role assigned</li>
+                     <li> != Filtering on users with this role not assigned</li>
+                  </ul>
+              </li>
+            </ul>
+         </p>
+
+         <p>
+           <image href="/resources/FilterByRole.png" alt="FilterByRole"/>
+         </p>
+
+         <p>
+             User can filter federated users list using following criteria:
+         </p>
+
+         <p>
+             <ul>
+                 <li>Username - Filter the users displayed in Users table by entering the full username or Unix regular expression. Capitalization does not matter.</li>
+                 <li>Last Login - In an empty field in Logged in within last days, enter the number of days.</li>
+                 <li>Failed Logins - Filter users with or without failed login attempts by selecting the Yes or No option.</li>
+                 <li>Credential Status - Filter the credential status values by checking the relevant checkboxes:
+                     <ul>
+                         <li>Active: means that the user has a valid certificate associated.</li>
+                         <li>New, Deleted, Inactive, Not Applicable: means that the user has no valid certificate associated.</li>
+                     </ul>
+                 </li>
+                 <li>Currently Logged in - Filter the currently logged in or not logged in users by selecting the Yes or No option.</li>
+                 <li>Roles - Filter the roles in users by checking the roles checkbox.
+                     <ul>
+                         <li> = Filtering on users with this role assigned</li>
+                         <li> != Filtering on users with this role not assigned</li>
+                     </ul>
+                 </li>
+             </ul>
+         </p>
+
+         <p>
+           Examples of Unix regular expression are:
+         </p>
+
+         <p>
+            <ul>
+               <li>Dot <b>.</b> matches any single character. For example: <b>"user1.2"</b> matches "user1a2","user112a" etc.
+               </li>
+               <li>Bracket expression <b>[ ]</b> matches a single character that is contained within the brackets.
+                   For example, <b>"Kat[a-k]"</b> matches "Kate" or "Katherine" but does not match "Katty".
+               </li>
+               <li>Star <b>*</b> matches the preceding element zero or more times.
+                   For example, <b>user10*4</b> matches "user14", "user104", "user140", "user141", "user142" etc.
+               </li>
+               <li>Curly brackets <b>{m,n}</b> matches the preceding element at least m and not more than n times.
+                   For example, <b>ll{1,3}</b>  matches "Allexander", "Emilly", and "Lili".
+               </li>
+           </ul>
+         </p>
+         <p>
+           After selecting filters, user needs to click <b>Apply</b>.
+         </p>
+
+         <p>
+           To clear the filter, click the<b> 'X'</b> symbol in the search box or click <b>Clear all Filters</b>.
+         </p>
+
+     </section>
+    </conbody>
+</concept>

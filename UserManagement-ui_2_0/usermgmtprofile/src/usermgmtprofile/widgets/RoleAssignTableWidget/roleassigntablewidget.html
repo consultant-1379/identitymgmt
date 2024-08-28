@@ -1,0 +1,84 @@
+<div class="eaUsermgmtprofile-wRoleAssignTableWidget eaUsermgmtprofile-wRoleAssignTableWidget-{{identifier}}">
+<!--    <h3>-->
+<!--        <div>-->
+<!--            <div class="eaUsermgmtprofile-wRoleAssignTableWidget-titleContainer">-->
+<!--                <span class="eaUsermgmtprofile-wRoleAssignTableWidget-title">-->
+<!--                    {{this.tableHeaders.title}}-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="eaUsermgmtprofile-wRoleAssignTableWidget-infoPopupContainer">-->
+<!--                <span class="eaUsermgmtprofile-wRoleAssignTableWidget-infoPopup">-->
+<!--                    <e-element src="widgets/InfoPopup" e-options="infoPopup" />-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div style="clear:both"></div>-->
+<!--    </h3>-->
+    <div class="eaUsermgmtprofile-role-duplicate-info">
+        <span class="eaUsermgmtprofile-role-duplicate-info-icon">
+            <i class="ebIcon ebIcon_error"></i>
+        </span>
+        <span class="eaUsermgmtprofile-role-duplicate-info-label">{{duplicateMessage}}</span>
+    </div>
+    <div class="eaUsermgmtprofile-role-error ebNotification ebNotification_color_red">
+        <div class="ebNotification-content eaUsermgmtprofile-role-error-content">
+            <span class="ebNotification-icon">
+                <i class="ebIcon ebIcon_error"></i>
+            </span>
+            <span class="ebNotification-label eaUsermgmtprofile-role-error-message"></span>
+        </div>
+    </div>
+    <div class="eaUsermgmtprofile-role-duplicate-info">
+        <span class="eaUsermgmtprofile-role-duplicate-info-icon">
+            <i class="ebIcon ebIcon_error"></i>
+        </span>
+        <span class="eaUsermgmtprofile-role-duplicate-info-label"></span>
+    </div>
+    <h4 class="eaUsermgmtprofile-wRoleAssignTableWidget-createRole">
+       <span class="eaUsermgmtprofile-wRoleAssignTableWidget-createRole-text">
+            {{this.tableHeaders.role_not_here}}
+       </span>
+       <a href="/#rolemanagement/userrole/create" class="eaUsermgmtprofile-wRoleAssignTableWidget-createRole-link" target="_blank">
+           {{this.tableHeaders.create_role}}
+       </a>
+    </h4>
+    <h4 class="eaUsermgmtprofile-wRoleAssignTableWidget-createTargetGroup">
+       <span class="eaUsermgmtprofile-wRoleAssignTableWidget-createTargetGroup-text">
+            {{this.tableHeaders.target_group_not_here}}
+       </span>
+       <a href="/#targetmanagement/targetgroup/create" class="eaUsermgmtprofile-wRoleAssignTableWidget-createTargetGroup-link" target="_blank">
+           {{this.tableHeaders.create_target_group}}
+       </a>
+    </h4>
+    <div class="eaUsermgmtprofile-wRoleAssignTableWidget-loader">
+        <h3>
+            <span class="eaUsermgmtprofile-wRoleAssignTableWidget-resultsRole">
+                <span class="eaUsermgmtprofile-wRoleAssignTableWidget-resultsRole-all"></span>|
+                <span class="eaUsermgmtprofile-wRoleAssignTableWidget-resultsRole-assigned"></span>-
+                <a href="javascript:;" class="eaUsermgmtprofile-wRoleAssignTableWidget-resultsRole-assignAllRoles-link">
+                    {{this.tableHeaders.all}}
+                </a>-
+                <a href="javascript:;" class="eaUsermgmtprofile-wRoleAssignTableWidget-resultsRole-unassignAllRoles-link">
+                    {{this.tableHeaders.none}}
+                </a>
+            </span>
+            <span class="eaUsermgmtprofile-wRoleAssignTableWidget-actions">
+                <button class="ebBtn eaUsermgmtprofile-wRoleAssignTableWidget-actions-serviceTGs">{{this.tableHeaders.service_target_groups}}</button>
+                <div class="eaUsermgmtprofile-wRoleAssignTableWidget-actions-info"> </div>              
+            </span>
+            <div class="eaUsermgmtprofile-wRoleAssignTableWidget-infoPopupContainer">
+                <span class="eaUsermgmtprofile-wRoleAssignTableWidget-infoPopup">
+                    <e-element src="widgets/InfoPopup" e-options="infoPopup" />
+                </span>
+            </div>
+        </h3>
+
+        <div class="eaUsermgmtprofile-wRoleAssignTableWidget-loader-overlay">
+            <div class="eaUsermgmtprofile-wRoleAssignTableWidget-loader-content">
+                <span class="ebLoader-Dots"></span>
+            </div>
+        </div>
+        <e-element e-id="rolePrivilegsTable" src="tablelib/Table" e-options="tableOptions" />
+    </div>
+</div>
+<e-link src="./roleassigntablewidget.less" />

@@ -1,0 +1,36 @@
+<div class="eaUsersgroupedit-StepSecurity">
+    <div class="eaUsersgroupedit-StepSecurity-container">
+       <div class="eaUsersgroupedit-StepSecurity-container-innerWrapper eaUsersgroupedit-StepSecurity-container-innerWrapper-authenticationMode">
+            <div class="eaUsersgroupedit-StepSecurity-title">
+                <label class="eaUsersgroupedit-StepSecurity-label">
+                    <input class="eaUsersgroupedit-StepSecurity-authMode ebCheckbox" type="checkbox" />
+                    <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">{{authMode.label}}</span>
+                </label>
+                <span class="eaUsersgroupedit-StepSecurity-infoPopup">
+                    <e-element src="widgets/InfoPopup" e-options="authMode" />
+                </span>
+            </div>
+            <div class="eaUsersgroupedit-StepSecurity-authModeContainer">
+                <e-element src="widgets/Dropdown" e-id="dropdownAuthMode"  e-options="dropdownAuthMode" class="eaUsersgroupedit-StepSecurity-DropdownAuthMode" />
+            </div>
+        </div>
+        <div class="eaUsersgroupedit-StepSecurity-container-innerWrapper eaUsersgroupedit-StepSecurity-container-innerWrapper-passwordAgeing">
+            <div class="eaUsersgroupedit-StepSecurity-title">
+                <label class="eaUsersgroupedit-StepSecurity-label">
+                    <input class="eaUsersgroupedit-StepSecurity-pwdAgeing ebCheckbox" type="checkbox" />
+                    <span class="ebCheckbox-inputStatus"></span>
+                    <span class="ebCheckbox-label">{{passwordAgeing.label}}</span>
+                </label>
+                <span class="eaUsersgroupedit-StepSecurity-infoPopup">
+                    <e-element src="widgets/InfoPopup" e-options="passwordAgeing" />
+                </span>
+            </div>
+            <div class="eaUsersgroupedit-StepSecurity-pwdAgeingContainer">
+                <e-element e-id="passwordAgeing"  e-options="pwdAgeingOptions" src="usermgmtlib/widgets/CustomPasswordAgeingWidget/CustomPasswordAgeingWidget" >
+                </e-element>
+            </div>
+        </div>               
+    </div>
+</div>
+<e-link src="./stepSecurity.less" />

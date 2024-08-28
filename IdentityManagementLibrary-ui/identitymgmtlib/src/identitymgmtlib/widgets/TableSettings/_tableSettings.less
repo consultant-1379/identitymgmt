@@ -1,0 +1,35 @@
+.elIdentitymgmtlib-wTableSettings {
+
+    &-header {
+        font-size: 0;
+    }
+
+    &-text,
+    &-buttonHolder {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-text {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        width: calc(~'100% - 200px');
+    }
+
+    &-buttonHolder {
+        padding: 4px;
+        box-sizing: border-box;
+        text-align: right;
+    }
+
+    &-settingsButton {
+        max-width: 100%;
+    }
+
+    &-text,
+    &-settingsButton {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorials">
+    <title>Tutorials</title>
+    <conbody>
+        <section>
+            <sl>
+                <sli><xref href="CreateTargetGroup.xml" type="concept">Create Target Group</xref></sli>
+            </sl>
+            <sl>
+                <sli><xref href="EditTargetGroup.xml" type="concept">Edit Target Group</xref></sli>
+            </sl>
+        </section>
+    </conbody>
+</concept>

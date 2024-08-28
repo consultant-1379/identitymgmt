@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "create" : "Create User Role",
+    "edit" : "Edit User Role",
+    "display" : "User Role"
+  },
+  "error" : "Error",
+  "details" : "Details",
+  "save" : "Save",
+  "edit" : "Edit",
+  "cancel" : "Cancel",
+  "confirmNav" : "There are unsaved changes on this page. Do you want to leave the page and discard your changes?",
+  "roleCreated" : "Role created",
+  "roleUpdated" : "Role updated",
+  "roleName_must_be_unique" : "This name already exists"
+}

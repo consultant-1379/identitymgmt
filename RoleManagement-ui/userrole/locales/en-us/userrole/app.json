@@ -1,0 +1,10 @@
+{
+    "title": "User Role",
+    "headers": {
+        "create": "Create User Role",
+        "edit": "Edit User Role"
+    },
+    "confirmNav": "You have unsaved changes.",
+    "roleType": "Role Type",
+    "selectRoleType": "Select Role Type"
+}

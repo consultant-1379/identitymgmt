@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="TopologyBrowser-AppInfo">
+    <title>AppInfo</title>
+    <conbody>
+        <dl>
+            <dlentry id="appName">
+                <dt>App</dt>
+                <dd>Role Management</dd>
+            </dlentry>
+			<dlentry id="productNumber">
+                <dt>Product Number</dt>
+                <dd>CNA 403 3016 R1A</dd>
+            </dlentry>
+            <dlentry id="version">
+                <dt>Version</dt>
+                <dd>{{version}}</dd>
+            </dlentry>
+			<dlentry id="buildDate">
+                <dt>Build Date</dt>
+                <dd>{{buildDate}}</dd>
+            </dlentry>
+            <dlentry id="installDate">
+                <dt>Install Date</dt>
+                <dd>{{installDate}}</dd>
+            </dlentry>
+            <dlentry id="link">
+                <dt>App Link</dt>
+                <dd>#</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

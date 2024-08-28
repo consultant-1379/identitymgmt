@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Prerequisites">
+    <title>Prerequisites</title>
+    <conbody>
+        <section>
+            <p>
+                The following prerequisites are valid for all supports node types:
+            </p>
+
+            <title id="Prerequisites">Required User Roles</title>
+
+            <p>
+              You must have a valid ENM user account.  
+            </p>
+        </section>
+
+        <section><title>Documentation</title>
+           <p>It is expected that you are familiar with the following:</p>
+             <ul>
+                <li>ENM Security System Administrator Guide</li>
+                <li>ENM Identity and Access Management System Administrator Guide</li>
+                <li>ENM Security Management Troubleshooting Guide</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>
+
+
+
+

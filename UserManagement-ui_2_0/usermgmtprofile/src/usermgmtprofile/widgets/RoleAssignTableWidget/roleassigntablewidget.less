@@ -1,0 +1,136 @@
+.eaUsermgmtprofile {
+
+    &-wRoleAssignTableWidget {
+        float: left;
+        padding-bottom: 20px;
+        width:100%;
+        overflow-x:auto;
+
+
+        &-resultsRole {
+            font-size: 14px;
+            padding-top: 24px;
+            padding-right: 200px;
+            &-all {
+                padding-right: 5px;
+            }
+            &-assigned {
+                color: grey;
+                font-size: 13px;
+                padding-right: 5px;
+            }
+            &-assignAllRoles-link {
+                font-size: 13px;
+                cursor: pointer;
+            }
+            &-unassignAllRoles-link {
+                font-size: 13px;
+                cursor: pointer;
+            }
+        }
+        &-actions {
+            font-size: 14px;
+            &-filterSearch {
+                width: 300px;
+                margin-left: 10px;
+            }
+            &-serviceTGs {
+                visibility: hidden;
+            }
+            &-tgs {
+                display: inline;
+            }
+            &-info {
+                display: inline-block;
+                visibility: hidden;
+            }
+        }
+        &-createRole {
+            margin: 0;
+            font-weight: normal;
+            border: 0;
+            &-text {
+                color: grey;
+            }
+            &-link {
+                cursor: pointer;
+            }
+        }
+        &-createTargetGroup {
+            margin: 0;
+            font-weight: normal;
+            border: 0;
+            &-text {
+                color: grey;
+            }
+            &-link {
+                cursor: pointer;
+            }
+        }
+        &-infoPopupContainer {
+            float: right;
+            margin-right: 10px;
+        }
+        &-titleContainer {
+            float: left;
+        }
+        &-loader {
+            &-overlay {
+                background-color: #fff;
+                opacity: 0.8;
+                position: absolute;
+                z-index: 501;
+                display: none;
+                width: 100%;
+                height: 100%;
+                &_show {
+                    display: block;
+                }
+            }
+            &-content {
+                text-align: center;
+                top: 100px;
+                left: 50%;
+                position: absolute;
+            }
+        }
+
+    }
+    &-role-duplicate-info {
+        background-color: #fce9e8;
+        border-color: #ee7c75 !important;
+        border: 1px solid;
+        border-radius: 3px;
+        color: #c70000;
+        padding: 3px 3px 5px;
+        display: none;
+        width: calc(100% - 6px);
+        margin-bottom: 5px;
+        margin-top: 5px;
+        &-icon {
+            position: relative;
+            top: 1px;
+        }
+        &-label {
+            padding-left: 4px;
+            padding-right: 2px;
+            font-size: 1.3rem;
+            position: relative;
+            top: 3px;
+        }
+        &_show_true {
+            display: inline-block;
+        }
+    }
+    &-role-error {
+        display: none;
+        width: 100%;
+        &-content {
+            width: 100%;
+        }
+        &_show {
+            display: inline-block;
+        }
+    }
+    
+}

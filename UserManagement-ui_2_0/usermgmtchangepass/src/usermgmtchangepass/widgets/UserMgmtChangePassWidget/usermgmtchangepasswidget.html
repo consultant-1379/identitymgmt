@@ -1,0 +1,31 @@
+<div class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-mainContent">
+    <p class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-mainContent-topInfoText">
+        <span class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-mainContent-topInfoText1"></span>
+        <span class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-mainContent-topInfoTextUserName ebColor_purple"></span>.
+        <span class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-mainContent-topInfoText2"></span>
+    </p>
+    <form class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form" autoComplete="off">
+        <input type="text" class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form-input_fakeText ebInput" style="display:none"></input>
+        <input type="password" class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form-input_fakePassword ebInput" style="display:none"></input>
+
+        {{#each inputFields}}
+        <label class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form-label {{#if this.required}}ebLabel-text_required{{/if}}">{{this.name}}</label>
+        <div class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form-innerWrapper">
+            <div class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form-input-content">
+                {{#if this.checkbox}}
+                <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/CheckboxWidget/CheckboxWidget" identifier="{{this.id}}" type="{{this.type}}" on-label="{{this.onLabel}}" off-label="{{this.offLabel}}" on-value="{{this.onValue}}" off-value="{{this.offValue}}" status="{{status}}"></e-element>
+                {{else}}
+                <e-element e-id="{{this.id}}" src="identitymgmtlib/widgets/InputWidget/InputWidget" debounce="{{this.debounce}}" identifier="{{this.id}}" type="{{this.type}}"></e-element>
+                {{/if}}  {{#if this.validator}}
+                <e-element e-id="{{this.validator}}" src="usermgmtlib/widgets/ValidationResultWidget/ValidationResultWidget"></e-element>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+
+    </form>
+    <div class="eaUsermgmtchangepass-wUserMgmtChangePassWidget-form-policies">
+        <e-element e-id="passwordPolicy" e-options="passwordPoliciesWidget" src="usermgmtlib/widgets/PasswordPolicyWidget/PasswordPolicyWidget"></e-element>
+    </div>
+</div>
+<e-link src="./usermgmtchangepasswidget.less" />

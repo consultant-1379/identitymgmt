@@ -1,0 +1,29 @@
+[
+    {
+        "source": "/openidm"
+    },
+    {
+        "source": "/editprofile"
+    },
+    {
+        "source": "/rest"
+    },
+    {
+        "source": "/oss"
+    },
+    {
+        "source": "/topologyCollections"
+    },
+    {
+        "source": "/managedObjects"
+    },
+    {
+        "source": "/object-configuration"
+    },
+    {
+        "source": "/configuration-tasks/v1/tasks"
+    },
+    {
+        "source": "/persistentObject"
+    }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="About">
+    <title>About</title>
+    <conbody>
+        <dl>
+            <dlentry id="appName">
+                <dt>App</dt>
+                <dd>Target Group Management</dd>
+            </dlentry>
+            <dlentry id="productNumber">
+                <dt><b>Product Number</b></dt>
+                <dd>CNA 403 3016 R1A</dd>
+            </dlentry>
+            <dlentry id="version">
+                <dt>Version</dt>
+                <dd>{{version}}</dd>
+            </dlentry>
+            <dlentry id="link">
+                <dt><b>App Link</b></dt>
+                <dd>#targetmanagement</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

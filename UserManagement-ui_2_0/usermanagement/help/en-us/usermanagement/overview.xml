@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Overview">
+    <title>Overview</title>
+    <conbody>
+        <p>
+            User Management allows a Security Administrator to create and delete users, assign users with roles, and manage password functions.
+            The mapping of roles, target groups, and users is also performed in this application.
+        </p>
+
+        <p>
+            Available operations for Security Administrator:
+            <ul>
+                <li>Create of Users</li>
+                <li>Edit Existing Users</li>
+                <li>Assign User Roles and Target Groups</li>
+                <li>Change User Password</li>
+                <li>Delete Users</li>
+                <li>Enable/Disable Users</li>
+                <li>Duplicate a User</li>
+                <li>Filter Users</li>
+                <li>Revoke User Certificate</li>
+                <li>Retrieve User Credentials</li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

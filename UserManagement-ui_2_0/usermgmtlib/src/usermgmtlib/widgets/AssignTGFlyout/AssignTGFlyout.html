@@ -1,0 +1,55 @@
+<div class="eaUsermgmtlib-wAssignTGFlyout">
+
+    <div class="eaUsermgmtlib-wAssignTGFlyout-Header">
+        <p class="eaUsermgmtlib-wAssignTGFlyout-Title">
+            <span class="eaUsermgmtlib-wAssignTGFlyout-RoleNameLabel eaUsermgmtlib-wAssignTGFlyout-Label"></span>
+            <span class="eaUsermgmtlib-wAssignTGFlyout-RoleName"></span>
+        </p>
+    </div>
+    <div class="eaUsermgmtlib-wAssignTGFlyout-Content-inlineMessageHolder ebInlineMessage">
+           <div class="ebInlineMessage-iconHolder"><i class="ebIcon ebIcon_warning ebIcon_big"></i></div>
+           <div class="ebInlineMessage-contentHolder">
+               <div class="ebInlineMessage-header eaUsermgmtlib-wAssignTGFlyout-Content-inlineMessage">{{i18n.targetGroupPanel.tbacWarningMessage}}</div>
+           </div>    
+    </div>
+    <div class="eaUsermgmtlib-wAssignTGFlyout-Content">
+        <p class="eaUsermgmtlib-wAssignTGFlyout-Checkboxes">
+            <label>
+                <input class="ebRadioBtn eaUsermgmtlib-wAssignTGFlyout-RadioButtonAssignManually eaUsermgmtlib-wAssignTGFlyout-RadioButton" type="radio" name="assignTg" value="3" id="tg_manual" disabled="disabled" />
+                <span class="ebRadioBtn-inputStatus eaUsermgmtlib-wAssignTGFlyout-RadioButtonAssignLabel_MANUALLY"></span>
+                <span class="ebRadioBtn-label">{{i18n.flyoutPanel.assignManually}}</span>
+            </label>
+            <label>
+                <input class="ebRadioBtn eaUsermgmtlib-wAssignTGFlyout-RadioButtonAssignAll eaUsermgmtlib-wAssignTGFlyout-RadioButton" type="radio" name="assignTg" value="1" id="tg_all" />
+                <span class="ebRadioBtn-inputStatus eaUsermgmtlib-wAssignTGFlyout-RadioButtonAssignLabel_ALL"></span>
+                <span class="ebRadioBtn-label">ALL</span>
+            </label>
+            <label>
+                <input class="ebRadioBtn eaUsermgmtlib-wAssignTGFlyout-RadioButtonAssignNone eaUsermgmtlib-wAssignTGFlyout-RadioButton" type="radio" name="assignTg" value="2" id="tg_none" />
+                <span class="ebRadioBtn-inputStatus eaUsermgmtlib-wAssignTGFlyout-RadioButtonAssignLabel_NONE"></span>
+                <span class="ebRadioBtn-label">NONE</span>
+            </label>
+        </p>
+        
+
+         <span class="eaUsermgmtlib-wAssignTGFlyout-infoPopupContainer"></span>
+
+          <div style="clear:both"></div>
+        <div class="eaUsermgmtlib-wAssignTGFlyout-role-error ebNotification ebNotification_color_red">
+            <div class="eaUsermgmtlib-wAssignTGFlyout-role-error-ebNotification-content ebNotification-content">
+            <span class="ebNotification-icon">
+              <i class="ebIcon ebIcon_error"></i>
+            </span>
+                <span class="ebNotification-label eaUsermgmtlib-role-error-message eaUsermgmtlib-wAssignTGFlyout-role-error-message"></span>
+            </div>
+        </div>
+
+        <div class="eaUsermgmtlib-wAssignTGFlyout-ListContainer" style="clear:both"></div>
+
+        <div class="eaUsermgmtlib-wAssignTGFlyout-ButtonContainer">
+            <button class="ebBtn ebBtn_color_darkBlue elLayouts-ActionBarButton eaUsermgmtlib-wAssignTGFlyout-ButtonApply" type="button">{{i18n.flyoutPanel.apply}}</button>
+            <button class="ebBtn elLayouts-ActionBarButton eaUsermgmtlib-wAssignTGFlyout-ButtonCancel" type="button">{{i18n.flyoutPanel.cancel}}</button>
+        </div>
+    </div>
+    
+</div>

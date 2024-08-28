@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="targetmanagement-EditTargetGroup">
+    <title>Edit Target Group</title>
+    <taskbody>
+        <prereq>
+          <ul>
+            <li>You must have the SECURITY_ADMIN role.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner, and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+            </li>
+          </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial explains how to <b>Edit a Target Group</b>.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Launch Edit Target Group</xref>
+                </li>
+                <li>
+                    <xref href="#2">Enter Target Group Details</xref>
+                </li>
+                <li>
+                    <xref href="#3">Add Targets to Target Group</xref>
+                </li>
+                <li>
+                    <xref href="#4">Remove Targets from Target Group</xref>
+                </li>
+                <li>
+                    <xref href="#5">Click Save</xref>
+                </li>
+            </ol>
+        </context>
+
+        <steps>
+
+            <step id="1">
+                <cmd>Launch Edit Target Group</cmd>
+                <info>
+                   <ol>
+                     <li>Launch <xref scope="external" href="#targetmanagement"> Target Group Management</xref>.</li>
+                     <li>Select one target group and click <b>Edit</b>.
+
+                   The <b>Edit Target Group</b> page is displayed.</li>
+
+                   </ol>
+                </info>
+
+            </step>
+
+            <step id="2">
+                <cmd>Enter Target Group Details</cmd>
+                <info>
+                    <p>
+                        Enter <b>Description</b> field of target group.
+                    </p>
+
+                </info>
+
+            </step>
+
+            <step id="3">
+                <cmd>Add Targets to Target Group</cmd>
+                <info>
+                  <ol>
+                    <li>
+                        Click <b>Add Topology Data</b>.
+                    </li>
+                    <li>
+                        Select and add the required scope using one of the following: 
+                        <ul>
+                        <li><xref href="../ui.xml#topology">Topology</xref></li>
+                        <li><xref href="../ui.xml#searchfornetworkobjects">Search</xref></li>
+                        <li><xref href="../ui.xml#addcollections">Collections</xref></li>
+                        <li><xref href="../ui.xml#addsavedsearches">Saved Searches</xref></li>
+                        </ul>
+                    </li>
+                  </ol>
+                </info>
+            </step>
+
+            <step id="4">
+               <cmd>Remove Targets from Target Group</cmd>
+               <info>
+                <ol>
+                   <li>
+                    Select the targets to be removed from target group. The <b>Remove Node</b> button is displayed in the action bar.
+
+                   </li>
+                   <li>
+                     Click <b>Remove Node</b>.
+                   </li>
+                </ol>
+                                    <p>
+                        For more information on <b>Edit Target Group</b>, see <i>
+                            <xref href="../ui.xml#ETG">Edit Target Group</xref></i>.
+                    </p>
+               </info>
+
+            </step>
+
+            <step id="5">
+                <cmd>Save the Target Group</cmd>
+                <info>
+                    <p>
+                        Click <b>Save</b>.
+                    </p>
+
+
+                </info>
+
+            </step>
+
+        </steps>
+        <result>
+            <p>The Target Group is successfully updated.</p>
+        </result>
+
+    </taskbody>
+</task>
+
+
+

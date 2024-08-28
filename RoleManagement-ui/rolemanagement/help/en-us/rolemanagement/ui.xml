@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<concept id="Tutorial1">
+    <title>Role Management User Interface</title>
+    <conbody>
+        <section>
+          <p><xref type="concept" href="#RM">Role Management</xref></p>
+          <p><xref type="concept" href="#CR">Create Role</xref></p>
+          <p><xref type="concept" href="#ER">Edit Role</xref></p>
+          <p><xref type="concept" href="#CRS">Compare Roles</xref></p>
+          <p><xref type="concept" href="#RS">Role Summary</xref></p>
+          <p><xref type="concept" href="#DR">Delete Role</xref></p>
+          <p><xref type="concept" href="#RMF">Roles Filters</xref></p>
+       </section>
+
+       <section>
+          <title id="RM">Role Management</title>
+            <p>
+               <image href="/resources/RoleManagement.png" alt="RoleManagement"/>
+            </p>
+            <title>List Roles</title>
+            <p>
+                Role management GUI lists the following roles:
+                <ul>
+                    <li>ENM System Roles (System-defined roles or Application-specific roles)
+                        <p><b>System-defined roles:</b>
+                            <ul>
+                                <li>ADMINISTRATOR: Users assigned this role have unrestricted access to applications and commands within the application, except:
+                                <ul>
+                                    <li>Security operations related to user management are excepted as security operations require the SECURITY_ADMIN role</li>
+                                    <li>Access to WinFIOL is excepted to WinFIOL roles only</li>
+                                </ul>
+                                This role doesn't have the rights of FIELD_TECHNICIAN role.
+                                </li>
+                                <li>OPERATOR: Users assigned this role have access to a subset of the ENM application functionality afforded to the ADMINISTRATOR users. General guidance is that if an action can be called affecting it requires the ADMINISTRATOR role. The exact breakdown of entitlements is application-specific.</li>
+                                <li>SECURITY_ADMIN: Users assigned this role are able to manage users, their passwords, certificates, assign users to roles and target groups. The SECURITY_ADMIN role gives full access to the security applications</li>
+                                <li>FIELD_TECHNICIAN: Users assigned this role do not have any specific authorizations for ENM applications. A user with this role is able to SFTP to the ENM when performing nodal provisioning.</li>
+                            </ul>
+                        
+                        <b>Application-specific roles:</b>
+                                <ph>Applications, in general, support at least one of the predefined roles: application Operator (for instance Amos_Operator) and application Administrator (for instance Amos_Administrator). The application Operator and application Administrator roles afford the users the same privileges as the system-wide OPERATOR and ADMINISTRATOR roles except the scope is limited to the specific application.</ph>
+                        </p>
+                        
+                    </li>
+                    <li>COM Roles</li>
+                    <li>COM Role Aliases</li>
+                    <li>Custom Roles</li>
+                    <li>Task Profile Roles</li>
+                </ul>
+            </p>
+            <p>
+                Detailed description of ENM roles is available in the ENM Identity and Access Management System Administrator Guide, 22/1543-AOM 901 151-1. This is available in the ENM CPI Library, EN/LZN 703 0205.
+            </p>
+            <p>
+                Roles are displayed with <b>Role Name</b>, <b>Role Type</b>, <b>Description</b>, and <b>Status</b> fields.
+            </p>
+            <p>
+                <image href="/resources/ListRoles.png" alt="ListRoles"/>
+            </p>
+            <p>
+                If the number of defined roles exceeds the number of roles to display, the list exceeds one page:
+            </p>
+            <p>
+                <image href="/resources/ListRolesPagination.png" alt="ListRolesPagination"/>
+            </p>
+            <p>
+                It is possible to adjust the number of displayed roles.
+            </p>
+            <p>
+                <image href="/resources/ListRolesPaginationSelect.png" alt="ListRolesPaginationSelect"/>
+            </p>
+
+            <title>Action Bar</title>
+            <p>
+                Roles can be selected by clicking the roles row or by using the checkbox next to the role name.
+            </p>
+            <p>
+                Select multiple roles by using the checkboxes or a range of roles by using the <b>Shift</b> key.
+            </p>
+            <p>
+                The first checkbox in the top left column selects or deselects all roles that are displayed on the current page.
+            </p>
+            <p>
+                <image href="/resources/ListRolesSelectAll.png" alt="ListRolesSelectAll"/>
+            </p>
+            <p>
+                After selecting role(s), additional options appear in the action bar.
+            </p>
+            <p>
+                <image href="/resources/ActionBar.png" alt="ActionBar"/>
+            </p>
+            <p>
+                It is also possible to select the options using the right click on the role.
+            </p>
+            <p>
+                <image href="/resources/ActionBarRightClick.png" alt="ActionBarRightClick"/>
+            </p>
+            <p>
+                Create User Role - creates new role <i>
+                            <xref href="/ui.xml#CR">(More information)</xref></i>.
+            </p>
+            <p>
+                Edit - edits role <i><xref href="/ui.xml#ER">(More information)</xref></i>.
+            </p>
+            <p>
+                Delete - deletes role <i><xref href="/ui.xml#DR">(More information)</xref></i>.
+            </p>
+            <p>
+                Compare - compares two roles <i><xref href="/ui.xml#CRS">(More information)</xref></i>.
+            </p>
+            <p>
+                Role summary - checks summary of single role <i><xref href="/ui.xml#RS">(More information)</xref></i>.
+            </p>
+            <title>Changing Role Status Buttons</title>
+            <p>
+                When a role is selected, it is possible to change its status. The displayed status depends on the types of selected roles.
+            </p>
+            <p>
+                <image href="/resources/RoleStatusButtons.png" alt="RoleStatusButtons"/>
+            </p>
+            <p>
+                It is also possible to change the status for more selected roles. The number of displayed buttons depends on the types of selected roles. The available status buttons can be none, two, or three.
+            </p>
+            <p>
+                It is not possible to change the status of an ENM System Role.
+            </p>
+            <p>
+                It is not possible to disable a COM Role.
+            </p>
+            <p>
+                It is not possible to disable a Task Profile Role.
+            </p>
+       </section>
+
+       <section>
+           <title id="CR">Create Role</title>
+            <p>
+              <image href="/resources/CreateRoleEmpty.png" alt="CreateRoleEmpty"/>
+            </p>
+            <p>
+              There are four mandatory fields:
+            </p>
+            <p>
+              <ul>
+                <li><b>Name</b> - role name, it must be unique. Only alphanumeric (upper and lower cases), underscore, dash, and dot characters are accepted. The name must start with an alphanumeric character.</li>
+                <li><b>Description</b> - role description</li>
+                <li><b>Status</b> - role status, default value is Enabled</li>
+                <li><b>Role Type</b>
+                  <ul>
+                    <li>COM Role</li>
+                    <li>COM Role Alias</li>
+                    <li>Custom Role</li>
+                  </ul>
+                </li>
+              </ul>
+            </p>
+            <p>
+                The ENM Roles are described in details in the ENM Identity and Access Management System Administration Guide.
+            </p>
+            <p>
+                ENM system roles are predefined and cannot be created.
+            </p>
+            <p>
+                When <b>COM Role Alias</b> is selected, a table with the available COM Roles is displayed. At least one COM Role must be selected for COM Role Alias:
+            </p>
+            <p>
+                <image href="/resources/COMRolesList.png" alt="COM Roles List"/>
+            </p>
+            <p>
+                When <b>Custom Role</b> is selected, <b>Capabilities</b>, <b>COM Roles</b>, and <b>Task Profile Roles</b> tabs are displayed.
+            </p>
+            <p>
+                <image href="/resources/CreateCustomRoleApplicationPrivileges.png" alt="CreateCustomRoleApplicationPrivileges"/>
+            </p>
+            <note>
+                <b>Note:</b>
+                <p>A user does not support more than 10 Task Profile Roles assigned (included the ones contained in a custom role).</p>
+                <p>Adding to a Custom Role some Task Profile Roles, check that the limit of 10 Task Profile Roles for user is not exceeded.</p>
+                <p>The name of custom roles must not to terminate with "_Operator" or "_Administratror".</p>
+
+            </note>
+            <sectiondiv>
+
+            <p>The following errors can occur when defining roles:</p>
+                <ul>
+                    <li>
+                        <p>
+                            Role does not comply with naming policies:
+                            <ul>
+                                <li>
+                                    Only alphanumeric (upper and lower case), underscore, dash, dot characters are allowed.
+                                </li>
+                                <li>
+                                    Name must start with an alphanumeric character.
+                                </li>
+                            </ul>
+                        </p>
+                            <image href="/resources/RoleNameContainsForbiddenCharacters.png" alt="RoleNameContainsForbiddenCharacters"></image>
+                    </li>
+                    <li>
+                        <p>
+                            Role name is empty.
+                        </p>
+                        <image href="/resources/RoleNameCannotBeEmpty.png" alt="RoleNameCannotBeEmpty"></image>
+                    </li>
+                    <li>
+                        <p>
+                            Role description is empty.
+                        </p>
+                        <image href="/resources/RoleDescriptionCannotBeEmpty.png" alt="RoleDescriptionCannotBeEmpty"></image>
+                    </li>
+                    <li>
+                        <p>
+                            Role type is not selected.
+                        </p>
+                        <image href="/resources/RoleTypeMustBeSelected.png" alt="RoleTypeMustBeSelected"></image>
+                    </li>
+                    <li>
+                        <p>
+                            Role name already exists.
+                        </p>
+                        <image href="/resources/RoleNameMustBeUnique.png" alt="RoleNameMustBeUnique"></image>
+                    </li>
+                    <li>
+                        <p>
+                            Alias is empty - at least one COM Role for COM Role Alias <b>must</b> be selected.
+                        </p>
+                        <image href="/resources/AliasMustNotBeEmpty.png" alt="AliasMustNotBeEmpty"></image>
+                    </li>
+                    <li>
+                        <p>
+                            The number of Task Profile Roles exceeds the 10 per user.
+                        </p>
+                        <image href="/resources/ExceedNumberTaskProfiles.png" alt="ExceedNumberTaskProfiles"></image>
+                    </li>
+                </ul>
+            </sectiondiv>
+       </section>
+
+       <section>
+          <title id="ER">Edit Role</title>
+          <image href="/resources/EditRoleWindow.png" alt="EditRoleWindow"></image>
+            <p>
+                It is possible to edit the following fields:
+            </p>
+            <p>
+              <ul>
+                <li><b>Name</b>: can be changed only in case of COM Role and COM Role Alias.</li>
+                <li><b>Description</b></li>
+                <li><b>Status</b></li>
+                <li><b>Capabilities</b>: can be changed in case of Custom Role.</li>
+                <li><b>COM Roles</b>: can be changed in case of COM Role Alias and Custom Role.</li>
+                <li><b>Task Profile Roles</b>: can be changed in case of Custom Role.</li>
+              </ul>
+            </p>
+            <p>It is not possible to edit ENM System Roles.</p>
+            <p>It is not possible to edit the <b>Role Type</b> field, for all role types.</p>
+            <image href="/resources/EditCustomRole.png" alt="EditCustomRole"></image>
+       </section>
+
+       <section>
+           <title id="CRS">Compare Roles</title>
+            <p>
+                Compare Roles action enables the comparison between two selected Custom roles.
+            </p>
+            <p>
+                To open the Role Comparison window, select two Custom roles and click <b>Compare</b>.
+            </p>
+            <p>
+                <image href="/resources/SelectingTwoRoles.png" alt="SelectingTwoRoles"/>
+            </p>
+
+            <p>
+                <b>Role Comparison window</b>
+            </p>
+            <p>
+                Role Comparison window allows comparison of the following attributes:
+            </p>
+            <p>
+              <ul>
+                <li>Status</li>
+                <li>Description</li>
+                <li>Different actions - show differences between capabilities of two roles
+                </li>
+              </ul>
+              <b>Note:</b> COM Roles and Task Profile Roles inside Custom roles are not taken in account.
+            </p>
+
+            <p>
+                <image href="/resources/RoleComparison.png" alt="RoleComparison"/>
+            </p>
+       </section>
+      
+       <section>
+           <title id="RS">Role Summary</title>
+            <p>
+                The Role Summary panel displays details of the selected role.
+            </p>
+            <p>
+                To open the Role Summary panel, select a role and click <b>Role Summary</b> icon.
+            </p>
+            <p>
+                <image href="/resources/RoleSummaryInfo.png" alt="RoleSummaryInfo"/>
+            </p>
+            <p>
+                It is possible to check the following attributes:
+            </p>
+            <p>
+                <ul>
+                    <li>Description</li>
+                    <li>Role Type</li>
+                    <li>Status</li>
+                </ul>
+            </p>
+            <p>
+                In case of COM Role Alias, it is also possible to check COM Roles.
+            </p>
+            <p>
+                In case of Custom Role, it is possible to check Roles (COM Roles and Task Profile Roles) and Capabilities.
+            </p>
+            <p>
+                <image href="/resources/RoleSummaryPanel.png" alt="RoleSummaryPanel"/>
+            </p>
+            <p>
+                To see all role information, click <b>View all details</b>.
+            </p>
+            <p>
+                It is not possible to <b>view</b> all details in case of COM Roles, Task Profile Roles, and ENM System Roles.
+            </p>
+            <p>
+                It is possible to edit the role from this view.
+            </p>
+            <p>
+                <image href="/resources/ViewDetailsUserRole.png" alt="ViewDetailsUserRole"/>
+            </p>
+        </section>
+        
+        <section>
+           <title id="DR">Delete Role</title>
+            <p>
+                The Delete button is only displayed when the selected roles are available for deletion.
+            </p>
+            <p>
+                The following roles cannot be deleted:
+            </p>
+            <p>
+              <ul>
+                <li>Roles with type "ENM System Role"</li>
+                <li>Roles with assigned users</li>
+                <li>COM Roles assigned to COM Role Alias or Custom Role</li>
+                <li>Predefined COM Roles and Task Profiles Roles</li>
+              </ul>
+            </p>
+            <p>
+              <image href="/resources/DeleteRole.png" alt="DeleteRole"/>
+            </p>
+        </section>
+        <section>
+            <title>Delete Roles Result</title>
+            <sectiondiv>
+            <p>
+                On successful deletion of role(s), one of the following notifications is displayed:
+            </p>
+            <p>
+              <ul>
+                <li>Role deleted</li>
+                <li>Roles deleted ROLE NUMBER</li>
+              </ul>
+            </p>
+            <p>
+                On unsuccessful deletion of role(s), a dialog window is displayed with the corresponding error:
+            </p>
+            </sectiondiv>
+            <sectiondiv>
+            <p>
+              <ul>
+                <li>Role assigned to group role</li>
+                <li>Role not found</li>
+              </ul>
+            </p>
+            <p>
+                In case of multiple roles deletion and at least one deletion failed, a summary panel is displayed:
+            </p>
+            <p>
+               <image href="/resources/DeleteRolesSummaryDialog.png" alt="DeleteRolesSummaryDialog"/>
+            </p>
+            </sectiondiv>
+        </section>
+        
+        <section>
+            <title id="RMF">Roles Filters</title>
+            <p>
+                <image href="/resources/RoleManagementFilter.png" alt="Roles Filters"/>
+            </p>
+            <ul>
+                <li>The <b>Filters</b> button opens the correspondent <b>Filters</b> pane from the <b>Role Management</b> GUI.
+                    <p>
+                        The roles are filtered with the following criteria:
+                        <ul>
+                            <li>
+                                <b>Role name</b>: Used to filter the roles by name. The asterisk (*) wildcard character can be used to broaden out the search. This wildcard character can be inserted both at the start and at the end of a partial text string as explained in the following examples:
+                            </li>
+                            <li>
+                               <b>Profile*</b> Used
+                               to filter all existing items which name starts with <b>Profile</b>.
+                            </li>
+                            <li>
+                                <b>*Test</b> Used 
+                               to filter all existing items which name ends with <b>Test</b>.
+                            </li>
+                            <li>
+                               <b>*Common*</b> Used 
+                               to filter all existing items which name contains the string <b>Common</b>.
+                            </li>
+                        </ul>
+                    </p>    
+                </li>
+                <li>
+                    <b>Status</b>: the <b>Enabled</b>, <b>Disabled</b>, or <b>Notassignable</b> check boxes can be used to filter the roles on their status.
+                </li>
+                <li>
+                     <b>Role Type</b>: The <b>COM Role</b>, <b>COM Role Alias</b>, <b>Custom Role</b>, <b>Task Profile Role</b>, and <b>ENM System Role</b> check boxes are used 
+                     to filter the roles on their type.
+                </li>
+            </ul>
+            <p>
+                    The search field filters supports Unix regular expressions for role name.
+            </p>
+            <p>
+                    Example:
+            </p>
+
+            <p>
+                <ul>
+                    <li>Dot <b>.</b> matches any single character. For example: <b>"role1.2"</b> matches "role1a2","role112a" etc.
+                    </li>
+                    <li>Bracket expression <b>[ ]</b> matches a single character that is contained within the brackets.
+                            For example: <b>"Kat[a-k]"</b> matches "Kate" or "Katherine" but doesn't match "Katty".
+                    </li>
+                    <li>Star <b>*</b> matches the preceding element zero or more times.
+                        For example: <b>role10*4</b> matches "role14", "role104", "role140", "role141", "role142" etc.
+                    </li>
+                    <li>Curly brackets <b>{m,n}</b> matches the preceding element at least m and not more than n times.
+                            For example: <b>ll{1,3}</b>  matches "Allexander", "Emilly", and "Lili".
+                    </li>
+                </ul>
+            </p>
+            <ul>
+                <li>
+                  <b>Apply</b> confirms the filter criteria (<b>Filters</b> closes the filter pane without any change). The filters pane is automatically closed and the
+                   <b>Role Management</b> GUI displays (if any) only the roles that match the filter criteria.
+                </li>
+            </ul>
+        </section>
+      <section>
+         <title>Clear all the Filters Criteria</title>
+         <ul>
+           <li>
+               <b>Clear</b> clears the filters criteria previously configured.
+            </li>
+         </ul>
+        </section>
+
+    </conbody>
+</concept>

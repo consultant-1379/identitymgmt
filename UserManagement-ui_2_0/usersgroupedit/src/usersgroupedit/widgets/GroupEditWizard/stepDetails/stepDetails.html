@@ -1,0 +1,24 @@
+<e-link src="../RoleAssignTableWidget/RoleAssignTableWidget" name="role-assign-table-widget" />
+<div class="eaUsersgroupedit-StepDetails">
+    <div class="eaUsersgroupedit-StepDetails-container">
+        <div class="eaUsersgroupedit-StepDetails-container-innerWrapper eaUsersgroupedit-StepDetails-container-innerWrapper-status">
+            <label class="eaUsersgroupedit-StepDetails-label">
+                <input class="eaUsersgroupedit-StepDetails-status ebCheckbox" type="checkbox" />
+                <span class="ebCheckbox-inputStatus"></span>
+                <span class="ebCheckbox-label">{{switcher.label}}:</span>
+            </label>
+            <e-element src="widgets/Switcher" e-id="switcher" class="eaUsersgroupedit-StepDetails-Switcher" value="true"  on-label="{{switcher.enabled}}" off-Label="{{switcher.disabled}}"> </e-element>
+
+        </div>
+        <div class="eaUsersgroupedit-StepDetails-container-innerWrapper eaUsersgroupedit-StepDetails-container-innerWrapper-description">
+            <label class="eaUsersgroupedit-StepDetails-label">
+                <input class="eaUsersgroupedit-StepDetails-description ebCheckbox" type="checkbox" />
+                <span class="ebCheckbox-inputStatus"></span>
+                <span class="ebCheckbox-label">{{description.label}}:</span>
+            </label>
+            <e-element e-id="description" class="eaUsersgroupedit-StepDetails-TextArea" src="identitymgmtlib/widgets/TextareaWidget/TextareaWidget" type="textarea">
+            </e-element>
+        </div>
+    </div>
+</div>
+<e-link src="./stepDetails.less" />

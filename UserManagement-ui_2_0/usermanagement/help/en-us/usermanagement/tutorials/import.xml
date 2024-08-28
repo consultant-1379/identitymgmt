@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="usermanagement-Import">
+    <title>Import User Profiles</title>
+    <taskbody>
+        <prereq>
+          <ul>
+            <li>You must have the SECURITY_ADMIN role.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner,
+           and click <b>View User Profile</b> from the drop-down list. Assigned roles are displayed.
+           </li>
+           <li>At least one privilege assigned to a user is required.</li>
+           <li>Import option cannot be used to change user password.</li>
+           <li>A user password is required to create a new user profile.</li>
+         </ul>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial describes the steps to import user profiles from an XML file. Up to 1,000 users can be imported from a single file.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+               <li>
+                  <xref href="#1">Click Import</xref>
+               </li>
+               <li>
+                  <xref href="#2">Select the File</xref>
+               </li>
+               <li>
+                  <xref href="#3">Start Import</xref>
+               </li>
+            </ol>
+        </context>
+
+       <steps>
+            <step id="1">
+                <cmd>Click Import</cmd>
+                <info>
+                  <ol>
+                    <li>Launch <xref scope="external" href="/#usermanagement">
+                            User Management.</xref></li>
+                    <li>Click <b>Import</b>. The file selection window is displayed.
+                    </li>
+                 </ol>
+           </info>
+           </step>
+
+           <step id="2">
+                <cmd>Select the File</cmd>
+                <info>
+                    Select the file to be imported and click <b>Open</b>. A <b>File Parsed</b> window is displayed with the number of user profiles loaded by the imported file.
+                </info>
+           </step>
+
+           <step id="3">
+                <cmd>Start Import</cmd>
+                <info>
+                  Click <b>Import All</b> or click <b>Import Only New</b>. Import process starts.
+                  <p>
+                        For more information on <b>Import</b>, see <i>
+                            <xref href="../ui.xml#importexport">Import and Export</xref></i>.
+                  </p>
+                </info>
+           </step>
+      </steps>
+      <result>
+            <p>
+                Import process starts with analysis of file to be imported. The summary is presented in dialog window.
+            </p>
+       </result>
+   </taskbody>
+</task>
+

@@ -1,0 +1,26 @@
+<div class="eaUserprofile-wUserProfileViewWidget">
+    <div class="eaUserprofile-wUserProfileViewWidget-detailsContainer">
+        <div class="eaUserprofile-wUserProfileViewWidget-details">
+            <table>
+                {{#each rows}}
+                <tr class="eaUserprofile-wUserProfileViewWidget-details-userDetails">
+
+                    <td>
+                        <label class="eaUserprofile-wUserProfileViewWidget-details-userDetails-label">{{this.label}}</label>
+                    </td>
+                    <td>
+                        {{#if this.showTick}}
+                        <i class="ebIcon" ></i>
+                        {{/if}}
+                        <span class="eaUserprofile-wUserProfileViewWidget-details-userDetails-span-{{this.key}}" identifier="{{this.key}}"  id="{{this.key}}"></span>
+                    </td>
+
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
+
+<e-link src="./UserProfileViewWidget.less" />
+

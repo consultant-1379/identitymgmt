@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<task id="usermanagement-Migration">
+    <title>Users Migration between ENM Systems</title>
+    <taskbody>
+        <prereq>
+          <ol>
+            <li>You must have the SECURITY_ADMIN role.</li>
+            <li>To check currently assigned role(s), select the User ID on the top right hand corner, and click View User Profile from the drop-down list. Assigned roles are displayed</li>
+            <li>The destination ENM version must be equal or higher than the source ENM version.</li>
+            <li>Custom role(s) <xref scope="external" href="#help/app/rolemanagement/topic/tutorials/CreateCustomRole">
+                            Create New User Custom Role</xref> and Target Group <xref scope="external" href="#help/app/targetmanagement/topic/tutorials/CreateTargetGroup">
+                            Create Target Group</xref> of the source ENM must be already created into the destination ENM.
+            </li>
+          </ol>
+        </prereq>
+        <context>
+            <p>
+                <b>Objective</b>
+            </p>
+            <p>This tutorial explains how to migrate users between ENM Systems. Up to 1,000 users can be migrated at one time.</p>
+            <p>
+                <b>Outline</b>
+            </p>
+            <ol>
+                <li>
+                    <xref href="#1">Export Users from Source ENM</xref>
+                </li>
+                <li>
+                    <xref href="#2">Adjust of password related fields into the exported file</xref>
+                </li>
+                <li>
+                    <xref href="#3">Import Users into the Destination ENM</xref>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step id="1">
+              <cmd>Export Users from Source ENM</cmd>
+                <info>
+                    <p>Export Users from Source ENM following this tutorial:</p>
+
+                       <p><xref scope="external" href="/#help/app/usermanagement/topic/tutorials/export">
+                            Export Users Profiles</xref></p>
+                </info>
+            </step>
+            <step id="2">
+                <cmd>Adjust the Password Related Fields into the Exported file</cmd>
+                <info>
+                    <p>The exported XML User Profile file contains &lt;password&gt; and &lt;changePasswordFlag&gt; fields for each user.</p>
+                    <ol>
+                        <li>Modify the Password Field inserting a new password between &lt;password&gt; and &lt;/password&gt; tags (i.e.: &lt;password&gt;ch4n93eMe&lt;/password&gt;)</li>
+                        <li>Check that ChangePasswordFlag Field is set to true (i.e.: &lt;changePasswordFlag&gt;true&lt;/changePasswordFlag&gt;).</li>
+                    </ol>
+                    <p>Make sure that the Password is compliant with Local Password Policy as per <xref scope="external" href="/#help/app/usermanagement/topic/ui~changeuserpassword">
+                            Local Password Policies</xref> set into the destination ENM.</p>
+                </info>
+            </step>
+            <step id="3">
+                <cmd>Import Users into the Destination ENM</cmd>
+                <info>
+                    <p>Import Users into the Destination ENM following this tutorial:</p>
+
+                       <p><xref scope="external" href="/#help/app/usermanagement/topic/tutorials/import">
+                            Import Users Profiles</xref></p>
+                </info>
+            </step>
+        </steps>
+        <result>
+            <p>
+                The users are migrated.
+            </p>
+      </result>
+    </taskbody>
+</task>

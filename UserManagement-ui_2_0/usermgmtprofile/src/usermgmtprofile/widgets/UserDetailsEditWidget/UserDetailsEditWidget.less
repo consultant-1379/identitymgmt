@@ -1,0 +1,68 @@
+.eaUsermgmtprofile-wUserDetailsEditWidget {
+
+    &-detailsContainer {
+        width: calc(~"46% - 15px");
+        display: inline-block;
+        margin-left: 2%;
+        position: relative;
+        vertical-align: top;
+    }
+
+    &-detailsContainer:nth-child(2n+1) {
+        margin-left: 0;
+    }
+
+    &-titleContainer {
+        float: left;
+    }
+
+    &-infoPopupContainer {
+        margin-left: 10px;
+        float: left;
+    }
+
+    &-details {
+        float: left;
+        margin-top: 20px;
+
+        &-innerWrapper {
+            padding-left: 7px;
+            margin-left: 2px;
+            background-color: white;
+            margin-bottom: 4px;
+        }
+
+        &-label {
+            float: left;
+            width: 120px;
+            margin-top: 6px;
+            display: inline-block;
+        }
+
+        &-input-content {
+            display: inline-block;
+        }
+
+        &-userDetails {
+            margin-left: 9px;
+            margin-bottom: 10px;
+
+            &-span {
+                margin: 60px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 784px)  {
+
+         &-detailsContainer {
+            width: 100%;
+            display: inline-block;
+            margin-left: 0;
+            position: relative;
+            vertical-align: top;
+        }
+ 
+    }
+
+}
